@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
+import Link from 'next/link';
 import {
   calculateStandardRepayment,
   calculateGraduatedRepayment,
@@ -222,9 +223,9 @@ export default function PaymentCalculator() {
         <p className="text-sm text-yellow-800">
           This calculator provides estimates for standard federal repayment plans. For income-driven
           repayment options, use our{' '}
-          <a href="/income-driven-repayment-calculator" className="underline font-medium">
+          <Link href="/income-driven-repayment-calculator" className="underline font-medium">
             IDR Calculator
-          </a>
+          </Link>
           .
         </p>
       </div>

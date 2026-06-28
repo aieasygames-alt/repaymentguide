@@ -1,0 +1,17 @@
+# Security headers for Cloudflare Pages
+# Apply appropriate headers for security and performance
+
+/*
+  Security Headers for Cloudflare Pages
+  Note: Some headers are managed by Cloudflare automatically
+*/
+
+# Basic security headers
+/X-Content-Type-Options: "nosniff"
+/X-Frame-Options: "DENY"
+/X-XSS-Protection: "1; mode=block"
+/Referrer-Policy: "strict-origin-when-cross-origin"
+/Permissions-Policy: "interest-cohort=()"
+
+# HSTS (note: may not work on Cloudflare Pages without custom domain)
+/Strict-Transport-Security: "max-age=31536000; includeSubDomains; preload"

@@ -1,15 +1,22 @@
 import { createClient } from '@supabase/supabase-js';
 
 const getSupabase = () => {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-  if (!supabaseUrl || !supabaseAnonKey) {
-    // Return null client for server-side rendering
+  // Only create client if we have valid URL and key
+  // During build time or when not configured, return null
+  if (!supabaseUrl || !supabaseAnonKey ||
+      supabaseUrl.includes('your-project-url') ||
+      supabaseAnonKey.includes('your-anon-key')) {
     return null;
   }
 
-  return createClient(supabaseUrl, supabaseAnonKey);
+  try {
+    return createClient(supabaseUrl, supabaseAnonKey);
+  } catch {
+    return null;
+  }
 };
 
 export const supabase = getSupabase();

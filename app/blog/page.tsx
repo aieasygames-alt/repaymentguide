@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -16,21 +17,75 @@ export const metadata: Metadata = {
 const blogPosts = [
   {
     title: 'Understanding SAVE Plan Alternatives',
-    excerpt: 'With SAVE plan changes, learn about your other IDR options.',
-    date: '2024-06-01',
+    excerpt: 'With SAVE plan blocked by courts, learn about PAYE, IBR, and ICR alternatives.',
+    date: '2025-06-01',
     slug: 'save-plan-alternatives',
   },
   {
     title: 'PSLF Application Guide',
-    excerpt: 'Step-by-step guide to applying for Public Service Loan Forgiveness.',
-    date: '2024-05-15',
+    excerpt: 'Step-by-step guide to applying for Public Service Loan Forgiveness with payment tracking.',
+    date: '2025-05-15',
     slug: 'pslf-application-guide',
   },
   {
-    title: 'IDR Plan Comparison',
-    excerpt: 'Compare SAVE, PAYE, IBR, and ICR to find your best option.',
-    date: '2024-05-01',
+    title: 'IDR Plan Comparison: Which Saves You the Most?',
+    excerpt: 'Compare SAVE, PAYE, IBR, and ICR to find your best option with payment examples.',
+    date: '2025-05-01',
     slug: 'idr-plan-comparison',
+  },
+  {
+    title: 'Student Loan Refinancing vs Consolidation',
+    excerpt: 'Understand the key differences between refinancing and consolidating student loans.',
+    date: '2025-04-15',
+    slug: 'student-loan-refinancing-vs-consolidation',
+  },
+  {
+    title: 'Parent PLUS Loan Repayment Options',
+    excerpt: 'Complete guide to repaying Parent PLUS loans, from ICR to PSLF strategies.',
+    date: '2025-04-01',
+    slug: 'parent-plus-loan-repayment-options',
+  },
+  {
+    title: 'Student Loan Default Rehabilitation',
+    excerpt: 'Step-by-step guide to getting out of default through rehabilitation and consolidation.',
+    date: '2025-03-20',
+    slug: 'student-loan-default-rehabilitation',
+  },
+  {
+    title: 'Deferment vs Forbearance: When to Use Each',
+    excerpt: 'Understand the differences between student loan deferment and forbearance options.',
+    date: '2025-03-10',
+    slug: 'deferment-vs-forbearance',
+  },
+  {
+    title: 'Student Loan Forgiveness Programs',
+    excerpt: 'Complete guide to all forgiveness programs from PSLF to IDR and teacher options.',
+    date: '2025-02-28',
+    slug: 'student-loan-forgiveness-programs',
+  },
+  {
+    title: 'Student Loan Consolidation Guide',
+    excerpt: 'When and how to consolidate federal student loans, including process and what to watch out for.',
+    date: '2025-02-15',
+    slug: 'student-loan-consolidation-guide',
+  },
+  {
+    title: 'Married Borrowers: Repayment Strategies',
+    excerpt: 'How marriage affects student loan repayment, from tax filing to IDR plan options.',
+    date: '2025-02-01',
+    slug: 'married-borrowers-repayment-strategy',
+  },
+  {
+    title: 'Student Loan Tax Implications',
+    excerpt: 'Understanding tax consequences of loan forgiveness, interest deductions, and employer assistance.',
+    date: '2025-01-20',
+    slug: 'student-loan-tax-implications',
+  },
+  {
+    title: 'Recent Graduate Repayment Guide',
+    excerpt: 'Complete guide for new graduates on managing student loans from grace period to repayment plans.',
+    date: '2025-01-10',
+    slug: 'recent-graduate-repayment-guide',
   },
 ];
 
@@ -47,18 +102,14 @@ export default function BlogPage() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {blogPosts.map((post) => (
-              <article key={post.slug} className="bg-white border rounded-lg overflow-hidden hover:shadow-lg transition">
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="block bg-white border rounded-lg overflow-hidden hover:shadow-lg transition">
                 <div className="p-6">
                   <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
                   <p className="text-gray-600 mb-4">{post.excerpt}</p>
                   <p className="text-sm text-gray-500">{post.date}</p>
                 </div>
-              </article>
+              </Link>
             ))}
-          </div>
-
-          <div className="bg-gray-50 border rounded-lg p-8 text-center mt-8">
-            <p className="text-gray-500">More articles coming in Phase 6</p>
           </div>
         </div>
       </main>
