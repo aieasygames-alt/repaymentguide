@@ -1,6 +1,23 @@
+'use client';
+
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import { getCurrentUser, signOut } from '@/lib/auth';
 
 export default function Header() {
+  const [user, setUser] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getCurrentUser().then(setUser).finally(() => setLoading(false));
+  }, []);
+
+  const handleSignOut = async () => {
+    await signOut();
+    setUser(null);
+    window.location.href = '/';
+  };
+
   return (
     <header className="border-b bg-white sticky top-0 z-50">
       <nav className="container mx-auto px-4 py-4">
@@ -25,6 +42,26 @@ export default function Header() {
             <Link href="/blog" className="text-gray-700 hover:text-primary-600">
               Blog
             </Link>
+            <Link href="/dashboard" className="text-gray-700 hover:text-primary-600">
+              Dashboard
+            </Link>
+            {!loading && (
+              user ? (
+                <button
+                  onClick={handleSignOut}
+                  className="text-gray-700 hover:text-primary-600"
+                >
+                  Sign Out
+                </button>
+              ) : (
+                <Link
+                  href="/dashboard"
+                  className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition"
+                >
+                  Sign In
+                </Link>
+              )
+            )}
           </div>
 
           <button className="md:hidden text-gray-700">
