@@ -9,6 +9,13 @@ import {
   type RepaymentPlan,
   getReaymentPlanLabel,
 } from '@/lib/calculators';
+import {
+  RepaymentComparisonChart,
+  InterestAccumulationChart,
+  MonthlyPaymentComparison,
+  TotalCostComparison,
+  PaymentTrendChart
+} from '@/components/RepaymentChart';
 
 export default function PaymentCalculator() {
   const [loanAmount, setLoanAmount] = useState('35000');
@@ -229,6 +236,54 @@ export default function PaymentCalculator() {
           .
         </p>
       </div>
+
+      {results && (
+        <div className="mt-8 bg-white border rounded-lg p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-6">Visual Comparison</h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="text-sm font-medium text-gray-700 mb-4">Total Cost Breakdown</h4>
+              <RepaymentComparisonChart
+                principal={parseFloat(loanAmount) || 0}
+                rate={parseFloat(interestRate) || 0}
+              />
+            </div>
+
+            <div>
+              <h4 className="text-sm font-medium text-gray-700 mb-4">Monthly Payment Comparison</h4>
+              <MonthlyPaymentComparison
+                principal={parseFloat(loanAmount) || 0}
+                rate={parseFloat(interestRate) || 0}
+              />
+            </div>
+
+            <div>
+              <h4 className="text-sm font-medium text-gray-700 mb-4">Interest Accumulation Over Time</h4>
+              <InterestAccumulationChart
+                principal={parseFloat(loanAmount) || 0}
+                rate={parseFloat(interestRate) || 0}
+              />
+            </div>
+
+            <div>
+              <h4 className="text-sm font-medium text-gray-700 mb-4">Total Cost Distribution</h4>
+              <TotalCostComparison
+                principal={parseFloat(loanAmount) || 0}
+                rate={parseFloat(interestRate) || 0}
+              />
+            </div>
+          </div>
+
+          <div className="mt-8">
+            <h4 className="text-sm font-medium text-gray-700 mb-4">Payment Trend: Standard vs Graduated</h4>
+            <PaymentTrendChart
+              principal={parseFloat(loanAmount) || 0}
+              rate={parseFloat(interestRate) || 0}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

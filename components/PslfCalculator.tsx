@@ -1,6 +1,14 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
+import {
+  PslfProgressChart,
+  PslfTimelineChart,
+  ForgivenessProjectionChart,
+  MonthlyPaymentMilestoneChart,
+  EmploymentEligibilityChart,
+  PaymentAcceleratorChart
+} from '@/components/PslfChart';
 
 interface PslfResult {
   qualifyingPayments: number;
@@ -258,17 +266,17 @@ export default function PslfCalculator() {
 
           <div className="space-y-6">
             <div className="bg-white border rounded-lg p-6">
-              <h3 className="font-semibold mb-4">Payment Progress</h3>
-              <div className="mb-2">
-                <div className="flex justify-between mb-2">
-                  <span>Progress</span>
-                  <span>{result.qualifyingPayments} / 120 payments</span>
+              <h3 className="font-semibold mb-4">Payment Progress Visualization</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-sm font-medium text-gray-700 mb-4 text-center">
+                    {result.qualifyingPayments} / 120 Payments ({progressPercentage.toFixed(0)}%)
+                  </h4>
+                  <PslfProgressChart currentPayments={result.qualifyingPayments} />
                 </div>
-                <div className="w-full bg-gray-200 rounded-full h-4">
-                  <div
-                    className="bg-primary-600 h-4 rounded-full"
-                    style={{ width: `${progressPercentage}%` }}
-                  />
+                <div>
+                  <h4 className="text-sm font-medium text-gray-700 mb-4">Payment Milestones</h4>
+                  <MonthlyPaymentMilestoneChart currentPayments={result.qualifyingPayments} />
                 </div>
               </div>
             </div>
@@ -297,6 +305,41 @@ export default function PslfCalculator() {
                   </span>
                 </div>
               </div>
+            </div>
+
+            <div className="bg-white border rounded-lg p-6">
+              <h3 className="font-semibold mb-4">Financial Projection</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-sm font-medium text-gray-700 mb-4">Balance & Payments Over Time</h4>
+                  <PslfTimelineChart
+                    currentPayments={result.qualifyingPayments}
+                    monthlyPayment={parseFloat(monthlyPayment) || 0}
+                    loanBalance={parseFloat(loanBalance) || 0}
+                  />
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-gray-700 mb-4">Projected Amounts</h4>
+                  <ForgivenessProjectionChart
+                    currentPayments={result.qualifyingPayments}
+                    loanBalance={parseFloat(loanBalance) || 0}
+                    monthlyPayment={parseFloat(monthlyPayment) || 0}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white border rounded-lg p-6">
+              <h3 className="font-semibold mb-4">Payment Strategy Comparison</h3>
+              <PaymentAcceleratorChart
+                currentPayments={result.qualifyingPayments}
+                monthlyPayment={parseFloat(monthlyPayment) || 0}
+              />
+            </div>
+
+            <div className="bg-white border rounded-lg p-6">
+              <h3 className="font-semibold mb-4">Employment Eligibility Guide</h3>
+              <EmploymentEligibilityChart />
             </div>
 
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
