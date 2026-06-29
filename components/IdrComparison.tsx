@@ -6,6 +6,17 @@ import {
   type IdrPlan,
   calculateIdrPayment,
 } from '@/lib/idr-plans';
+import {
+  IdrPaymentComparison,
+  IdrTotalCostProjection,
+  IdrForgivenessAnalysis,
+  IdrIncomeSensitivity,
+  IdrTermComparison,
+  IdrDiscretionaryIncomeBreakdown,
+  IdrPlanRadar,
+  IdrPaymentTrajectory,
+  IdrCostSavingsAnalysis
+} from '@/components/IdrChart';
 
 export default function IdrComparison() {
   const [agi, setAgi] = useState('45000');
@@ -141,6 +152,143 @@ export default function IdrComparison() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Visual Analysis Section */}
+          <div className="mt-8 bg-white border rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-6">Visual Analysis</h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="text-sm font-medium text-gray-700 mb-4">Monthly Payment Comparison</h4>
+                <IdrPaymentComparison
+                  plans={planCalculations.map(calc => ({
+                    name: calc.plan.name,
+                    monthlyPayment: calc.monthlyPayment,
+                    totalPayments: calc.annualPayment * parseInt(calc.plan.forgivenessYears),
+                    forgivenessAmount: calc.annualPayment * parseInt(calc.plan.forgivenessYears) * 0.3,
+                    termYears: parseInt(calc.plan.forgivenessYears),
+                    discretionaryIncome: calc.discretionaryIncome
+                  }))}
+                />
+              </div>
+
+              <div>
+                <h4 className="text-sm font-medium text-gray-700 mb-4">Total Cost & Forgiveness Projection</h4>
+                <IdrTotalCostProjection
+                  plans={planCalculations.map(calc => ({
+                    name: calc.plan.name,
+                    monthlyPayment: calc.monthlyPayment,
+                    totalPayments: calc.annualPayment * parseInt(calc.plan.forgivenessYears),
+                    forgivenessAmount: calc.annualPayment * parseInt(calc.plan.forgivenessYears) * 0.3,
+                    termYears: parseInt(calc.plan.forgivenessYears),
+                    discretionaryIncome: calc.discretionaryIncome
+                  }))}
+                />
+              </div>
+
+              <div>
+                <h4 className="text-sm font-medium text-gray-700 mb-4">Forgiveness Amount Analysis</h4>
+                <IdrForgivenessAnalysis
+                  plans={planCalculations.map(calc => ({
+                    name: calc.plan.name,
+                    monthlyPayment: calc.monthlyPayment,
+                    totalPayments: calc.annualPayment * parseInt(calc.plan.forgivenessYears),
+                    forgivenessAmount: calc.annualPayment * parseInt(calc.plan.forgivenessYears) * 0.3,
+                    termYears: parseInt(calc.plan.forgivenessYears),
+                    discretionaryIncome: calc.discretionaryIncome
+                  }))}
+                />
+              </div>
+
+              <div>
+                <h4 className="text-sm font-medium text-gray-700 mb-4">Income Level Sensitivity</h4>
+                <IdrIncomeSensitivity
+                  plans={planCalculations.map(calc => ({
+                    name: calc.plan.name,
+                    monthlyPayment: calc.monthlyPayment,
+                    totalPayments: calc.annualPayment * parseInt(calc.plan.forgivenessYears),
+                    forgivenessAmount: calc.annualPayment * parseInt(calc.plan.forgivenessYears) * 0.3,
+                    termYears: parseInt(calc.plan.forgivenessYears),
+                    discretionaryIncome: calc.discretionaryIncome
+                  }))}
+                  income={agiNum}
+                />
+              </div>
+
+              <div>
+                <h4 className="text-sm font-medium text-gray-700 mb-4">Loan Term Comparison</h4>
+                <IdrTermComparison
+                  plans={planCalculations.map(calc => ({
+                    name: calc.plan.name,
+                    monthlyPayment: calc.monthlyPayment,
+                    totalPayments: calc.annualPayment * parseInt(calc.plan.forgivenessYears),
+                    forgivenessAmount: calc.annualPayment * parseInt(calc.plan.forgivenessYears) * 0.3,
+                    termYears: parseInt(calc.plan.forgivenessYears),
+                    discretionaryIncome: calc.discretionaryIncome
+                  }))}
+                />
+              </div>
+
+              <div>
+                <h4 className="text-sm font-medium text-gray-700 mb-4">Discretionary Income Breakdown</h4>
+                <IdrDiscretionaryIncomeBreakdown
+                  plans={planCalculations.map(calc => ({
+                    name: calc.plan.name,
+                    monthlyPayment: calc.monthlyPayment,
+                    totalPayments: calc.annualPayment * parseInt(calc.plan.forgivenessYears),
+                    forgivenessAmount: calc.annualPayment * parseInt(calc.plan.forgivenessYears) * 0.3,
+                    termYears: parseInt(calc.plan.forgivenessYears),
+                    discretionaryIncome: calc.discretionaryIncome
+                  }))}
+                  agi={agiNum}
+                  householdSize={householdSizeNum}
+                />
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <h4 className="text-sm font-medium text-gray-700 mb-4">Plan Features Radar Comparison</h4>
+              <IdrPlanRadar
+                plans={planCalculations.map(calc => ({
+                  name: calc.plan.name,
+                  monthlyPayment: calc.monthlyPayment,
+                  totalPayments: calc.annualPayment * parseInt(calc.plan.forgivenessYears),
+                  forgivenessAmount: calc.annualPayment * parseInt(calc.plan.forgivenessYears) * 0.3,
+                  termYears: parseInt(calc.plan.forgivenessYears),
+                  discretionaryIncome: calc.discretionaryIncome
+                }))}
+              />
+            </div>
+
+            <div className="mt-8">
+              <h4 className="text-sm font-medium text-gray-700 mb-4">20-Year Payment Trajectory</h4>
+              <IdrPaymentTrajectory
+                plans={planCalculations.map(calc => ({
+                  name: calc.plan.name,
+                  monthlyPayment: calc.monthlyPayment,
+                  totalPayments: calc.annualPayment * parseInt(calc.plan.forgivenessYears),
+                  forgivenessAmount: calc.annualPayment * parseInt(calc.plan.forgivenessYears) * 0.3,
+                  termYears: parseInt(calc.plan.forgivenessYears),
+                  discretionaryIncome: calc.discretionaryIncome
+                }))}
+                years={20}
+              />
+            </div>
+
+            <div className="mt-8">
+              <h4 className="text-sm font-medium text-gray-700 mb-4">Cost Savings Analysis vs Lowest Payment Plan</h4>
+              <IdrCostSavingsAnalysis
+                plans={planCalculations.map(calc => ({
+                  name: calc.plan.name,
+                  monthlyPayment: calc.monthlyPayment,
+                  totalPayments: calc.annualPayment * parseInt(calc.plan.forgivenessYears),
+                  forgivenessAmount: calc.annualPayment * parseInt(calc.plan.forgivenessYears) * 0.3,
+                  termYears: parseInt(calc.plan.forgivenessYears),
+                  discretionaryIncome: calc.discretionaryIncome
+                }))}
+              />
+            </div>
           </div>
 
           <div className="mt-8 bg-yellow-50 border border-yellow-200 rounded-lg p-4">
