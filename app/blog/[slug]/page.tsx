@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { ArticleSchema } from '@/components/ArticleSchema';
+import Image from 'next/image';
+import { getBlogImage } from '@/lib/blog-images';
 
 const blogPosts: Record<string, {
   title: string;
@@ -2059,16 +2061,28 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <Header />
       <article className="flex-1">
         {/* Hero Section */}
-        <div className="bg-gradient-to-br from-primary-50 to-primary-100 py-16">
-          <div className="container mx-auto px-4">
-            <Link href="/blog" className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium mb-6">
+        <div className="relative">
+          <div className="absolute inset-0">
+            <Image
+              src={getBlogImage(slug)}
+              alt={post.title}
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary-900/75 to-primary-800/75" />
+          </div>
+
+          <div className="relative container mx-auto px-4 py-16 md:py-24">
+            <Link href="/blog" className="inline-flex items-center text-white hover:text-white/80 font-medium mb-6">
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
               Back to Blog
             </Link>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{post.title}</h1>
-            <div className="flex items-center text-gray-600">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">{post.title}</h1>
+            <div className="flex items-center text-white/90">
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
@@ -2105,6 +2119,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <div className="grid md:grid-cols-2 gap-6">
                   {relatedPosts.map(([relatedSlug, relatedPost]) => (
                     <Link key={relatedSlug} href={`/blog/${relatedSlug}`} className="block bg-white border rounded-xl overflow-hidden hover:shadow-lg transition">
+                      <div className="relative h-40">
+                        <Image
+                          src={getBlogImage(relatedSlug)}
+                          alt={relatedPost.title}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                        />
+                      </div>
                       <div className="p-6">
                         <h4 className="text-xl font-semibold mb-2 text-gray-900">{relatedPost.title}</h4>
                         <p className="text-gray-600 mb-3">{relatedPost.excerpt}</p>

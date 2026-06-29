@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://repaymentguide.com/og-image.jpg",
+        url: "https://repaymentguide.com/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "RepaymentGuide - Student Loan Repayment Tools",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "RepaymentGuide - Student Loan Payment Calculator",
     description: "Free tools to calculate payments and compare repayment plans",
-    images: ["https://repaymentguide.com/og-image.jpg"],
+    images: ["https://repaymentguide.com/images/og-image.png"],
   },
   alternates: {
     canonical: "https://repaymentguide.com",

@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Image from 'next/image';
+import { getBlogImage } from '@/lib/blog-images';
 
 export const metadata: Metadata = {
   title: 'Blog - Student Loan Repayment Guides & Tips',
@@ -103,6 +105,15 @@ export default function BlogPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {blogPosts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="block bg-white border rounded-lg overflow-hidden hover:shadow-lg transition">
+                <div className="relative h-48">
+                  <Image
+                    src={getBlogImage(post.slug)}
+                    alt={post.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                  />
+                </div>
                 <div className="p-6">
                   <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
                   <p className="text-gray-600 mb-4">{post.excerpt}</p>
