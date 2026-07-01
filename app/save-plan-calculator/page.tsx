@@ -6,9 +6,9 @@ import IdrComparison from '@/components/IdrComparison';
 import { FAQSchema } from '@/components/FAQSchema';
 
 export const metadata: Metadata = {
-  title: 'SAVE Plan Calculator & Alternatives - Compare IDR Plans',
-  description: 'Compare SAVE plan with PAYE, IBR, and ICR. Find the best income-driven repayment plan for your student loans with detailed comparisons and examples.',
-  keywords: ['SAVE plan', 'IDR plans', 'PAYE', 'IBR', 'ICR', 'income driven repayment', 'student loan alternatives'],
+  title: 'SAVE Plan Alternatives 2026 - Compare RAP, IBR, PAYE & ICR',
+  description: 'SAVE ended in 2026. Compare RAP, IBR, PAYE, ICR, and standard repayment options before your 90-day servicer deadline.',
+  keywords: ['SAVE plan ending', 'RAP plan', 'IDR plans', 'PAYE', 'IBR', 'ICR', 'income driven repayment', 'student loan alternatives'],
   openGraph: {
     title: 'SAVE Plan Calculator & Alternatives',
     description: 'Compare SAVE with other IDR plans and find your best option',
@@ -18,16 +18,16 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: 'Will SAVE become available again?',
-    answer: 'Legal experts believe SAVE will eventually become available after court challenges resolve. The Biden administration has expressed commitment to the plan. However, timing is uncertain. In the meantime, choose PAYE (closest alternative) or another IDR plan.'
+    question: 'Is SAVE still available?',
+    answer: 'No. A court order ended the SAVE Plan on March 10, 2026. Servicers are notifying SAVE borrowers beginning July 1, 2026, and borrowers generally have 90 days from the notice date to choose a different repayment plan.'
   },
   {
-    question: 'Can I switch to PAYE now and switch to SAVE later?',
-    answer: 'Yes! You can switch IDR plans at any time. Moving from PAYE to SAVE when available is simple and fast. There is no penalty for switching, and your payment count for forgiveness carries over.'
+    question: 'What is RAP?',
+    answer: 'RAP is the Repayment Assistance Plan, a new income-driven repayment plan available beginning July 1, 2026. Payments are based on 1-10% of AGI, reduced by $50 per dependent, with a $10 minimum monthly payment.'
   },
   {
-    question: 'What happens to my existing SAVE application?',
-    answer: 'Existing SAVE borrowers are automatically in a $0 payment forbearance. Your payments count as $0 (good for PSLF), interest does not capitalize during forbearance, and you don not need to take any action. You can voluntarily switch to PAYE/IBR if you want actual payments to count toward forgiveness.'
+    question: 'What happens if I do not choose a new plan?',
+    answer: 'If you miss your SAVE transition deadline, your servicer may place you into a standard-style plan. That can increase your monthly payment, so compare RAP, IBR, PAYE, ICR, and standard repayment before the 90-day window closes.'
   },
   {
     question: 'How do I apply for PAYE, IBR, or ICR?',
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     question: 'What if I\'m already in SAVE but want to switch?',
-    answer: 'You can proactively switch to PAYE/IBR/ICR at any time. Reasons to consider: you want actual payments to count toward PSLF (not $0 forbearance), you want payment certainty (forbearance ends when courts rule), or you want to lock in a specific plan before rules change. Apply through StudentAid.gov and select your new plan choice.'
+    answer: 'You can choose another available repayment plan through StudentAid.gov. Compare RAP, IBR, PAYE, ICR, and standard repayment based on your income, dependents, loan type, and PSLF strategy.'
   }
 ];
 
@@ -48,9 +48,9 @@ export default function SavePlanCalculatorPage() {
         {/* Hero Section */}
         <div className="bg-gradient-to-br from-primary-50 to-primary-100 py-12">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">SAVE Plan Alternatives</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">SAVE Plan Alternatives for 2026</h1>
             <p className="text-xl text-gray-700 max-w-3xl">
-              With SAVE plan blocked by courts, compare your income-driven repayment options and find the best plan for your situation.
+              SAVE has ended. Compare RAP, IBR, PAYE, ICR, and standard repayment options before your 90-day servicer deadline.
             </p>
           </div>
         </div>
@@ -73,11 +73,10 @@ export default function SavePlanCalculatorPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-bold text-red-900 mb-2">Court Order Block (June 2024)</h3>
+                    <h3 className="font-bold text-red-900 mb-2">SAVE Ended by Court Order</h3>
                     <p className="text-red-800">
-                      The SAVE plan is currently blocked by court orders following legal challenges from multiple states.
-                      The Department of Education has placed existing SAVE borrowers in a forbearance with $0 payments
-                      until legal challenges are resolved.
+                      A March 10, 2026 court order ended the SAVE Plan. Servicers are notifying borrowers between
+                      July 1 and August 15, 2026, and borrowers have 90 days from the notice date to select another plan.
                     </p>
                   </div>
                 </div>
@@ -86,10 +85,10 @@ export default function SavePlanCalculatorPage() {
               <div className="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-6">
                 <h3 className="font-bold text-blue-900 mb-2">What This Means for You</h3>
                 <ul className="text-blue-800 space-y-2">
-                  <li>• <strong>New applications:</strong> Cannot apply for SAVE until courts rule</li>
-                  <li>• <strong>Existing SAVE borrowers:</strong> Automatically in $0 payment forbearance</li>
-                  <li>• <strong>Need lower payments now:</strong> Choose PAYE, IBR, or ICR instead</li>
-                  <li>• <strong>PSLF borrowers:</strong> Your $0 SAVE payments still count toward forgiveness</li>
+                  <li>• <strong>New applications:</strong> SAVE is no longer available as a repayment choice</li>
+                  <li>• <strong>Existing SAVE borrowers:</strong> Watch for your servicer notice and 90-day deadline</li>
+                  <li>• <strong>Need lower payments now:</strong> Compare RAP, IBR, PAYE, ICR, and standard repayment</li>
+                  <li>• <strong>PSLF borrowers:</strong> RAP can count toward PSLF if all other PSLF rules are met</li>
                 </ul>
               </div>
             </section>
@@ -99,6 +98,41 @@ export default function SavePlanCalculatorPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">IDR Plans Explained</h2>
 
               <div className="space-y-6">
+                {/* RAP */}
+                <div className="bg-white border rounded-xl overflow-hidden">
+                  <div className="bg-blue-50 px-6 py-4">
+                    <h3 className="text-xl font-bold text-gray-900">RAP (Repayment Assistance Plan)</h3>
+                    <p className="text-blue-700">New 2026 IDR Plan • AGI-Based • Interest and Principal Benefits</p>
+                  </div>
+                  <div className="p-6">
+                    <div className="grid md:grid-cols-2 gap-6 mb-4">
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-2">Advantages:</h4>
+                        <ul className="text-gray-600 space-y-1 text-sm">
+                          <li>• Payments are based on 1-10% of AGI</li>
+                          <li>• $50 monthly reduction for each dependent</li>
+                          <li>• Unpaid monthly interest can be subsidized after full, on-time payments</li>
+                          <li>• Matching principal payment up to $50 when needed</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-2">Watch-outs:</h4>
+                        <ul className="text-gray-600 space-y-1 text-sm">
+                          <li>• $10 minimum monthly payment</li>
+                          <li>• No poverty-line income exclusion</li>
+                          <li>• 30-year forgiveness timeline outside PSLF</li>
+                          <li>• Parent PLUS consolidation loans are not eligible</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="bg-gray-50 rounded-lg p-4 mt-4">
+                      <p className="text-sm text-gray-700">
+                        <strong>Best for:</strong> Borrowers whose RAP payment is lower than IBR/PAYE/ICR, and borrowers who value the interest subsidy and principal progress benefits.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
                 {/* PAYE */}
                 <div className="bg-white border rounded-xl overflow-hidden">
                   <div className="bg-purple-50 px-6 py-4">
@@ -110,7 +144,7 @@ export default function SavePlanCalculatorPage() {
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-2">Advantages:</h4>
                         <ul className="text-gray-600 space-y-1 text-sm">
-                          <li>• 10% of discretionary income (same as SAVE)</li>
+                          <li>• 10% of discretionary income</li>
                           <li>• Payment cap protects high earners</li>
                           <li>• No interest capitalization if staying in plan</li>
                           <li>• 20-year forgiveness timeline</li>
@@ -326,35 +360,35 @@ export default function SavePlanCalculatorPage() {
               <div className="space-y-4">
                 <details className="bg-white border rounded-lg">
                   <summary className="px-6 py-4 cursor-pointer font-semibold text-gray-900 hover:bg-gray-50">
-                    Will SAVE become available again?
+                    Is SAVE still available?
                   </summary>
                   <div className="px-6 pb-4 text-gray-600">
-                    <p className="mb-2">Legal experts believe SAVE will eventually become available after court challenges resolve. The Biden administration has expressed commitment to the plan. However, timing is uncertain.</p>
-                    <p className="text-sm">In the meantime, choose PAYE (closest alternative) or another IDR plan.</p>
+                    <p className="mb-2">No. A March 10, 2026 court order ended the SAVE Plan. Servicers are notifying borrowers beginning July 1, 2026.</p>
+                    <p className="text-sm">Compare RAP, IBR, PAYE, ICR, and standard repayment before your 90-day deadline.</p>
                   </div>
                 </details>
 
                 <details className="bg-white border rounded-lg">
                   <summary className="px-6 py-4 cursor-pointer font-semibold text-gray-900 hover:bg-gray-50">
-                    Can I switch to PAYE now and switch to SAVE later?
+                    What is RAP?
                   </summary>
                   <div className="px-6 pb-4 text-gray-600">
-                    <p>Yes! You can switch IDR plans at any time. Moving from PAYE to SAVE when available is simple and fast. There's no penalty for switching, and your payment count for forgiveness carries over.</p>
+                    <p>RAP is the Repayment Assistance Plan, a new income-driven repayment option available beginning July 1, 2026. It uses 1-10% of AGI, subtracts $50 per dependent, and has a $10 minimum monthly payment.</p>
                   </div>
                 </details>
 
                 <details className="bg-white border rounded-lg">
                   <summary className="px-6 py-4 cursor-pointer font-semibold text-gray-900 hover:bg-gray-50">
-                    What happens to my existing SAVE application?
+                    What happens if I miss the SAVE transition deadline?
                   </summary>
                   <div className="px-6 pb-4 text-gray-600">
-                    <p className="mb-2">Existing SAVE borrowers are automatically in a $0 payment forbearance. This means:</p>
+                    <p className="mb-2">Your servicer may place you into a standard-style repayment plan, which can raise your monthly bill. Before the deadline, compare:</p>
                     <ul className="space-y-1 text-sm">
-                      <li>• Your payments count as $0 (good for PSLF)</li>
-                      <li>• Interest does not capitalize during forbearance</li>
-                      <li>• You don't need to take any action</li>
+                      <li>• RAP</li>
+                      <li>• IBR, PAYE, or ICR if available for your loans</li>
+                      <li>• Tiered Standard or other standard repayment options</li>
                     </ul>
-                    <p className="text-sm mt-3">You can voluntarily switch to PAYE/IBR if you want actual payments to count toward forgiveness.</p>
+                    <p className="text-sm mt-3">Apply through StudentAid.gov or your servicer once you choose a plan.</p>
                   </div>
                 </details>
 

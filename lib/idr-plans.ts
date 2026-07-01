@@ -13,6 +13,32 @@ export interface IdrPlan {
 
 export const idrPlans: IdrPlan[] = [
   {
+    id: 'rap',
+    name: 'RAP',
+    fullName: 'Repayment Assistance Plan',
+    monthlyPayment: '1-10% of AGI, reduced by $50 per dependent',
+    paymentCap: 'None',
+    forgivenessYears: '30',
+    marriedFiling: 'separate',
+    eligibility: [
+      'Direct Loan borrowers with eligible loan types',
+      'Direct PLUS loans for graduate or professional students',
+      'Direct Consolidation loans that do not include Parent PLUS loans',
+    ],
+    pros: [
+      'Available beginning July 1, 2026',
+      'Unpaid monthly interest subsidy after full, on-time payments',
+      'Matching principal payment up to $50 when needed',
+      'Counts toward PSLF if all other PSLF rules are met',
+    ],
+    cons: [
+      '30-year forgiveness timeline',
+      'No $0 monthly payment; minimum payment is $10',
+      'No poverty-line income exclusion',
+      'Parent PLUS consolidation loans are not eligible',
+    ],
+  },
+  {
     id: 'save',
     name: 'SAVE',
     fullName: 'Saving on a Valuable Education',
@@ -26,15 +52,15 @@ export const idrPlans: IdrPlan[] = [
       'No loan date requirement',
     ],
     pros: [
-      'Lowest monthly payments (5% for undergrad loans)',
-      '100% unpaid interest subsidy',
-      'Forgiveness after 10-20 years',
+      'Previously offered low monthly payments',
+      'Previously included 100% unpaid interest subsidy',
+      'Previously offered shorter forgiveness for some balances',
       'Spouse income excluded if filing separately',
     ],
     cons: [
-      'Currently blocked by court orders (as of 2024)',
-      'Capitalization if you leave the plan',
-      'Graduate loans have 10% payment rate',
+      'Ended by court order on March 10, 2026',
+      'Borrowers must choose a different plan during the 2026 transition window',
+      'Not available for new repayment elections',
     ],
   },
   {
@@ -156,12 +182,49 @@ export function calculateDiscretionaryIncome(
 export function calculateIdrPayment(
   agi: number,
   householdSize: number,
-  planType: 'save' | 'paye' | 'ibr' | 'icr'
+  planType: 'rap' | 'save' | 'paye' | 'ibr' | 'icr'
 ): {
   monthlyPayment: number;
   annualPayment: number;
   discretionaryIncome: number;
 } {
+  if (planType === 'rap') {
+    const dependents = Math.max(0, householdSize - 1);
+    let annualPayment: number;
+
+    if (agi <= 10000) {
+      annualPayment = 120;
+    } else if (agi <= 20000) {
+      annualPayment = agi * 0.01;
+    } else if (agi <= 30000) {
+      annualPayment = agi * 0.02;
+    } else if (agi <= 40000) {
+      annualPayment = agi * 0.03;
+    } else if (agi <= 50000) {
+      annualPayment = agi * 0.04;
+    } else if (agi <= 60000) {
+      annualPayment = agi * 0.05;
+    } else if (agi <= 70000) {
+      annualPayment = agi * 0.06;
+    } else if (agi <= 80000) {
+      annualPayment = agi * 0.07;
+    } else if (agi <= 90000) {
+      annualPayment = agi * 0.08;
+    } else if (agi <= 100000) {
+      annualPayment = agi * 0.09;
+    } else {
+      annualPayment = agi * 0.1;
+    }
+
+    const monthlyPayment = Math.max(10, annualPayment / 12 - dependents * 50);
+
+    return {
+      monthlyPayment: Math.round(monthlyPayment),
+      annualPayment: Math.round(monthlyPayment * 12),
+      discretionaryIncome: Math.round(agi),
+    };
+  }
+
   const discretionaryIncome = calculateDiscretionaryIncome(agi, householdSize, planType);
 
   let paymentPercentage = 0.1; // 10% default

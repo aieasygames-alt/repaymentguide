@@ -14,8 +14,17 @@ export default function HomePage() {
               Student Loan Repayment Made Simple
             </h1>
             <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-              Calculate payments, compare IDR plans, and estimate PSLF forgiveness with our free tools.
+              Calculate payments, compare RAP and legacy IDR plans, and estimate PSLF forgiveness with our free tools.
             </p>
+            <div className="max-w-3xl mx-auto mb-8 bg-white/90 border border-primary-200 rounded-lg p-4 text-left shadow-sm">
+              <p className="text-sm font-semibold text-primary-800 mb-1">2026 SAVE transition update</p>
+              <p className="text-gray-700">
+                SAVE borrowers are being notified to choose another plan within 90 days. Compare RAP, IBR, PAYE, ICR, and standard repayment before your servicer deadline.
+              </p>
+              <Link href="/blog/save-ending-rap-vs-save-2026" className="inline-block mt-2 text-primary-700 font-semibold hover:text-primary-800">
+                Read the 90-day checklist →
+              </Link>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/student-loan-payment-calculator" className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition">
                 Calculate Payments
@@ -48,8 +57,8 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">SAVE Alternatives</h3>
-                <p className="text-gray-600">Compare SAVE with other IDR plans to find your best option.</p>
+                <h3 className="text-xl font-semibold mb-2">SAVE Transition</h3>
+                <p className="text-gray-600">Compare RAP, IBR, PAYE, ICR, and standard options after SAVE.</p>
               </Link>
 
               <Link href="/income-driven-repayment-calculator" className="bg-white border rounded-xl p-6 hover:shadow-lg transition">

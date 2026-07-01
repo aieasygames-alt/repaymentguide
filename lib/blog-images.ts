@@ -1,5 +1,6 @@
 // Blog post image mapping
 export const blogImages: Record<string, string> = {
+  'save-ending-rap-vs-save-2026': '/images/save-plan-alternatives.png',
   'save-plan-alternatives': '/images/save-plan-alternatives.png',
   'pslf-application-guide': '/images/pslf-application-guide.png',
   'idr-plan-comparison': '/images/idr-plan-comparison.png',

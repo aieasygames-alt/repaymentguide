@@ -6,9 +6,9 @@ import Link from 'next/link';
 import { FAQSchema } from '@/components/FAQSchema';
 
 export const metadata: Metadata = {
-  title: 'IDR Calculator - Find the Best Income-Driven Repayment Plan',
-  description: 'Calculate payments under SAVE, PAYE, IBR, and ICR plans. Find which income-driven repayment plan saves you the most money with detailed examples and guidance.',
-  keywords: ['IDR calculator', 'income driven repayment', 'SAVE', 'PAYE', 'IBR', 'ICR'],
+  title: 'IDR Calculator - Compare RAP, IBR, PAYE, ICR & SAVE',
+  description: 'Calculate estimated payments under RAP, SAVE, PAYE, IBR, and ICR plans. Compare income-driven repayment options after the 2026 SAVE transition.',
+  keywords: ['IDR calculator', 'income driven repayment', 'RAP', 'SAVE', 'PAYE', 'IBR', 'ICR'],
   openGraph: {
     title: 'IDR Calculator - Compare All Plans',
     description: 'Find the best income-driven repayment plan',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: 'What is discretionary income for IDR calculations?',
-    answer: 'Discretionary income is the difference between your adjusted gross income (AGI) and 225% of the federal poverty guideline for your family size and state. For example, in 2024, the poverty guideline for a single person is $15,060, so 225% of that is $33,885. If you earn $50,000, your discretionary income is $16,115.'
+    answer: 'For legacy IDR plans, discretionary income is your adjusted gross income (AGI) minus a poverty-guideline allowance. RAP works differently: it uses AGI directly, then reduces the monthly payment by $50 for each dependent.'
   },
   {
     question: 'How often do I need to recertify my IDR plan?',
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     question: 'Do IDR plans forgive loan balances?',
-    answer: 'Yes. After 20-25 years of qualifying payments (depending on the plan), any remaining loan balance is forgiven. SAVE offers 10-year forgiveness for loans under $12,000. PSLF offers forgiveness after 10 years for public service employees. Note that forgiven amounts may be taxable after 2025.'
+    answer: 'Yes. Legacy IDR plans generally use 20-25 year forgiveness timelines, while RAP uses 30 years. PSLF can forgive eligible Direct Loans after 120 qualifying payments for public service employees. Note that non-PSLF forgiven amounts may be taxable.'
   },
   {
     question: 'Should I choose IDR or standard repayment?',
@@ -54,7 +54,7 @@ export default function IdrCalculatorPage() {
           <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Income-Driven Repayment Calculator</h1>
             <p className="text-xl text-gray-700 max-w-3xl">
-              Calculate your monthly payments under SAVE, PAYE, IBR, and ICR plans. Find which plan saves you the most money.
+              Calculate estimated monthly payments under RAP, SAVE, PAYE, IBR, and ICR plans. Find which plan fits your 2026 repayment strategy.
             </p>
           </div>
         </div>
@@ -95,25 +95,25 @@ export default function IdrCalculatorPage() {
               <div className="space-y-6">
                 <div className="bg-white border rounded-xl overflow-hidden">
                   <div className="bg-primary-50 px-6 py-4">
-                    <h3 className="text-xl font-bold text-gray-900">SAVE Plan (When Available)</h3>
-                    <p className="text-primary-700">Lowest Payments • 10-Year Forgiveness (Small Balances)</p>
+                    <h3 className="text-xl font-bold text-gray-900">RAP Plan</h3>
+                    <p className="text-primary-700">New 2026 IDR Plan • AGI-Based • 30-Year Forgiveness</p>
                   </div>
                   <div className="p-6">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-2">Best For:</h4>
                         <ul className="text-gray-600 space-y-1 text-sm">
-                          <li>• Undergraduate borrowers (when available)</li>
-                          <li>• Those wanting lowest monthly payments</li>
-                          <li>• Balances under $12,000 (10-year forgiveness)</li>
+                          <li>• Borrowers comparing 2026 SAVE transition options</li>
+                          <li>• Borrowers with eligible Direct Loans</li>
+                          <li>• PSLF borrowers whose RAP payment is lowest</li>
                         </ul>
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <ul className="text-gray-600 space-y-1 text-sm">
-                          <li>• 5% of discretionary income (undergrad)</li>
-                          <li>• 100% unpaid interest subsidy</li>
-                          <li>• 10-20 year forgiveness timeline</li>
+                          <li>• 1-10% of AGI based on income tier</li>
+                          <li>• $50 dependent reduction, $10 minimum</li>
+                          <li>• Interest subsidy and matching principal benefit after full, on-time payments</li>
                         </ul>
                       </div>
                     </div>
@@ -221,24 +221,30 @@ export default function IdrCalculatorPage() {
                     </thead>
                     <tbody>
                       <tr className="border-b">
+                        <td className="p-4 font-semibold">RAP</td>
+                        <td className="p-4 text-right">$167</td>
+                        <td className="p-4 text-right">$60,000</td>
+                        <td className="p-4 text-right">Varies</td>
+                      </tr>
+                      <tr className="border-b bg-gray-50">
                         <td className="p-4 font-semibold">SAVE</td>
                         <td className="p-4 text-right">$158</td>
                         <td className="p-4 text-right">$38,000</td>
                         <td className="p-4 text-right text-green-600">~$37,000</td>
                       </tr>
-                      <tr className="border-b bg-gray-50">
+                      <tr className="border-b">
                         <td className="p-4 font-semibold">PAYE</td>
                         <td className="p-4 text-right">$317</td>
                         <td className="p-4 text-right">$76,000</td>
                         <td className="p-4 text-right">$0</td>
                       </tr>
-                      <tr className="border-b">
+                      <tr className="border-b bg-gray-50">
                         <td className="p-4 font-semibold">IBR</td>
                         <td className="p-4 text-right">$317</td>
                         <td className="p-4 text-right">$76,000</td>
                         <td className="p-4 text-right">$0</td>
                       </tr>
-                      <tr className="bg-gray-50">
+                      <tr>
                         <td className="p-4 font-semibold">ICR</td>
                         <td className="p-4 text-right">$633</td>
                         <td className="p-4 text-right">$151,000</td>
@@ -266,8 +272,8 @@ export default function IdrCalculatorPage() {
                     What is discretionary income for IDR calculations?
                   </summary>
                   <div className="px-6 pb-4 text-gray-600">
-                    <p className="mb-2">Discretionary income is the difference between your adjusted gross income (AGI) and 225% of the federal poverty guideline for your family size and state.</p>
-                    <p className="text-sm">For example, in 2024, the poverty guideline for a single person is $15,060, so 225% of that is $33,885. If you earn $50,000, your discretionary income is $16,115.</p>
+                    <p className="mb-2">Legacy IDR plans use discretionary income, which subtracts a poverty-guideline allowance from your AGI before applying a payment percentage.</p>
+                    <p className="text-sm">RAP works differently: it uses AGI directly, then subtracts $50 per dependent from the monthly payment, subject to a $10 minimum.</p>
                   </div>
                 </details>
 
@@ -297,7 +303,7 @@ export default function IdrCalculatorPage() {
                   </summary>
                   <div className="px-6 pb-4 text-gray-600">
                     <p className="mb-2">If you get married or have a child, your family size increases, which increases the poverty guideline deduction and potentially lowers your discretionary income.</p>
-                    <p className="text-sm">You must update this information during your annual recertification. If you file taxes separately, you can exclude your spouse's income from PAYE, IBR, and SAVE calculations.</p>
+                    <p className="text-sm">You must update this information during your annual recertification. RAP reduces monthly payments by $50 per dependent claimed on your federal tax return.</p>
                   </div>
                 </details>
 
@@ -308,7 +314,8 @@ export default function IdrCalculatorPage() {
                   <div className="px-6 pb-4 text-gray-600">
                     <p className="mb-2">Yes. After 20-25 years of qualifying payments (depending on the plan), any remaining loan balance is forgiven.</p>
                     <ul className="space-y-1 text-sm my-2">
-                      <li>• SAVE: 10 years (balances under $12,000) or 20 years</li>
+                      <li>• RAP: 30 years</li>
+                      <li>• SAVE: ended in 2026 after previously offering 10-25 year timelines</li>
                       <li>• PAYE: 20 years</li>
                       <li>• IBR: 20-25 years</li>
                       <li>• ICR: 25 years</li>

@@ -18,8 +18,14 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    title: 'SAVE Is Ending: RAP vs SAVE and Your 90-Day Checklist',
+    excerpt: 'SAVE borrowers are entering a 2026 transition window. Compare RAP, IBR, PAYE, ICR, and Tiered Standard before your servicer deadline.',
+    date: '2026-07-01',
+    slug: 'save-ending-rap-vs-save-2026',
+  },
+  {
     title: 'Understanding SAVE Plan Alternatives',
-    excerpt: 'With SAVE plan blocked by courts, learn about PAYE, IBR, and ICR alternatives.',
+    excerpt: 'With SAVE ended by court order, learn about RAP, PAYE, IBR, ICR, and Tiered Standard alternatives.',
     date: '2025-06-01',
     slug: 'save-plan-alternatives',
   },

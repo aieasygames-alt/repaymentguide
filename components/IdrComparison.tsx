@@ -105,7 +105,7 @@ export default function IdrComparison() {
               Based on your income and household size, your discretionary income ranges from{' '}
               <strong>{formatCurrency(sortedPlans[0].discretionaryIncome)}</strong> to{' '}
               <strong>{formatCurrency(sortedPlans[sortedPlans.length - 1].discretionaryIncome)}</strong>{' '}
-              depending on the plan (SAVE uses a more generous calculation).
+              depending on the plan. RAP uses AGI directly, while legacy IDR plans use discretionary income.
             </p>
           </div>
 
@@ -294,7 +294,8 @@ export default function IdrComparison() {
           <div className="mt-8 bg-yellow-50 border border-yellow-200 rounded-lg p-4">
             <h4 className="font-semibold text-yellow-900 mb-2">Important Notes</h4>
             <ul className="text-sm text-yellow-800 space-y-1">
-              <li>• SAVE plan is currently blocked by court orders as of 2024</li>
+              <li>• SAVE ended by court order on March 10, 2026; borrowers in SAVE are being moved to other options in 2026</li>
+              <li>• RAP estimates treat household members beyond the borrower as dependents; actual payments depend on your federal tax return</li>
               <li>• These are estimates. Actual payments may vary based on your specific loans</li>
               <li>• Married borrowers can file separately to exclude spouse income (except ICR)</li>
               <li>• Interest capitalization and other factors affect total cost</li>

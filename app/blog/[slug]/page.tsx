@@ -12,14 +12,94 @@ const blogPosts: Record<string, {
   excerpt: string;
   content: string;
 }> = {
+  'save-ending-rap-vs-save-2026': {
+    title: 'SAVE Is Ending: RAP vs SAVE and Your 90-Day Checklist',
+    date: '2026-07-01',
+    excerpt: 'SAVE borrowers are entering a 2026 transition window. Compare RAP, IBR, PAYE, ICR, and Tiered Standard before your servicer deadline.',
+    content: `
+# SAVE Is Ending: RAP vs SAVE and Your 90-Day Checklist
+
+The SAVE Plan is no longer just "paused." A court order ended SAVE on **March 10, 2026**, and servicers are notifying SAVE borrowers between **July 1 and August 15, 2026**. Once your notice is sent, you have **90 days** to choose another repayment plan.
+
+This guide explains the new **Repayment Assistance Plan (RAP)**, how it differs from SAVE, and what to do before your servicer's deadline.
+
+## What changed on July 1, 2026?
+
+Starting July 1, 2026, borrowers can access two new repayment options:
+
+- **RAP**: an income-driven plan based on adjusted gross income (AGI) and dependents
+- **Tiered Standard**: a fixed-payment standard plan with 10, 15, 20, or 25-year terms based on balance
+
+Borrowers who are still in SAVE should watch for a servicer notice. If you do not make an election during your 90-day window, you may be moved into a standard-style plan that can raise your payment.
+
+## RAP vs SAVE at a glance
+
+| Feature | SAVE Plan | RAP |
+|---------|-----------|-----|
+| Current status | Ended by court order | Available beginning July 1, 2026 |
+| Payment base | Discretionary income after a poverty-line exclusion | AGI, before any poverty-line exclusion |
+| Payment rate | 5% for undergraduate loans, 10% for graduate loans | 1-10% of AGI based on income tier |
+| Minimum monthly payment | Could be $0 | At least $10 |
+| Dependent adjustment | Larger family size increased the poverty-line exclusion | Monthly payment reduced by $50 per dependent |
+| Forgiveness timeline | Previously 10-25 years depending on debt and loan type | 30 years, or 120 qualifying payments for PSLF |
+| Interest treatment | Unpaid interest subsidy | Unpaid monthly interest subsidy after full, on-time payments |
+| Principal progress | Not the main feature | Matching principal payment up to $50 when needed |
+| Parent PLUS access | Limited, generally not direct | Parent PLUS consolidation loans are not eligible |
+
+## RAP payment example
+
+Assume a single borrower with no dependents has **$50,000 AGI**.
+
+- RAP uses the **more than $40,000 and not more than $50,000** tier, or **4% of AGI**
+- $50,000 x 4% = $2,000 per year
+- Estimated RAP payment: **about $167/month**
+
+That is different from SAVE because RAP does not first subtract 225% of the federal poverty guideline. For lower-income borrowers who relied on $0 SAVE payments, RAP's $10 minimum and AGI-based formula can matter a lot.
+
+## Who should compare plans carefully?
+
+### Borrowers who may dislike RAP
+
+- You had a $0 SAVE payment and cannot absorb a new monthly bill
+- You are close to IDR forgiveness under an older plan
+- You have Parent PLUS loans or consolidation loans that include Parent PLUS
+- You need the lowest possible monthly payment and may qualify for IBR
+
+### Borrowers who may like RAP
+
+- You want an income-driven plan available under the new 2026 rules
+- Your payment is lower under RAP than IBR or PAYE
+- You value the unpaid-interest waiver and matching principal benefit
+- You are pursuing PSLF and RAP is your lowest qualifying payment
+
+## Your 90-day action checklist
+
+1. **Check your servicer notice date.** Your 90-day clock starts when the notice is sent, not when you happen to read about the policy change.
+2. **Log in to StudentAid.gov.** Confirm your current repayment plan, loan types, and servicer.
+3. **Run estimates before switching.** Compare RAP, IBR, PAYE, ICR, and standard repayment using your AGI, dependents, loan balance, and PSLF status.
+4. **Watch Parent PLUS rules.** Direct Consolidation loans that include Parent PLUS loans are not eligible for RAP.
+5. **Submit your choice before the deadline.** Do not wait for automatic placement if your budget depends on an income-driven payment.
+6. **Consider auto pay.** The Department of Education announced a temporary 1% auto-pay interest-rate reduction from July 1, 2026 through June 30, 2028 for eligible borrowers.
+
+## Source notes
+
+This article uses current public guidance from the [U.S. Department of Education RAP fact sheet](https://www.ed.gov/about/news/press-release/fact-sheet-trump-administration-simplifying-student-loan-repayment), the [Department's repayment update](https://www.ed.gov/about/news/press-release/us-department-of-education-announces-student-loan-interest-rate-reduction), and the [Edfinancial/Federal Student Aid RAP page](https://edfinancial.studentaid.gov/income-driven-repaymentinformation-center/rap). Policy implementation can still change, so confirm your final choice with StudentAid.gov or your loan servicer before submitting an application.
+
+## Bottom line
+
+RAP is not a one-for-one SAVE replacement. It can help some borrowers by waiving unpaid monthly interest and supporting principal progress, but it also uses AGI directly, has a $10 minimum payment, and stretches IDR forgiveness to 30 years.
+
+Use the [IDR Calculator](/income-driven-repayment-calculator) to compare estimates, then apply or update your plan through [StudentAid.gov](https://studentaid.gov/idr).
+    `,
+  },
   'save-plan-alternatives': {
     title: 'Understanding SAVE Plan Alternatives',
     date: '2025-06-01',
-    excerpt: 'With the SAVE plan blocked by court orders as of 2024, learn about your alternative IDR options.',
+    excerpt: 'With SAVE ended by court order in 2026, learn about RAP, IBR, PAYE, ICR, and standard repayment alternatives.',
     content: `
 # Understanding SAVE Plan Alternatives
 
-With the **SAVE plan blocked by court orders** as of 2024, many borrowers are wondering what their options are. This guide explains the alternative income-driven repayment (IDR) plans available.
+With the **SAVE plan ended by court order** in 2026, many borrowers are wondering what their options are. This guide explains the alternative income-driven repayment (IDR) plans available.
 
 ## What Happened to SAVE?
 
@@ -30,9 +110,19 @@ The **SAVE (Saving on a Valuable Education)** plan was introduced as the most ge
 - 100% unpaid interest subsidy
 - Forgiveness after 10-20 years
 
-However, legal challenges have blocked its implementation, leaving borrowers in need of alternatives.
+However, a March 10, 2026 court order ended SAVE, leaving borrowers in need of alternatives during the 2026 transition window.
 
 ## Your IDR Options
+
+### RAP (Repayment Assistance Plan)
+
+**The new 2026 income-driven option** for eligible Direct Loan borrowers.
+
+- 1-10% of adjusted gross income (AGI)
+- $50 monthly payment reduction for each dependent
+- $10 minimum monthly payment
+- 30-year forgiveness timeline outside PSLF
+- Not available for consolidation loans that include Parent PLUS loans
 
 ### PAYE (Pay As You Earn)
 
@@ -73,7 +163,8 @@ However, legal challenges have blocked its implementation, leaving borrowers in 
 
 | Plan | Monthly Payment | Forgiveness | Best For |
 |------|----------------|-------------|----------|
-| SAVE | 5-10% | 10-20 years | Most borrowers (when available) |
+| RAP | 1-10% of AGI | 30 years | Eligible Direct Loan borrowers after SAVE |
+| SAVE | 5-10% | Ended | No longer available |
 | PAYE | 10% | 20 years | Newer borrowers with high debt |
 | IBR | 10-15% | 20-25 years | Older loans, separate filers |
 | ICR | 20% | 25 years | Parent PLUS loans |
@@ -105,7 +196,7 @@ Before applying, make sure you meet these requirements:
 
 You must be enrolled in an **income-driven repayment plan**:
 
-- SAVE (when available)
+- RAP
 - PAYE
 - IBR
 - ICR
@@ -191,18 +282,17 @@ Choosing the right **income-driven repayment plan** can save you thousands of do
 
 ## Deep Dive: Each Plan
 
-### 🎯 SAVE Plan (When Available)
+### RAP Plan
 
-**Lowest payments, most generous terms**
+**New 2026 income-driven plan**
 
-- **5%** of discretionary income for undergraduate loans
-- **10%** for graduate loans
-- **100%** interest subsidy (no unpaid interest capitalization)
-- Forgiveness after **10-20 years**
+- **1-10%** of AGI based on income tier
+- **$50** monthly reduction for each dependent
+- **$10** minimum monthly payment
+- Forgiveness after **30 years** outside PSLF
+- Unpaid monthly interest subsidy and matching principal benefit after full, on-time payments
 
-⚠️ **Currently blocked by courts as of 2024**
-
-> **Need alternatives while SAVE is blocked?** Our [SAVE Plan Alternatives Guide](/blog/save-plan-alternatives) explains your options in detail.
+> **Need a SAVE transition guide?** Our [SAVE Plan Alternatives Guide](/blog/save-plan-alternatives) explains your options in detail.
 
 ### 🔰 PAYE Plan
 
@@ -1282,7 +1372,7 @@ Student loan forgiveness can **eliminate your remaining balance** after meeting 
 
 ### If You Have High Debt-to-Income
 - **IDR forgiveness** (20-25 years)
-- **SAVE plan** (most generous, when available)
+- **RAP or IBR** depending on eligibility and payment estimate
 - **PSLF** if public sector (faster)
 
 ### If You Have Perkins Loans

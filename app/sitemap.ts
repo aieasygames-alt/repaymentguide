@@ -3,6 +3,7 @@ import { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 const blogPosts = [
+  'save-ending-rap-vs-save-2026',
   'save-plan-alternatives',
   'pslf-application-guide',
   'idr-plan-comparison',
@@ -21,10 +22,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://repaymentguide.com';
 
   const urls = [
-    { url: `${baseUrl}/`, lastModified: '2024-06-01', changeFrequency: 'daily' as const, priority: 1 },
-    { url: `${baseUrl}/student-loan-payment-calculator/`, lastModified: '2024-06-01', changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${baseUrl}/save-plan-calculator/`, lastModified: '2024-06-01', changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${baseUrl}/income-driven-repayment-calculator/`, lastModified: '2024-06-01', changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${baseUrl}/`, lastModified: '2026-07-01', changeFrequency: 'daily' as const, priority: 1 },
+    { url: `${baseUrl}/student-loan-payment-calculator/`, lastModified: '2026-07-01', changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${baseUrl}/save-plan-calculator/`, lastModified: '2026-07-01', changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${baseUrl}/income-driven-repayment-calculator/`, lastModified: '2026-07-01', changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${baseUrl}/pslf-calculator/`, lastModified: '2024-06-01', changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${baseUrl}/blog/`, lastModified: '2024-06-01', changeFrequency: 'daily' as const, priority: 0.7 },
     { url: `${baseUrl}/news/`, lastModified: '2024-06-01', changeFrequency: 'daily' as const, priority: 0.8 },
@@ -34,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/terms/`, lastModified: '2024-06-01', changeFrequency: 'monthly' as const, priority: 0.3 },
     ...blogPosts.map((slug) => ({
       url: `${baseUrl}/blog/${slug}/`,
-      lastModified: '2024-06-01',
+      lastModified: slug === 'save-ending-rap-vs-save-2026' ? '2026-07-01' : '2024-06-01',
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     })),
