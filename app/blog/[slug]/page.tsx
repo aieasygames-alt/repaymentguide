@@ -32,6 +32,26 @@ Starting July 1, 2026, borrowers can access two new repayment options:
 
 Borrowers who are still in SAVE should watch for a servicer notice. If you do not make an election during your 90-day window, you may be moved into a standard-style plan that can raise your payment.
 
+## How to calculate your personal 90-day deadline
+
+The 90-day clock is not the same for every SAVE borrower. Servicers are expected to send notices in waves, so your deadline depends on the date your servicer sends your notice.
+
+Do not assume your deadline is exactly 90 days after July 1, 2026. Save the notice, write down the sent date, and count 90 calendar days from that date. If your servicer gives a specific deadline in the notice, use that date.
+
+## What happens if you miss the 90-day deadline?
+
+If you do nothing, you should not expect to stay on SAVE indefinitely or be automatically moved into the lowest IDR payment. You may be placed into a standard-style repayment plan where income and family size do not lower the bill.
+
+That can be a problem if your budget depends on an income-driven payment, if you are pursuing PSLF, or if you have been in repayment for many years. Standard payments are designed to pay the loan off on a fixed schedule, not to preserve a low monthly bill.
+
+## Why Standard repayment can surprise SAVE borrowers
+
+Standard repayment is not always one simple payment amount. Borrowers with loans that were never consolidated are usually looking at a 10-year Standard plan. Borrowers with Direct Consolidation loans may have a longer Standard term based on the consolidation balance.
+
+The painful part is timing. If you entered repayment years ago, the remaining Standard schedule may be much shorter than a fresh 10-year estimate. That can make the automatic payment far higher than the payment you were used to under SAVE.
+
+For PSLF borrowers, Standard repayment also deserves extra caution. A 10-year Standard payment can count for PSLF, but longer consolidation Standard schedules generally do not help the same way. If PSLF is your goal, compare RAP, IBR, PAYE, and ICR before accepting a default placement.
+
 ## RAP vs SAVE at a glance
 
 | Feature | SAVE Plan | RAP |
@@ -71,6 +91,14 @@ That is different from SAVE because RAP does not first subtract 225% of the fede
 - Your payment is lower under RAP than IBR or PAYE
 - You value the unpaid-interest waiver and matching principal benefit
 - You are pursuing PSLF and RAP is your lowest qualifying payment
+
+## Should you wait, switch now, or compare first?
+
+For most borrowers, the best first move is not waiting until day 91. It is running the numbers before the deadline. Compare your RAP payment against IBR, PAYE, ICR, and Standard repayment, then submit a plan choice before automatic placement becomes an issue.
+
+If your income dropped since your last tax return, be ready to provide current income documentation. If you authorize IRS tax information sharing through StudentAid.gov, the IDR application may be faster because you may not need to upload income documents manually.
+
+RAP benefits also depend on payment behavior. The unpaid-interest waiver, principal match, and PSLF progress all rely on making full, on-time monthly payments under the applicable rules. Auto pay can help, but you should still monitor your servicer account after switching.
 
 ## Your 90-day action checklist
 
