@@ -1894,21 +1894,29 @@ function parseMarkdown(content: string) {
   const elements: React.ReactNode[] = [];
   let currentList: string[] = [];
   let inList = false;
+  let currentListOrdered = false;
   let tableRows: string[][] = [];
   let inTable = false;
 
   const flushList = () => {
     if (currentList.length > 0) {
-      elements.push(
+      const listItems = currentList.map((item, i) => (
+        <li key={i} className="text-gray-700 leading-relaxed">
+          {parseInline(item.replace(/^\s*(?:[-*+]|\d+\.)\s+/, '').trim())}
+        </li>
+      ));
+
+      elements.push(currentListOrdered ? (
+        <ol key={`list-${elements.length}`} className="list-decimal pl-6 space-y-2 my-4">
+          {listItems}
+        </ol>
+      ) : (
         <ul key={`list-${elements.length}`} className="space-y-2 my-4">
-          {currentList.map((item, i) => (
-            <li key={i} className="text-gray-700 leading-relaxed">
-              {parseInline(item.replace(/^\d+\.\s*/, '').replace(/^-\s*/, '').replace(/^\*+/, '').trim())}
-            </li>
-          ))}
+          {listItems}
         </ul>
-      );
+      ));
       currentList = [];
+      currentListOrdered = false;
     }
   };
 
@@ -1921,7 +1929,7 @@ function parseMarkdown(content: string) {
               <tr>
                 {tableRows[0]?.map((cell, i) => (
                   <th key={i} className="px-4 py-3 text-left text-sm font-semibold text-gray-900">
-                    {cell.trim()}
+                    {parseInline(cell)}
                   </th>
                 ))}
               </tr>
@@ -1931,7 +1939,7 @@ function parseMarkdown(content: string) {
                 <tr key={rowIndex}>
                   {row.map((cell, cellIndex) => (
                     <td key={cellIndex} className="px-4 py-3 text-sm text-gray-700">
-                      {cell.trim()}
+                      {parseInline(cell)}
                     </td>
                   ))}
                 </tr>
@@ -2013,8 +2021,13 @@ function parseMarkdown(content: string) {
         flushList();
         inTable = true;
       }
-      const cells = line.split('|').filter(c => c.trim() || c === '');
-      if (cells.length > 1) {
+      const rawCells = line.split('|').map((cell) => cell.trim());
+      const cells = rawCells.slice(
+        rawCells[0] === '' ? 1 : 0,
+        rawCells[rawCells.length - 1] === '' ? -1 : rawCells.length
+      );
+      const isDivider = cells.length > 0 && cells.every((cell) => /^:?-{3,}:?$/.test(cell));
+      if (cells.length > 1 && !isDivider) {
         tableRows.push(cells);
       }
       return;
@@ -2028,8 +2041,13 @@ function parseMarkdown(content: string) {
 
     // List items
     if (line.match(/^\s*[-*+]\s/) || line.match(/^\s*\d+\.\s/)) {
+      const isOrdered = Boolean(line.match(/^\s*\d+\.\s/));
+      if (inList && currentListOrdered !== isOrdered) {
+        flushList();
+      }
       if (!inList) {
         inList = true;
+        currentListOrdered = isOrdered;
       }
       currentList.push(line);
       return;
@@ -2114,7 +2132,6 @@ function parseInline(text: string): React.ReactNode {
 
   return <>{parts}</>;
 }
-
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = blogPosts[slug];
