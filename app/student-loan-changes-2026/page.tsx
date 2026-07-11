@@ -21,6 +21,14 @@ const faqs = [
     question: 'Can PSLF borrowers use RAP?',
     answer: 'RAP may count for PSLF if the borrower satisfies all PSLF requirements, but PSLF borrowers should compare plans carefully and confirm final eligibility with StudentAid.gov or their servicer.',
   },
+  {
+    question: 'How do I calculate my SAVE transition deadline?',
+    answer: 'Use the sent date on your servicer notice, then count the number of calendar days listed in the notice. If the notice gives a specific due date, use that date instead of estimating.',
+  },
+  {
+    question: 'Should Parent PLUS borrowers choose RAP?',
+    answer: 'Parent PLUS borrowers should be careful. Parent PLUS loans and consolidation loans that include Parent PLUS loans can have different IDR eligibility rules, so review Parent PLUS-specific options before choosing a plan.',
+  },
 ];
 
 const actionCards = [
@@ -47,6 +55,87 @@ const actionCards = [
     description: 'Parent PLUS rules remain unusually restrictive, especially around RAP and older IDR options.',
     href: '/blog/parent-plus-loan-repayment-options',
     cta: 'Review Parent PLUS options',
+  },
+];
+
+const planRows = [
+  {
+    plan: 'RAP',
+    bestFor: 'Borrowers who compare favorably under an AGI-based formula and want interest/principal protections.',
+    watchOut: 'No poverty-line exclusion, $10 minimum payment, 30-year IDR forgiveness timeline outside PSLF.',
+  },
+  {
+    plan: 'IBR',
+    bestFor: 'Borrowers who need an income-driven option and may not qualify for PAYE.',
+    watchOut: 'Payment percentage and forgiveness timeline can vary based on borrower timing and loan history.',
+  },
+  {
+    plan: 'PAYE',
+    bestFor: 'Eligible borrowers who want a payment cap and a 20-year non-PSLF forgiveness timeline.',
+    watchOut: 'Eligibility is narrower than IBR, so not every borrower can choose it.',
+  },
+  {
+    plan: 'ICR',
+    bestFor: 'Some Parent PLUS borrowers after consolidation and borrowers who do not fit other IDR plans.',
+    watchOut: 'Often has a higher payment formula than other IDR options.',
+  },
+  {
+    plan: 'Tiered Standard',
+    bestFor: 'Borrowers who want fixed payments and are not relying on IDR forgiveness.',
+    watchOut: 'May create payment shock and may be a poor fit for some forgiveness strategies.',
+  },
+];
+
+const deadlineExamples = [
+  {
+    noticeDate: 'July 1, 2026',
+    planningNote: 'Start comparing plans immediately; do not wait until the final week to apply.',
+  },
+  {
+    noticeDate: 'August 15, 2026',
+    planningNote: 'Your deadline may be later than someone notified in July, but servicer processing can still take time.',
+  },
+  {
+    noticeDate: 'A notice with a specific due date',
+    planningNote: 'Use the servicer-provided date, then save a copy of the notice for your records.',
+  },
+];
+
+const mistakeCards = [
+  {
+    title: 'Only chasing the lowest monthly payment',
+    description: 'A lower bill can still be the wrong choice if it delays forgiveness, affects PSLF progress, or leaves you in a plan you cannot sustain.',
+  },
+  {
+    title: 'Assuming RAP works like SAVE',
+    description: 'RAP uses a different formula and timeline. Run the numbers instead of assuming your old SAVE payment will carry over.',
+  },
+  {
+    title: 'Ignoring Parent PLUS rules',
+    description: 'Parent PLUS loans are often the exception to the general IDR rule. Check eligibility before relying on a calculator result.',
+  },
+  {
+    title: 'Waiting for automatic placement',
+    description: 'Automatic placement may be convenient, but it may not pick the best plan for your budget, loan type, or forgiveness goal.',
+  },
+];
+
+const borrowerPaths = [
+  {
+    label: 'Low income, no PSLF',
+    path: 'Compare RAP minimum payments against IBR/PAYE. Pay attention to whether a poverty-guideline-based plan produces a lower bill.',
+  },
+  {
+    label: 'Public service worker',
+    path: 'Start with PSLF eligibility, then compare qualifying repayment plans. A non-qualifying payment can be more expensive than it looks.',
+  },
+  {
+    label: 'High balance, rising income',
+    path: 'Look for payment caps, forgiveness timelines, and whether your future income could make RAP or ICR more expensive.',
+  },
+  {
+    label: 'Parent borrower',
+    path: 'Review consolidation history first. Then compare ICR, Standard repayment, and any PSLF strategy tied to parent employment.',
   },
 ];
 
@@ -166,6 +255,39 @@ export default function StudentLoanChanges2026Page() {
 
         <section className="py-14">
           <div className="container mx-auto px-4">
+            <div className="mb-8 max-w-3xl">
+              <h2 className="mb-3 text-3xl font-bold text-gray-900">Which repayment plan should you compare first?</h2>
+              <p className="text-lg text-gray-600">
+                There is no universal best plan. Use this table to decide what to test first in the calculator.
+              </p>
+            </div>
+            <div className="overflow-hidden rounded-2xl border bg-white shadow-sm">
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-5 py-4 text-left text-sm font-semibold text-gray-900">Plan</th>
+                      <th className="px-5 py-4 text-left text-sm font-semibold text-gray-900">Compare first if...</th>
+                      <th className="px-5 py-4 text-left text-sm font-semibold text-gray-900">Watch out for...</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100">
+                    {planRows.map((row) => (
+                      <tr key={row.plan}>
+                        <td className="px-5 py-4 font-semibold text-primary-700">{row.plan}</td>
+                        <td className="px-5 py-4 text-gray-700">{row.bestFor}</td>
+                        <td className="px-5 py-4 text-gray-700">{row.watchOut}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-14">
+          <div className="container mx-auto px-4">
             <div className="grid gap-8 lg:grid-cols-[1fr_360px]">
               <div>
                 <h2 className="mb-6 text-3xl font-bold text-gray-900">A safer 2026 repayment checklist</h2>
@@ -198,6 +320,66 @@ export default function StudentLoanChanges2026Page() {
                   </Link>
                 </div>
               </aside>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-amber-50 py-14">
+          <div className="container mx-auto px-4">
+            <div className="grid gap-8 lg:grid-cols-[360px_1fr]">
+              <div>
+                <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-amber-700">Deadline planning</p>
+                <h2 className="mb-4 text-3xl font-bold text-gray-900">Do not treat every SAVE deadline as the same date</h2>
+                <p className="text-gray-700">
+                  Your practical deadline depends on your servicer notice. The safest move is to save the notice, write down the sent date, and apply early enough for processing delays.
+                </p>
+              </div>
+              <div className="grid gap-4 md:grid-cols-3">
+                {deadlineExamples.map((example) => (
+                  <div key={example.noticeDate} className="rounded-xl border border-amber-200 bg-white p-5 shadow-sm">
+                    <h3 className="mb-2 font-bold text-amber-900">{example.noticeDate}</h3>
+                    <p className="text-sm text-gray-700">{example.planningNote}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-14">
+          <div className="container mx-auto px-4">
+            <div className="mb-8 max-w-3xl">
+              <h2 className="mb-3 text-3xl font-bold text-gray-900">Recommended path by borrower type</h2>
+              <p className="text-lg text-gray-600">
+                These are starting points, not final advice. Use them to choose which calculations and guides to open first.
+              </p>
+            </div>
+            <div className="grid gap-5 md:grid-cols-2">
+              {borrowerPaths.map((item) => (
+                <div key={item.label} className="rounded-2xl border bg-white p-6 shadow-sm">
+                  <h3 className="mb-2 text-xl font-bold text-gray-900">{item.label}</h3>
+                  <p className="text-gray-700">{item.path}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-gray-50 py-14">
+          <div className="container mx-auto px-4">
+            <div className="mb-8 max-w-3xl">
+              <h2 className="mb-3 text-3xl font-bold text-gray-900">Four mistakes to avoid during the 2026 transition</h2>
+              <p className="text-lg text-gray-600">
+                Most bad outcomes come from rushing, assuming old rules still apply, or treating plan names as interchangeable.
+              </p>
+            </div>
+            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+              {mistakeCards.map((item) => (
+                <div key={item.title} className="rounded-2xl border bg-white p-5 shadow-sm">
+                  <h3 className="mb-2 font-bold text-gray-900">{item.title}</h3>
+                  <p className="text-sm leading-6 text-gray-600">{item.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
