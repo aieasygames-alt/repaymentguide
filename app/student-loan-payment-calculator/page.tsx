@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Student Loan Payment Calculator - Calculate Monthly Payments',
   description: 'Calculate your monthly student loan payments under different repayment plans. Compare standard, graduated, and extended repayment options with detailed examples.',
   keywords: ['student loan payment calculator', 'monthly payment', 'loan calculator', 'repayment plans'],
+  alternates: {
+    canonical: '/student-loan-payment-calculator/',
+  },
   openGraph: {
     title: 'Student Loan Payment Calculator',
     description: 'Calculate your monthly student loan payments and compare repayment options',

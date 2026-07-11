@@ -25,6 +25,8 @@ import {
 
 const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899'];
 
+type ChartDataPoint = Record<string, string | number | boolean>;
+
 interface IdrPlanData {
   name: string;
   monthlyPayment: number;
@@ -49,7 +51,7 @@ export function IdrPaymentComparison({ plans }: { plans: IdrPlanData[] }) {
           <XAxis dataKey="name" tick={{ fontSize: 12 }} />
           <YAxis tickFormatter={(value) => `$${value}`} />
           <Tooltip
-            formatter={(value: any) => `$${typeof value === 'number' ? value.toFixed(0) : 0}`}
+            formatter={(value: unknown) => `$${typeof value === 'number' ? value.toFixed(0) : 0}`}
             contentStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid #ccc', borderRadius: '4px' }}
           />
           <Legend />
@@ -75,7 +77,7 @@ export function IdrTotalCostProjection({ plans }: { plans: IdrPlanData[] }) {
           <XAxis dataKey="name" tick={{ fontSize: 12 }} />
           <YAxis tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`} />
           <Tooltip
-            formatter={(value: any) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
+            formatter={(value: unknown) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
             contentStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid #ccc', borderRadius: '4px' }}
           />
           <Legend />
@@ -91,7 +93,6 @@ export function IdrForgivenessAnalysis({ plans }: { plans: IdrPlanData[] }) {
   const data = plans.map(plan => ({
     name: plan.name,
     forgiveness: plan.forgivenessAmount,
-    percentage: plan.termYears > 0 ? (plan.forgivenessAmount / (plan.totalPayments + plan.forgivenessAmount)) * 100 : 0,
   }));
 
   return (
@@ -113,7 +114,7 @@ export function IdrForgivenessAnalysis({ plans }: { plans: IdrPlanData[] }) {
             ))}
           </Pie>
           <Tooltip
-            formatter={(value: any) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
+            formatter={(value: unknown) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
             contentStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid #ccc', borderRadius: '4px' }}
           />
         </PieChart>
@@ -127,7 +128,7 @@ export function IdrIncomeSensitivity({ plans, income }: { plans: IdrPlanData[]; 
 
   const data = incomeLevels.map(inc => {
     const baseIncome = inc;
-    const yearData: any = { income: `$${(baseIncome / 1000).toFixed(0)}k` };
+    const yearData: ChartDataPoint = { income: `$${(baseIncome / 1000).toFixed(0)}k` };
 
     plans.forEach(plan => {
       const discretionaryIncome = Math.max(0, baseIncome - 15000);
@@ -145,7 +146,7 @@ export function IdrIncomeSensitivity({ plans, income }: { plans: IdrPlanData[]; 
           <XAxis dataKey="income" tick={{ fontSize: 12 }} />
           <YAxis tickFormatter={(value) => `$${value}`} />
           <Tooltip
-            formatter={(value: any) => `$${typeof value === 'number' ? value.toFixed(0) : 0}`}
+            formatter={(value: unknown) => `$${typeof value === 'number' ? value.toFixed(0) : 0}`}
             contentStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid #ccc', borderRadius: '4px' }}
           />
           <Legend />
@@ -179,10 +180,10 @@ export function IdrTermComparison({ plans }: { plans: IdrPlanData[] }) {
           <XAxis type="number" tick={{ fontSize: 12 }} />
           <YAxis type="category" dataKey="name" width={100} tick={{ fontSize: 12 }} />
           <Tooltip
-            formatter={(value: any, name?: any) => {
+            formatter={(value: unknown, name?: unknown) => {
               if (name === 'termYears') return [`${value} years`, 'Loan Term'];
               if (name === 'monthlyPayment') return [`$${typeof value === 'number' ? value.toFixed(0) : 0}`, 'Monthly Payment'];
-              return [value, name];
+              return [String(value ?? ''), String(name ?? '')];
             }}
             contentStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid #ccc', borderRadius: '4px' }}
           />
@@ -217,7 +218,7 @@ export function IdrDiscretionaryIncomeBreakdown({ plans, agi, householdSize }: {
           <XAxis dataKey="name" tick={{ fontSize: 12 }} />
           <YAxis tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`} />
           <Tooltip
-            formatter={(value: any) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
+            formatter={(value: unknown) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
             contentStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid #ccc', borderRadius: '4px' }}
           />
           <Legend />
@@ -259,7 +260,7 @@ export function IdrPlanRadar({ plans }: { plans: IdrPlanData[] }) {
 
 export function IdrPaymentTrajectory({ plans, years }: { plans: IdrPlanData[]; years: number }) {
   const trajectoryData = Array.from({ length: Math.min(years, 25) }, (_, year) => {
-    const yearData: any = { year: `Year ${year + 1}` };
+    const yearData: ChartDataPoint = { year: `Year ${year + 1}` };
 
     plans.forEach(plan => {
       // Simplified trajectory calculation
@@ -278,7 +279,7 @@ export function IdrPaymentTrajectory({ plans, years }: { plans: IdrPlanData[]; y
           <XAxis dataKey="year" tick={{ fontSize: 10 }} />
           <YAxis tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`} />
           <Tooltip
-            formatter={(value: any) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
+            formatter={(value: unknown) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
             contentStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid #ccc', borderRadius: '4px' }}
           />
           <Legend />
@@ -322,7 +323,7 @@ export function IdrCostSavingsAnalysis({ plans }: { plans: IdrPlanData[] }) {
           <XAxis dataKey="name" tick={{ fontSize: 12 }} />
           <YAxis tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`} />
           <Tooltip
-            formatter={(value: any) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
+            formatter={(value: unknown) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
             contentStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid #ccc', borderRadius: '4px' }}
           />
           <Bar dataKey="totalSavings" name="20-Year Total Cost vs Lowest">

@@ -1,5 +1,6 @@
 'use client';
 
+import type { Session } from '@supabase/supabase-js';
 import { supabase } from './supabase';
 
 function getSupabase() {
@@ -35,7 +36,7 @@ export async function getCurrentUser() {
   return user;
 }
 
-export function onAuthStateChange(callback: (event: string, session: any) => void) {
+export function onAuthStateChange(callback: (event: string, session: Session | null) => void) {
   const client = getSupabase();
   const { data: { subscription } } = client.auth.onAuthStateChange(callback);
   return subscription;

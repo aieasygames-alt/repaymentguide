@@ -6,8 +6,8 @@ import { getCurrentUser } from '@/lib/auth';
 
 interface SaveCalculationButtonProps {
   calculationType: 'payment' | 'idr' | 'pslf';
-  inputs: any;
-  results: any;
+  inputs: unknown;
+  results: unknown;
 }
 
 export default function SaveCalculationButton({

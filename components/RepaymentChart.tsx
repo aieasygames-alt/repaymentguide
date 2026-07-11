@@ -68,7 +68,7 @@ export function RepaymentComparisonChart({ principal, rate }: { principal: numbe
           <XAxis type="number" tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`} />
           <YAxis type="category" dataKey="name" width={120} tick={{ fontSize: 12 }} />
           <Tooltip
-            formatter={(value: any) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
+            formatter={(value: unknown) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
             contentStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid #ccc', borderRadius: '4px' }}
           />
           <Legend />
@@ -97,7 +97,7 @@ export function InterestAccumulationChart({ principal, rate }: { principal: numb
           <XAxis dataKey="year" tick={{ fontSize: 12 }} />
           <YAxis tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`} />
           <Tooltip
-            formatter={(value: any) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
+            formatter={(value: unknown) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
             contentStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid #ccc', borderRadius: '4px' }}
           />
           <Area type="monotone" dataKey="interest" stroke="#ef4444" fill="#ef4444" fillOpacity={0.6} name="Cumulative Interest" />
@@ -135,7 +135,7 @@ export function MonthlyPaymentComparison({ principal, rate }: { principal: numbe
           <XAxis dataKey="name" tick={{ fontSize: 12 }} />
           <YAxis tickFormatter={(value) => `$${value}`} />
           <Tooltip
-            formatter={(value: any) => `$${(typeof value === 'number' ? value : 0).toFixed(0)}`}
+            formatter={(value: unknown) => `$${(typeof value === 'number' ? value : 0).toFixed(0)}`}
             contentStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid #ccc', borderRadius: '4px' }}
           />
           <Bar dataKey="payment" name="Monthly Payment" fill="#10b981" />
@@ -184,7 +184,7 @@ export function TotalCostComparison({ principal, rate }: { principal: number; ra
             ))}
           </Pie>
           <Tooltip
-            formatter={(value: any) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
+            formatter={(value: unknown) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
             contentStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid #ccc', borderRadius: '4px' }}
           />
         </PieChart>
@@ -210,7 +210,7 @@ export function PaymentTrendChart({ principal, rate }: { principal: number; rate
           <XAxis dataKey="year" tick={{ fontSize: 12 }} />
           <YAxis tickFormatter={(value) => `$${value}`} />
           <Tooltip
-            formatter={(value: any) => `$${(typeof value === 'number' ? value : 0).toFixed(0)}`}
+            formatter={(value: unknown) => `$${(typeof value === 'number' ? value : 0).toFixed(0)}`}
             contentStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid #ccc', borderRadius: '4px' }}
           />
           <Legend />

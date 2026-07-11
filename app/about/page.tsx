@@ -5,6 +5,9 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: 'About RepaymentGuide - Student Loan Repayment Experts',
   description: 'Learn about RepaymentGuide\'s mission to help student loan borrowers make informed repayment decisions.',
+  alternates: {
+    canonical: '/about/',
+  },
   openGraph: {
     title: 'About RepaymentGuide',
     description: 'Our mission is to make student loan repayment simple and accessible for everyone.',

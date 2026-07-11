@@ -12,13 +12,17 @@ import {
   PieChart,
   Pie,
   Cell,
-  LineChart,
-  Line,
   Area,
   AreaChart
 } from 'recharts';
 
 const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899'];
+
+interface TooltipPayload {
+  payload?: {
+    examples?: string;
+  };
+}
 
 interface PslfProgressData {
   name: string;
@@ -43,8 +47,6 @@ export function PslfProgressChart({ currentPayments }: { currentPayments: number
     },
   ];
 
-  const percentage = Math.min(100, (currentPayments / 120) * 100);
-
   return (
     <div className="w-full h-72">
       <ResponsiveContainer width="100%" height="100%">
@@ -63,7 +65,7 @@ export function PslfProgressChart({ currentPayments }: { currentPayments: number
             <Cell key="remaining" fill={currentPayments >= 120 ? '#10b981' : '#e5e7eb'} />
           </Pie>
           <Tooltip
-            formatter={(value: any) => `${typeof value === 'number' ? value : 0} payments`}
+            formatter={(value: unknown) => `${typeof value === 'number' ? value : 0} payments`}
             contentStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid #ccc', borderRadius: '4px' }}
           />
         </PieChart>
@@ -82,8 +84,6 @@ export function PslfTimelineChart({ currentPayments, monthlyPayment, loanBalance
 
   const data = Array.from({ length: Math.min(10, yearsToGo) }, (_, i) => {
     const year = i + 1;
-    const paymentsThisYear = Math.min(12, remainingPayments - i * 12);
-    const balanceReduction = paymentsThisYear * monthlyPayment;
     const estimatedBalance = Math.max(0, loanBalance - (i + 1) * 12 * monthlyPayment);
 
     return {
@@ -102,7 +102,7 @@ export function PslfTimelineChart({ currentPayments, monthlyPayment, loanBalance
           <XAxis dataKey="year" tick={{ fontSize: 12 }} />
           <YAxis tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`} />
           <Tooltip
-            formatter={(value: any) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
+            formatter={(value: unknown) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
             contentStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid #ccc', borderRadius: '4px' }}
           />
           <Legend />
@@ -146,7 +146,7 @@ export function ForgivenessProjectionChart({ currentPayments, loanBalance, month
           <XAxis type="number" tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`} />
           <YAxis type="category" dataKey="name" width={120} tick={{ fontSize: 12 }} />
           <Tooltip
-            formatter={(value: any) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
+            formatter={(value: unknown) => `$${(typeof value === 'number' ? value : 0).toLocaleString()}`}
             contentStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid #ccc', borderRadius: '4px' }}
           />
           <Bar dataKey="value" name="Amount">
@@ -177,7 +177,7 @@ export function MonthlyPaymentMilestoneChart({ currentPayments }: { currentPayme
           <XAxis type="number" domain={[0, 130]} tick={{ fontSize: 12 }} />
           <YAxis type="category" dataKey="milestone" width={100} tick={{ fontSize: 11 }} />
           <Tooltip
-            formatter={(value: any, name?: any) => [`${typeof value === 'number' ? value : 0} payments`, 'Payments']}
+            formatter={(value: unknown) => [`${typeof value === 'number' ? value : 0} payments`, 'Payments']}
             contentStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid #ccc', borderRadius: '4px' }}
           />
           <Bar dataKey="payments" name="Required Payments">
@@ -231,7 +231,7 @@ export function EmploymentEligibilityChart() {
           <XAxis type="category" tick={{ fontSize: 12 }} />
           <YAxis type="category" dataKey="type" width={80} tick={{ fontSize: 12 }} />
           <Tooltip
-            formatter={(value: any, name?: any, props?: any) => [
+            formatter={(value: unknown, _name: unknown, props: TooltipPayload) => [
               value ? 'Eligible' : 'Not Eligible',
               props?.payload?.examples || ''
             ]}
@@ -283,10 +283,11 @@ export function PaymentAcceleratorChart({ currentPayments, monthlyPayment }: {
           <XAxis dataKey="name" tick={{ fontSize: 12 }} />
           <YAxis tickFormatter={(value) => `$${value}`} />
           <Tooltip
-            formatter={(value: any, name?: any) => {
-              if (name === 'monthly') return [`$${value.toFixed(0)}`, 'Monthly Payment'];
-              if (name === 'totalPaid') return [`$${(value / 1000).toFixed(1)}k`, 'Total Remaining'];
-              return [value, name];
+            formatter={(value: unknown, name?: unknown) => {
+              const numericValue = typeof value === 'number' ? value : 0;
+              if (name === 'monthly') return [`$${numericValue.toFixed(0)}`, 'Monthly Payment'];
+              if (name === 'totalPaid') return [`$${(numericValue / 1000).toFixed(1)}k`, 'Total Remaining'];
+              return [String(value ?? ''), String(name ?? '')];
             }}
             contentStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid #ccc', borderRadius: '4px' }}
           />

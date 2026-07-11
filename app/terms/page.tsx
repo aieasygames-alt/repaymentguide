@@ -5,6 +5,9 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: 'Terms of Service - RepaymentGuide',
   description: 'Terms of service for RepaymentGuide.com',
+  alternates: {
+    canonical: '/terms/',
+  },
 };
 
 export default function TermsPage() {

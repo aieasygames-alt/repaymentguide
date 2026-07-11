@@ -5,6 +5,9 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: 'Privacy Policy - RepaymentGuide',
   description: 'Privacy policy for RepaymentGuide.com',
+  alternates: {
+    canonical: '/privacy/',
+  },
 };
 
 export default function PrivacyPage() {

@@ -1907,10 +1907,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${post.title} | RepaymentGuide Blog`,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${slug}/`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: 'article',
+      url: `https://repaymentguide.com/blog/${slug}/`,
       publishedTime: post.date,
     },
   };

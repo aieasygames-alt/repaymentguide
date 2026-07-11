@@ -29,24 +29,24 @@ export type Database = {
           id: string;
           user_id: string;
           calculation_type: 'payment' | 'idr' | 'pslf';
-          inputs: any;
-          results: any;
+          inputs: unknown;
+          results: unknown;
           created_at: string;
         };
         Insert: {
           id?: string;
           user_id: string;
           calculation_type: 'payment' | 'idr' | 'pslf';
-          inputs: any;
-          results: any;
+          inputs: unknown;
+          results: unknown;
           created_at?: string;
         };
         Update: {
           id?: string;
           user_id?: string;
           calculation_type?: 'payment' | 'idr' | 'pslf';
-          inputs?: any;
-          results?: any;
+          inputs?: unknown;
+          results?: unknown;
           created_at?: string;
         };
       };

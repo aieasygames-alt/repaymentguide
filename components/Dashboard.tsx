@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import type { User } from '@supabase/supabase-js';
 import { getCurrentUser, signOut, onAuthStateChange, signInWithGoogle } from '@/lib/auth';
 import { getCalculations, deleteCalculation } from '@/lib/calculations';
 import type { Database } from '@/lib/supabase';
@@ -8,13 +9,29 @@ import type { Database } from '@/lib/supabase';
 type Calculation = Database['public']['Tables']['calculations']['Row'];
 
 export default function Dashboard() {
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<User | null>(null);
   const [calculations, setCalculations] = useState<Calculation[]>([]);
   const [loading, setLoading] = useState(true);
 
+  const loadCalculations = useCallback(async () => {
+    try {
+      const data = await getCalculations();
+      setCalculations(data);
+    } catch (error) {
+      console.error('Failed to load calculations:', error);
+    }
+  }, []);
+
   useEffect(() => {
     // Check initial auth state
-    getCurrentUser().then(setUser).finally(() => setLoading(false));
+    getCurrentUser()
+      .then((currentUser) => {
+        setUser(currentUser);
+        if (currentUser) {
+          loadCalculations();
+        }
+      })
+      .finally(() => setLoading(false));
 
     // Listen for auth changes
     const subscription = onAuthStateChange((event, session) => {
@@ -29,16 +46,7 @@ export default function Dashboard() {
     return () => {
       subscription.unsubscribe();
     };
-  }, []);
-
-  const loadCalculations = async () => {
-    try {
-      const data = await getCalculations();
-      setCalculations(data);
-    } catch (error) {
-      console.error('Failed to load calculations:', error);
-    }
-  };
+  }, [loadCalculations]);
 
   const handleDelete = async (id: string) => {
     try {
@@ -61,15 +69,6 @@ export default function Dashboard() {
     } catch (error) {
       console.error('Failed to sign in:', error);
     }
-  };
-
-  const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(amount);
   };
 
   const getCalculationTypeLabel = (type: string) => {

@@ -1,10 +1,15 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact Us - RepaymentGuide',
   description: 'Get in touch with RepaymentGuide for questions, feedback, or support.',
+  alternates: {
+    canonical: '/contact/',
+  },
   openGraph: {
     title: 'Contact RepaymentGuide',
     description: 'We\'re here to help with your student loan questions.',
@@ -36,7 +41,9 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
-                <p className="text-gray-600 text-sm">support@repaymentguide.com</p>
+                <a href="mailto:gachiawiki@gmail.com" className="text-primary-600 hover:text-primary-700 text-sm">
+                  gachiawiki@gmail.com
+                </a>
               </div>
 
               <div className="text-center">
@@ -62,81 +69,17 @@ export default function ContactPage() {
 
             <div className="bg-white border rounded-lg p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-              <form className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    placeholder="Your name"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    placeholder="your@email.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    Subject
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  >
-                    <option value="">Select a topic</option>
-                    <option value="calculator">Calculator Question</option>
-                    <option value="idr">IDR Plan Help</option>
-                    <option value="pslf">PSLF Question</option>
-                    <option value="feedback">Feedback</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    placeholder="How can we help you?"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition"
-                >
-                  Send Message
-                </button>
-              </form>
+              <ContactForm />
 
               <p className="text-sm text-gray-500 mt-6 text-center">
                 For fastest answers to common questions, check out our{' '}
-                <a href="/blog" className="text-primary-600 hover:text-primary-700">
+                <Link href="/blog" className="text-primary-600 hover:text-primary-700">
                   blog articles
-                </a>
+                </Link>
                 {' '}and{' '}
-                <a href="/student-loan-payment-calculator" className="text-primary-600 hover:text-primary-700">
+                <Link href="/student-loan-payment-calculator" className="text-primary-600 hover:text-primary-700">
                   calculators
-                </a>.
+                </Link>.
               </p>
             </div>
           </div>

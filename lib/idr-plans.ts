@@ -1,5 +1,7 @@
+export type IdrPlanId = 'rap' | 'save' | 'paye' | 'ibr' | 'icr';
+
 export interface IdrPlan {
-  id: string;
+  id: IdrPlanId;
   name: string;
   fullName: string;
   monthlyPayment: string; // % of discretionary income
@@ -140,24 +142,24 @@ export const idrPlans: IdrPlan[] = [
 ];
 
 /**
- * Federal Poverty Line (2024, contiguous US)
+ * 2026 HHS poverty guidelines for the 48 contiguous states and DC.
  */
-export const federalPovertyLine2024: Record<string, number> = {
-  '1': 15180,
-  '2': 20580,
-  '3': 25920,
-  '4': 31280,
-  '5': 36640,
-  '6': 42000,
-  '7': 47360,
-  '8': 52720,
+export const federalPovertyLine2026: Record<string, number> = {
+  '1': 15960,
+  '2': 21640,
+  '3': 27320,
+  '4': 33000,
+  '5': 38680,
+  '6': 44360,
+  '7': 50040,
+  '8': 55720,
 };
 
 export function getPovertyLine(householdSize: number): number {
   if (householdSize <= 8) {
-    return federalPovertyLine2024[String(householdSize)] || federalPovertyLine2024['1'];
+    return federalPovertyLine2026[String(householdSize)] || federalPovertyLine2026['1'];
   }
-  return federalPovertyLine2024['8'] + (householdSize - 8) * 5360;
+  return federalPovertyLine2026['8'] + (householdSize - 8) * 5680;
 }
 
 /**
@@ -182,7 +184,7 @@ export function calculateDiscretionaryIncome(
 export function calculateIdrPayment(
   agi: number,
   householdSize: number,
-  planType: 'rap' | 'save' | 'paye' | 'ibr' | 'icr'
+  planType: IdrPlanId
 ): {
   monthlyPayment: number;
   annualPayment: number;

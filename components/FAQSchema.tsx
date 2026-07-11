@@ -1,5 +1,3 @@
-import { ReactNode } from 'react';
-
 interface FAQItem {
   question: string;
   answer: string;

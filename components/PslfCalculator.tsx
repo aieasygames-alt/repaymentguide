@@ -18,12 +18,15 @@ interface PslfResult {
   isEligible: boolean;
 }
 
+type EmploymentType = 'government' | 'nonprofit' | 'other';
+type LoanType = 'direct' | 'ffel' | 'perkins' | 'other';
+
 export default function PslfCalculator() {
   const [loanBalance, setLoanBalance] = useState('50000');
   const [qualifyingPayments, setQualifyingPayments] = useState('36');
   const [monthlyPayment, setMonthlyPayment] = useState('300');
-  const [employmentType, setEmploymentType] = useState<'government' | 'nonprofit' | 'other'>('government');
-  const [loanType, setLoanType] = useState<'direct' | 'ffel' | 'perkins' | 'other'>('direct');
+  const [employmentType, setEmploymentType] = useState<EmploymentType>('government');
+  const [loanType, setLoanType] = useState<LoanType>('direct');
   const [showResults, setShowResults] = useState(false);
 
   const calculatePslf = (): PslfResult => {
@@ -143,7 +146,7 @@ export default function PslfCalculator() {
                 name="employment"
                 value="government"
                 checked={employmentType === 'government'}
-                onChange={(e) => setEmploymentType(e.target.value as any)}
+                onChange={(e) => setEmploymentType(e.target.value as EmploymentType)}
                 className="mr-2"
               />
               <span>Government (federal, state, local, tribal)</span>
@@ -154,7 +157,7 @@ export default function PslfCalculator() {
                 name="employment"
                 value="nonprofit"
                 checked={employmentType === 'nonprofit'}
-                onChange={(e) => setEmploymentType(e.target.value as any)}
+                onChange={(e) => setEmploymentType(e.target.value as EmploymentType)}
                 className="mr-2"
               />
               <span>501(c)(3) Nonprofit organization</span>
@@ -165,7 +168,7 @@ export default function PslfCalculator() {
                 name="employment"
                 value="other"
                 checked={employmentType === 'other'}
-                onChange={(e) => setEmploymentType(e.target.value as any)}
+                onChange={(e) => setEmploymentType(e.target.value as EmploymentType)}
                 className="mr-2"
               />
               <span>Other employment</span>
@@ -184,7 +187,7 @@ export default function PslfCalculator() {
                 name="loanType"
                 value="direct"
                 checked={loanType === 'direct'}
-                onChange={(e) => setLoanType(e.target.value as any)}
+                onChange={(e) => setLoanType(e.target.value as LoanType)}
                 className="mr-2"
               />
               <span>Direct Loans (William D. Ford)</span>
@@ -195,7 +198,7 @@ export default function PslfCalculator() {
                 name="loanType"
                 value="ffel"
                 checked={loanType === 'ffel'}
-                onChange={(e) => setLoanType(e.target.value as any)}
+                onChange={(e) => setLoanType(e.target.value as LoanType)}
                 className="mr-2"
               />
               <span>FFEL Loans (must consolidate to Direct Loans)</span>
@@ -206,7 +209,7 @@ export default function PslfCalculator() {
                 name="loanType"
                 value="perkins"
                 checked={loanType === 'perkins'}
-                onChange={(e) => setLoanType(e.target.value as any)}
+                onChange={(e) => setLoanType(e.target.value as LoanType)}
                 className="mr-2"
               />
               <span>Perkins Loans (must consolidate to Direct Loans)</span>
@@ -217,7 +220,7 @@ export default function PslfCalculator() {
                 name="loanType"
                 value="other"
                 checked={loanType === 'other'}
-                onChange={(e) => setLoanType(e.target.value as any)}
+                onChange={(e) => setLoanType(e.target.value as LoanType)}
                 className="mr-2"
               />
               <span>Other loans</span>

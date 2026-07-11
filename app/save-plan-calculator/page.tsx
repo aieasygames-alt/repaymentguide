@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'SAVE Plan Alternatives 2026 - Compare RAP, IBR, PAYE & ICR',
   description: 'SAVE ended in 2026. Compare RAP, IBR, PAYE, ICR, and standard repayment options before your 90-day servicer deadline.',
   keywords: ['SAVE plan ending', 'RAP plan', 'IDR plans', 'PAYE', 'IBR', 'ICR', 'income driven repayment', 'student loan alternatives'],
+  alternates: {
+    canonical: '/save-plan-calculator/',
+  },
   openGraph: {
     title: 'SAVE Plan Calculator & Alternatives',
     description: 'Compare SAVE with other IDR plans and find your best option',

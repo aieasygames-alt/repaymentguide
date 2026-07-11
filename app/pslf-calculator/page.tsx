@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'PSLF Calculator - Public Service Loan Forgiveness Estimator',
   description: 'Estimate your Public Service Loan Forgiveness amount. Track your progress toward 120 qualifying payments with detailed guidance.',
   keywords: ['PSLF calculator', 'public service loan forgiveness', 'loan forgiveness', 'PSLF'],
+  alternates: {
+    canonical: '/pslf-calculator/',
+  },
   openGraph: {
     title: 'PSLF Calculator - Estimate Your Forgiveness',
     description: 'Calculate your Public Service Loan Forgiveness amount',

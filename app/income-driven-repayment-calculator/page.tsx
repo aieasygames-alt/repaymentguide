@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'IDR Calculator - Compare RAP, IBR, PAYE, ICR & SAVE',
   description: 'Calculate estimated payments under RAP, SAVE, PAYE, IBR, and ICR plans. Compare income-driven repayment options after the 2026 SAVE transition.',
   keywords: ['IDR calculator', 'income driven repayment', 'RAP', 'SAVE', 'PAYE', 'IBR', 'ICR'],
+  alternates: {
+    canonical: '/income-driven-repayment-calculator/',
+  },
   openGraph: {
     title: 'IDR Calculator - Compare All Plans',
     description: 'Find the best income-driven repayment plan',

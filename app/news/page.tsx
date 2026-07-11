@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'SAVE Plan News & Updates - Latest Student Loan News',
   description: 'Stay updated on SAVE plan changes, student loan news, and repayment policy updates.',
   keywords: ['SAVE plan news', 'student loan updates', 'IDR news', 'PSLF updates'],
+  alternates: {
+    canonical: '/news/',
+  },
   openGraph: {
     title: 'SAVE Plan News & Updates',
     description: 'Latest student loan repayment news',

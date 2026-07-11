@@ -3,7 +3,6 @@
 import { useState, FormEvent } from 'react';
 import {
   idrPlans,
-  type IdrPlan,
   calculateIdrPayment,
 } from '@/lib/idr-plans';
 import {
@@ -42,7 +41,7 @@ export default function IdrComparison() {
 
   const planCalculations = idrPlans.map((plan) => ({
     plan,
-    ...calculateIdrPayment(agiNum, householdSizeNum, plan.id as any),
+    ...calculateIdrPayment(agiNum, householdSizeNum, plan.id),
   }));
 
   const sortedPlans = [...planCalculations].sort((a, b) => a.monthlyPayment - b.monthlyPayment);

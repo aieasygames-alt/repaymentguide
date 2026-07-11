@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://repaymentguide.com"),
   title: "RepaymentGuide - Student Loan Payment Calculator & IDR Plan Comparison",
   description: "Calculate your student loan payments, compare IDR plans including RAP, SAVE, PAYE, IBR, and ICR, and estimate PSLF forgiveness. Free tools for federal student loan borrowers.",
   keywords: ["student loan calculator", "IDR plans", "RAP plan", "SAVE plan", "PSLF", "student loan repayment"],
@@ -27,9 +28,6 @@ export const metadata: Metadata = {
     description: "Free tools to calculate payments and compare repayment plans",
     images: ["https://repaymentguide.com/images/og-image.png"],
   },
-  alternates: {
-    canonical: "https://repaymentguide.com",
-  },
 };
 
 const jsonLd = {
@@ -49,7 +47,7 @@ const jsonLd = {
     url: 'https://repaymentguide.com',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://repaymentguide.com/logo.png',
+      url: 'https://repaymentguide.com/images/logo.png',
       width: 200,
       height: 60,
     },

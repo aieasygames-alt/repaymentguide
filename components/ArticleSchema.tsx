@@ -13,7 +13,7 @@ export function ArticleSchema({ title, description, date, url, author = 'Repayme
     '@type': 'Article',
     headline: title,
     description: description,
-    image: image || 'https://repaymentguide.com/og-image.jpg',
+    image: image || 'https://repaymentguide.com/images/og-image.png',
     datePublished: date,
     dateModified: date,
     author: {
@@ -27,7 +27,7 @@ export function ArticleSchema({ title, description, date, url, author = 'Repayme
       url: 'https://repaymentguide.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://repaymentguide.com/logo.png',
+        url: 'https://repaymentguide.com/images/logo.png',
         width: 200,
         height: 60,
       },

@@ -6,6 +6,10 @@ import Dashboard from '@/components/Dashboard';
 export const metadata: Metadata = {
   title: 'Dashboard - RepaymentGuide',
   description: 'View your saved calculations and account settings',
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function DashboardPage() {

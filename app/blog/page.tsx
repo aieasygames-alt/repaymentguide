@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Blog - Student Loan Repayment Guides & Tips',
   description: 'Expert guides on student loan repayment, IDR plans, PSLF, and saving money on your student loans.',
   keywords: ['student loan blog', 'repayment tips', 'IDR guides', 'PSLF help'],
+  alternates: {
+    canonical: '/blog/',
+  },
   openGraph: {
     title: 'RepaymentGuide Blog',
     description: 'Student loan repayment guides and tips',
