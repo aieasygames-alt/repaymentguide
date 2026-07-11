@@ -28,8 +28,8 @@ export default function HomePage() {
               <p className="text-gray-700">
                 SAVE borrowers are being notified to choose another plan within 90 days. Compare RAP, IBR, PAYE, ICR, and standard repayment before your servicer deadline.
               </p>
-              <Link href="/blog/save-ending-rap-vs-save-2026" className="inline-block mt-2 text-primary-700 font-semibold hover:text-primary-800">
-                Read the 90-day checklist →
+              <Link href="/student-loan-changes-2026" className="inline-block mt-2 text-primary-700 font-semibold hover:text-primary-800">
+                Start with the 2026 changes guide →
               </Link>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
