@@ -12,6 +12,8 @@ export default function Footer() {
               <li><Link href="/save-plan-calculator" className="text-gray-600 hover:text-primary-600">SAVE Plan Calculator</Link></li>
               <li><Link href="/income-driven-repayment-calculator" className="text-gray-600 hover:text-primary-600">IDR Calculator</Link></li>
               <li><Link href="/pslf-calculator" className="text-gray-600 hover:text-primary-600">PSLF Calculator</Link></li>
+              <li><Link href="/save-90-day-deadline-calculator" className="text-gray-600 hover:text-primary-600">SAVE Deadline Tool</Link></li>
+              <li><Link href="/repayment-plan-recommendation" className="text-gray-600 hover:text-primary-600">Plan Recommendation</Link></li>
             </ul>
           </div>
 
@@ -20,6 +22,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/blog" className="text-gray-600 hover:text-primary-600">Blog</Link></li>
               <li><Link href="/student-loan-changes-2026" className="text-gray-600 hover:text-primary-600">2026 Changes Guide</Link></li>
+              <li><Link href="/parent-plus-rap-eligibility" className="text-gray-600 hover:text-primary-600">Parent PLUS Checker</Link></li>
               <li><Link href="/news" className="text-gray-600 hover:text-primary-600">News & Updates</Link></li>
               <li><Link href="/about" className="text-gray-600 hover:text-primary-600">About Us</Link></li>
               <li><Link href="/contact" className="text-gray-600 hover:text-primary-600">Contact</Link></li>

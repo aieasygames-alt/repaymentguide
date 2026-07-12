@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://repaymentguide.com"),
+  verification: process.env.NEXT_PUBLIC_GSC_VERIFICATION
+    ? {
+        google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
+      }
+    : undefined,
   title: "RepaymentGuide - Student Loan Payment Calculator & IDR Plan Comparison",
   description: "Calculate your student loan payments, compare IDR plans including RAP, SAVE, PAYE, IBR, and ICR, and estimate PSLF forgiveness. Free tools for federal student loan borrowers.",
   keywords: ["student loan calculator", "IDR plans", "RAP plan", "SAVE plan", "PSLF", "student loan repayment"],

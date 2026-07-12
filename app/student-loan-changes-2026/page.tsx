@@ -139,6 +139,24 @@ const borrowerPaths = [
   },
 ];
 
+const decisionTools = [
+  {
+    title: 'SAVE 90-Day Deadline Calculator',
+    description: 'Enter your servicer notice date and get an estimated deadline plus planning milestones.',
+    href: '/save-90-day-deadline-calculator',
+  },
+  {
+    title: 'RAP vs IBR vs PAYE Recommendation Tool',
+    description: 'Answer a few questions to see which repayment plans deserve your first comparison.',
+    href: '/repayment-plan-recommendation',
+  },
+  {
+    title: 'Parent PLUS RAP Eligibility Checker',
+    description: 'Check the Parent PLUS-specific questions that can change your repayment path.',
+    href: '/parent-plus-rap-eligibility',
+  },
+];
+
 export const metadata: Metadata = {
   title: '2026 Student Loan Changes - SAVE, RAP, IBR & PSLF Guide',
   description: 'A practical 2026 student loan repayment guide for SAVE borrowers, RAP, IBR, PAYE, ICR, PSLF, Parent PLUS, and default recovery decisions.',
@@ -282,6 +300,26 @@ export default function StudentLoanChanges2026Page() {
                   </tbody>
                 </table>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-primary-50 py-14">
+          <div className="container mx-auto px-4">
+            <div className="mb-8 max-w-3xl">
+              <h2 className="mb-3 text-3xl font-bold text-gray-900">Use the decision tools</h2>
+              <p className="text-lg text-gray-600">
+                These tools turn the 2026 rules into concrete next steps: deadline timing, plan comparison order, and Parent PLUS eligibility checks.
+              </p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-3">
+              {decisionTools.map((tool) => (
+                <Link key={tool.href} href={tool.href} className="rounded-2xl border bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                  <h3 className="mb-2 text-xl font-bold text-primary-900">{tool.title}</h3>
+                  <p className="mb-4 text-gray-600">{tool.description}</p>
+                  <span className="font-semibold text-primary-700">Open tool →</span>
+                </Link>
+              ))}
             </div>
           </div>
         </section>

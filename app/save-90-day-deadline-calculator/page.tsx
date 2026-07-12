@@ -1,0 +1,96 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import SaveDeadlineCalculator from '@/components/SaveDeadlineCalculator';
+import { FAQSchema } from '@/components/FAQSchema';
+
+const faqs = [
+  {
+    question: 'When does the SAVE 90-day deadline start?',
+    answer: 'Use the sent date on your servicer notice, unless the notice gives a specific due date. If the notice gives a specific deadline, rely on that deadline instead of an estimate.',
+  },
+  {
+    question: 'Are the 90 days calendar days or business days?',
+    answer: 'Treat the window as calendar days unless your servicer notice says otherwise. Save the notice and verify the deadline inside your servicer account.',
+  },
+  {
+    question: 'What should I do before the final week?',
+    answer: 'Compare plans, submit your repayment choice, save confirmation screenshots, and check that your servicer processed the change before your deadline.',
+  },
+];
+
+export const metadata: Metadata = {
+  title: 'SAVE 90-Day Deadline Calculator - 2026 Student Loan Tool',
+  description: 'Calculate your estimated SAVE transition deadline from your servicer notice date and plan a safer timeline for choosing RAP, IBR, PAYE, ICR, or Standard repayment.',
+  keywords: ['SAVE 90 day deadline', 'SAVE transition deadline calculator', 'SAVE ending 2026', 'student loan deadline calculator'],
+  alternates: {
+    canonical: '/save-90-day-deadline-calculator/',
+  },
+  openGraph: {
+    title: 'SAVE 90-Day Deadline Calculator',
+    description: 'Estimate your SAVE transition deadline and planning milestones.',
+    url: 'https://repaymentguide.com/save-90-day-deadline-calculator/',
+  },
+};
+
+export default function SaveDeadlineCalculatorPage() {
+  return (
+    <>
+      <FAQSchema faqs={faqs} />
+      <Header />
+      <main className="flex-1">
+        <section className="bg-gradient-to-br from-amber-50 to-primary-100 py-14">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl">
+              <p className="mb-3 inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-amber-800 ring-1 ring-amber-200">
+                SAVE transition planning tool
+              </p>
+              <h1 className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl">SAVE 90-Day Deadline Calculator</h1>
+              <p className="max-w-3xl text-xl text-gray-700">
+                Estimate the date by which you should choose a replacement repayment plan after receiving a SAVE transition notice.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12">
+          <div className="container mx-auto px-4">
+            <SaveDeadlineCalculator />
+
+            <div className="mx-auto mt-12 max-w-4xl space-y-8">
+              <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 text-amber-900">
+                <p className="font-semibold">Important disclaimer</p>
+                <p className="mt-2 text-sm">
+                  This tool provides planning estimates, not legal, financial, or servicer-specific advice. Your servicer notice and StudentAid.gov account control your final deadline and repayment options.
+                </p>
+              </div>
+
+              <section className="rounded-2xl border bg-white p-6">
+                <h2 className="mb-4 text-2xl font-bold text-gray-900">What to do after calculating your date</h2>
+                <ol className="space-y-3 text-gray-700">
+                  <li><strong>1. Save your notice.</strong> Keep the email, letter, or account message that shows the sent date and any due date.</li>
+                  <li><strong>2. Compare plans early.</strong> Run RAP, IBR, PAYE, ICR, and Standard estimates before waiting on servicer processing.</li>
+                  <li><strong>3. Submit before the final two weeks.</strong> Waiting until the deadline increases the risk of processing delays or payment shock.</li>
+                  <li><strong>4. Verify the new bill.</strong> After submitting, check that your servicer applied the plan you selected.</li>
+                </ol>
+              </section>
+
+              <div className="grid gap-6 md:grid-cols-2">
+                <Link href="/income-driven-repayment-calculator" className="rounded-2xl border bg-primary-50 p-6 transition hover:shadow-md">
+                  <h3 className="mb-2 text-xl font-bold text-primary-900">Compare IDR plans next</h3>
+                  <p className="text-primary-800">Estimate RAP, IBR, PAYE, ICR, and SAVE-era comparisons with your income and household size.</p>
+                </Link>
+                <Link href="/repayment-plan-recommendation" className="rounded-2xl border bg-white p-6 transition hover:shadow-md">
+                  <h3 className="mb-2 text-xl font-bold text-gray-900">Get a plan recommendation path</h3>
+                  <p className="text-gray-600">Answer a few questions to see which repayment plans to compare first.</p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}
