@@ -22,6 +22,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/blog" className="text-gray-600 hover:text-primary-600">Blog</Link></li>
               <li><Link href="/student-loan-changes-2026" className="text-gray-600 hover:text-primary-600">2026 Changes Guide</Link></li>
+              <li><Link href="/student-loan-faq" className="text-gray-600 hover:text-primary-600">Student Loan FAQ</Link></li>
               <li><Link href="/parent-plus-rap-eligibility" className="text-gray-600 hover:text-primary-600">Parent PLUS Checker</Link></li>
               <li><Link href="/news" className="text-gray-600 hover:text-primary-600">News & Updates</Link></li>
               <li><Link href="/about" className="text-gray-600 hover:text-primary-600">About Us</Link></li>

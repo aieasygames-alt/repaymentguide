@@ -71,16 +71,22 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
               <ContactForm />
 
-              <p className="text-sm text-gray-500 mt-6 text-center">
-                For fastest answers to common questions, check out our{' '}
-                <Link href="/blog" className="text-primary-600 hover:text-primary-700">
-                  blog articles
-                </Link>
-                {' '}and{' '}
-                <Link href="/student-loan-payment-calculator" className="text-primary-600 hover:text-primary-700">
-                  calculators
-                </Link>.
-              </p>
+              <div className="mt-6 rounded-xl bg-gray-50 p-4 text-sm text-gray-600">
+                <p>
+                  Please do not include Social Security numbers, Federal Student Aid login details, full account
+                  numbers, or other sensitive personal information.
+                </p>
+                <p className="mt-3">
+                  For fastest answers to common questions, check out our{' '}
+                  <Link href="/blog" className="text-primary-600 hover:text-primary-700">
+                    blog articles
+                  </Link>
+                  {' '}and{' '}
+                  <Link href="/student-loan-payment-calculator" className="text-primary-600 hover:text-primary-700">
+                    calculators
+                  </Link>.
+                </p>
+              </div>
             </div>
           </div>
         </div>

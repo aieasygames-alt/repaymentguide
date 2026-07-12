@@ -91,6 +91,22 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Popular Questions */}
+        <section className="bg-slate-50 py-16">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-primary-700">Popular borrower questions</p>
+              <h2 className="text-3xl font-bold text-gray-900">Not sure where to start?</h2>
+              <p className="mt-4 text-gray-600">
+                Start with short answers for SAVE deadlines, RAP vs IBR, Parent PLUS, PSLF, default, and married filing separately scenarios.
+              </p>
+              <Link href="/student-loan-faq" className="mt-6 inline-block rounded-lg bg-slate-900 px-6 py-3 font-semibold text-white transition hover:bg-slate-800">
+                Browse the Student Loan FAQ
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="bg-primary-600 py-16">
           <div className="container mx-auto px-4 text-center">

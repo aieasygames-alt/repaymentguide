@@ -18,7 +18,7 @@ export default function PrivacyPage() {
         <div className="container mx-auto px-4 max-w-3xl">
           <h1 className="text-4xl font-bold mb-6">Privacy Policy</h1>
           <div className="prose prose-lg">
-            <p>Last updated: June 2024</p>
+            <p>Last updated: July 12, 2026</p>
 
             <h2 className="text-2xl font-semibold mt-6 mb-3">Information We Collect</h2>
             <p>
@@ -26,11 +26,21 @@ export default function PrivacyPage() {
               calculators or contact us. This may include loan balances, income information, and
               contact details.
             </p>
+            <p>
+              If you submit the contact form, we may collect your name, email address, selected topic,
+              message, the page you submitted from, and basic anti-spam signals. Please do not send
+              Social Security numbers, account numbers, Federal Student Aid login details, or other
+              sensitive personal information through the contact form.
+            </p>
 
             <h2 className="text-2xl font-semibold mt-6 mb-3">How We Use Your Information</h2>
             <p>
               We use your information to provide calculator results, improve our services, and respond
               to inquiries. We do not sell your personal data to third parties.
+            </p>
+            <p>
+              Contact form submissions may be processed by email delivery, webhook, hosting, or spam
+              prevention providers we configure to operate the site.
             </p>
 
             <h2 className="text-2xl font-semibold mt-6 mb-3">Cookies and Analytics</h2>
