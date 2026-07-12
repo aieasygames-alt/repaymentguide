@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import IdrComparison from '@/components/IdrComparison';
 import { FAQSchema } from '@/components/FAQSchema';
+import { CalculatorDisclosure, officialStudentLoanSources } from '@/components/TrustSignals';
 
 export const metadata: Metadata = {
   title: 'SAVE Plan Alternatives 2026 - Compare RAP, IBR, PAYE & ICR',
@@ -61,6 +62,24 @@ export default function SavePlanCalculatorPage() {
         <div className="container mx-auto px-4 py-12">
           {/* Calculator */}
           <IdrComparison />
+
+          <div className="mt-8 max-w-4xl mx-auto">
+            <CalculatorDisclosure
+              title="SAVE transition calculation assumptions"
+              assumptions={[
+                'SAVE is treated as ended for planning purposes based on the 2026 transition guidance already reflected on this site.',
+                'RAP comparisons use public AGI-tier guidance, dependent reductions, and the stated minimum payment.',
+                'This page helps compare replacement options, but your servicer notice controls your actual deadline and next-step requirements.',
+                'Parent PLUS and consolidation history can materially change which plans are available.',
+              ]}
+              sources={[
+                officialStudentLoanSources.edRapFactSheet,
+                officialStudentLoanSources.edRateUpdate,
+                officialStudentLoanSources.studentAidRepaymentPlans,
+                officialStudentLoanSources.idrApplication,
+              ]}
+            />
+          </div>
 
           {/* Detailed Content */}
           <div className="mt-16 max-w-4xl mx-auto space-y-12">

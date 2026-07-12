@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import RepaymentRecommendationFlow from '@/components/RepaymentRecommendationFlow';
 import { FAQSchema } from '@/components/FAQSchema';
+import { CalculatorDisclosure, officialStudentLoanSources } from '@/components/TrustSignals';
 
 const faqs = [
   {
@@ -55,12 +56,20 @@ export default function RepaymentPlanRecommendationPage() {
 
         <section className="py-12">
           <div className="container mx-auto px-4 space-y-8">
-            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 text-amber-900">
-              <p className="font-semibold">Important disclaimer</p>
-              <p className="mt-2 text-sm">
-                This recommendation flow is a prioritization aid, not a final eligibility decision. Confirm final plan availability, payment amount, and PSLF treatment with StudentAid.gov or your loan servicer.
-              </p>
-            </div>
+            <CalculatorDisclosure
+              title="Recommendation flow assumptions"
+              assumptions={[
+                'The flow prioritizes which plans to compare first; it does not choose a final repayment plan for you.',
+                'PSLF strategy, Parent PLUS history, consolidation status, tax filing status, and income documentation can change the best next step.',
+                'Final plan availability, monthly payment, and PSLF treatment must be confirmed through official channels.',
+              ]}
+              sources={[
+                officialStudentLoanSources.studentAidRepaymentPlans,
+                officialStudentLoanSources.idrApplication,
+                officialStudentLoanSources.pslfHelpTool,
+                officialStudentLoanSources.edRapFactSheet,
+              ]}
+            />
             <RepaymentRecommendationFlow />
           </div>
         </section>

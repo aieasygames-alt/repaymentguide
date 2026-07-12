@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import PslfCalculator from '@/components/PslfCalculator';
 import Link from 'next/link';
 import { FAQSchema } from '@/components/FAQSchema';
+import { CalculatorDisclosure, officialStudentLoanSources } from '@/components/TrustSignals';
 
 export const metadata: Metadata = {
   title: 'PSLF Calculator - Public Service Loan Forgiveness Estimator',
@@ -65,6 +66,21 @@ export default function PslfCalculatorPage() {
         <div className="container mx-auto px-4 py-12">
           {/* Calculator */}
           <PslfCalculator />
+
+          <div className="mt-8 max-w-4xl mx-auto">
+            <CalculatorDisclosure
+              assumptions={[
+                'PSLF estimates assume qualifying employment, eligible Direct Loans, and qualifying repayment plan participation for the months you count.',
+                'The tool does not verify employer eligibility, loan type, consolidation history, or official qualifying payment counts.',
+                'Only your official PSLF records, servicer records, and StudentAid.gov account can confirm final forgiveness eligibility.',
+              ]}
+              sources={[
+                officialStudentLoanSources.pslfHelpTool,
+                officialStudentLoanSources.studentAidRepaymentPlans,
+                officialStudentLoanSources.idrApplication,
+              ]}
+            />
+          </div>
 
           {/* Detailed Content */}
           <div className="mt-16 max-w-4xl mx-auto space-y-12">

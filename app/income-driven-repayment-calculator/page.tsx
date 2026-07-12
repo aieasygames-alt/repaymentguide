@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import IdrComparison from '@/components/IdrComparison';
 import Link from 'next/link';
 import { FAQSchema } from '@/components/FAQSchema';
+import { CalculatorDisclosure, officialStudentLoanSources } from '@/components/TrustSignals';
 
 export const metadata: Metadata = {
   title: 'IDR Calculator - Compare RAP, IBR, PAYE, ICR & SAVE',
@@ -65,6 +66,23 @@ export default function IdrCalculatorPage() {
         <div className="container mx-auto px-4 py-12">
           {/* Calculator */}
           <IdrComparison />
+
+          <div className="mt-8 max-w-4xl mx-auto">
+            <CalculatorDisclosure
+              assumptions={[
+                'Legacy IDR estimates use AGI, family size, state, and poverty-guideline allowances where applicable.',
+                'RAP estimates use AGI-based tiers and the dependent reduction described in current public guidance.',
+                'The calculator does not make final eligibility decisions for PAYE, IBR, ICR, RAP, Parent PLUS loans, or PSLF.',
+                'Actual bills can change after income recertification, consolidation, servicer processing, capitalization, or policy updates.',
+              ]}
+              sources={[
+                officialStudentLoanSources.studentAidRepaymentPlans,
+                officialStudentLoanSources.idrApplication,
+                officialStudentLoanSources.edRapFactSheet,
+                officialStudentLoanSources.loanSimulator,
+              ]}
+            />
+          </div>
 
           {/* Detailed Content */}
           <div className="mt-16 max-w-4xl mx-auto space-y-12">

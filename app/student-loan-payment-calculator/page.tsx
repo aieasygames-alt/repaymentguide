@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import PaymentCalculator from '@/components/PaymentCalculator';
 import Link from 'next/link';
 import { FAQSchema } from '@/components/FAQSchema';
+import { CalculatorDisclosure, officialStudentLoanSources } from '@/components/TrustSignals';
 
 export const metadata: Metadata = {
   title: 'Student Loan Payment Calculator - Calculate Monthly Payments',
@@ -65,6 +66,20 @@ export default function PaymentCalculatorPage() {
         <div className="container mx-auto px-4 py-12">
           {/* Calculator */}
           <PaymentCalculator />
+
+          <div className="mt-8 max-w-4xl mx-auto">
+            <CalculatorDisclosure
+              assumptions={[
+                'Standard, graduated, and extended estimates use amortization formulas and the loan balance, interest rate, and term you enter.',
+                'The calculator does not include late fees, unpaid interest capitalization, autopay discounts, collection costs, or private-loan terms.',
+                'Federal loan availability can depend on loan type, consolidation history, and servicer records.',
+              ]}
+              sources={[
+                officialStudentLoanSources.studentAidRepaymentPlans,
+                officialStudentLoanSources.loanSimulator,
+              ]}
+            />
+          </div>
 
           {/* Detailed Content Section */}
           <div className="mt-16 max-w-4xl mx-auto space-y-12">

@@ -128,6 +128,61 @@ export default function AboutPage() {
               </div>
             </section>
 
+            {/* Editorial Standards */}
+            <section className="bg-white border rounded-2xl p-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Editorial Standards</h2>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                RepaymentGuide content is written and maintained by the RepaymentGuide Editorial Team. We focus on
+                federal student loan repayment rules, calculator assumptions, borrower decision points, and official
+                source verification.
+              </p>
+              <div className="grid md:grid-cols-2 gap-6 mt-6">
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">How we update content</h3>
+                  <p className="text-gray-600">
+                    Policy-heavy pages are reviewed when federal repayment rules, court orders, Department of
+                    Education guidance, or StudentAid.gov workflows change. Pages show published and last-updated
+                    dates where appropriate.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">How we cite sources</h3>
+                  <p className="text-gray-600">
+                    We prioritize official sources such as StudentAid.gov, the U.S. Department of Education, Federal
+                    Register materials, and IRS guidance for tax-related topics.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Calculator transparency</h3>
+                  <p className="text-gray-600">
+                    Calculators include assumption notes because estimates can differ from a servicer bill after
+                    income recertification, consolidation, interest capitalization, or policy implementation details.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Corrections</h3>
+                  <p className="text-gray-600">
+                    If a rule changes or a page needs clarification, we update the affected content and favor clear
+                    explanations over optimistic shortcuts.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Independence */}
+            <section className="rounded-2xl border border-amber-200 bg-amber-50 p-8">
+              <h2 className="text-3xl font-bold text-amber-950 mb-4">Independence and Disclaimer</h2>
+              <p className="text-amber-900 leading-relaxed mb-4">
+                RepaymentGuide is independent. We are not affiliated with the U.S. Department of Education, Federal
+                Student Aid, loan servicers, private lenders, or debt relief companies.
+              </p>
+              <p className="text-amber-900 leading-relaxed">
+                Our content is educational and does not provide legal, tax, or individualized financial advice. Before
+                changing repayment plans, applying for forgiveness, consolidating loans, or making tax decisions,
+                verify your details with StudentAid.gov, your loan servicer, or a qualified advisor.
+              </p>
+            </section>
+
             {/* CTA */}
             <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl p-8 text-white text-center">
               <h3 className="text-2xl font-bold mb-3">Ready to Take Control?</h3>

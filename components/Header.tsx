@@ -13,7 +13,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt="RepaymentGuide Logo"
               width={40}
               height={40}

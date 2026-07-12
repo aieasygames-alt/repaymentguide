@@ -5,13 +5,48 @@ import Footer from '@/components/Footer';
 import { ArticleSchema } from '@/components/ArticleSchema';
 import Image from 'next/image';
 import { getBlogImage } from '@/lib/blog-images';
+import {
+  ArticleTrustSummary,
+  FinancialDisclaimer,
+  OfficialSources,
+  SourceLink,
+  officialStudentLoanSources,
+} from '@/components/TrustSignals';
 
-const blogPosts: Record<string, {
+type BlogPost = {
   title: string;
   date: string;
+  updated?: string;
   excerpt: string;
   content: string;
-}> = {
+};
+
+type BlogTrust = {
+  updated?: string;
+  policyReviewed?: string;
+  reviewedBy?: string;
+  sources: SourceLink[];
+};
+
+const temporaryReliefSource: SourceLink = {
+  label: 'Federal Student Aid deferment and forbearance guidance',
+  url: 'https://studentaid.gov/manage-loans/lower-payments/get-temporary-relief',
+  note: 'Official guidance on temporary payment relief options.',
+};
+
+const employerTaxSource: SourceLink = {
+  label: 'IRS educational assistance program FAQs',
+  url: 'https://www.irs.gov/newsroom/frequently-asked-questions-about-educational-assistance-programs',
+  note: 'Official IRS guidance for employer educational assistance programs.',
+};
+
+const teacherForgivenessSource: SourceLink = {
+  label: 'Federal Student Aid teacher loan forgiveness',
+  url: 'https://studentaid.gov/manage-loans/forgiveness-cancellation/teacher',
+  note: 'Official teacher loan forgiveness eligibility guidance.',
+};
+
+const blogPosts: Record<string, BlogPost> = {
   'save-ending-rap-vs-save-2026': {
     title: 'SAVE Is Ending: RAP vs SAVE and Your 90-Day Checklist',
     date: '2026-07-01',
@@ -1891,6 +1926,107 @@ Graduating with student loans? Here's everything you need to know to manage your
   },
 };
 
+const blogTrust: Record<string, BlogTrust> = {
+  'save-ending-rap-vs-save-2026': {
+    updated: '2026-07-12',
+    policyReviewed: '2026-07-12',
+    sources: [
+      officialStudentLoanSources.edRapFactSheet,
+      officialStudentLoanSources.edRateUpdate,
+      officialStudentLoanSources.idrApplication,
+      officialStudentLoanSources.studentAidRepaymentPlans,
+    ],
+  },
+  'save-plan-alternatives': {
+    updated: '2026-07-12',
+    policyReviewed: '2026-07-12',
+    sources: [
+      officialStudentLoanSources.edRapFactSheet,
+      officialStudentLoanSources.idrApplication,
+      officialStudentLoanSources.studentAidRepaymentPlans,
+      officialStudentLoanSources.loanSimulator,
+    ],
+  },
+  'pslf-application-guide': {
+    sources: [
+      officialStudentLoanSources.pslfHelpTool,
+      officialStudentLoanSources.idrApplication,
+      officialStudentLoanSources.studentAidRepaymentPlans,
+    ],
+  },
+  'idr-plan-comparison': {
+    sources: [
+      officialStudentLoanSources.studentAidRepaymentPlans,
+      officialStudentLoanSources.idrApplication,
+      officialStudentLoanSources.loanSimulator,
+      officialStudentLoanSources.edRapFactSheet,
+    ],
+  },
+  'student-loan-refinancing-vs-consolidation': {
+    sources: [
+      officialStudentLoanSources.consolidation,
+      officialStudentLoanSources.loanSimulator,
+      officialStudentLoanSources.studentAidRepaymentPlans,
+    ],
+  },
+  'parent-plus-loan-repayment-options': {
+    sources: [
+      officialStudentLoanSources.studentAidRepaymentPlans,
+      officialStudentLoanSources.consolidation,
+      officialStudentLoanSources.pslfHelpTool,
+    ],
+  },
+  'student-loan-default-rehabilitation': {
+    sources: [
+      officialStudentLoanSources.defaultResolution,
+      officialStudentLoanSources.consolidation,
+      officialStudentLoanSources.idrApplication,
+    ],
+  },
+  'deferment-vs-forbearance': {
+    sources: [
+      temporaryReliefSource,
+      officialStudentLoanSources.studentAidRepaymentPlans,
+      officialStudentLoanSources.idrApplication,
+    ],
+  },
+  'student-loan-forgiveness-programs': {
+    sources: [
+      officialStudentLoanSources.pslfHelpTool,
+      officialStudentLoanSources.idrApplication,
+      teacherForgivenessSource,
+    ],
+  },
+  'student-loan-consolidation-guide': {
+    sources: [
+      officialStudentLoanSources.consolidation,
+      officialStudentLoanSources.studentAidRepaymentPlans,
+      officialStudentLoanSources.idrApplication,
+    ],
+  },
+  'married-borrowers-repayment-strategy': {
+    sources: [
+      officialStudentLoanSources.idrApplication,
+      officialStudentLoanSources.studentAidRepaymentPlans,
+      officialStudentLoanSources.irsStudentLoans,
+    ],
+  },
+  'student-loan-tax-implications': {
+    sources: [
+      officialStudentLoanSources.irsStudentLoans,
+      employerTaxSource,
+      officialStudentLoanSources.idrApplication,
+    ],
+  },
+  'recent-graduate-repayment-guide': {
+    sources: [
+      officialStudentLoanSources.studentAidRepaymentPlans,
+      officialStudentLoanSources.loanSimulator,
+      officialStudentLoanSources.idrApplication,
+    ],
+  },
+};
+
 export async function generateStaticParams() {
   return Object.keys(blogPosts).map((slug) => ({ slug }));
 }
@@ -1903,6 +2039,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: 'Post Not Found',
     };
   }
+  const trust = blogTrust[slug];
+  const dateModified = trust?.updated || post.updated || post.date;
 
   return {
     title: `${post.title} | RepaymentGuide Blog`,
@@ -1916,6 +2054,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: 'article',
       url: `https://repaymentguide.com/blog/${slug}/`,
       publishedTime: post.date,
+      modifiedTime: dateModified,
     },
   };
 }
@@ -2188,6 +2327,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     .slice(0, 2);
 
   const articleUrl = `https://repaymentguide.com/blog/${slug}`;
+  const trust = blogTrust[slug];
+  const dateModified = trust?.updated || post.updated || post.date;
 
   return (
     <>
@@ -2195,6 +2336,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         title={post.title}
         description={post.excerpt}
         date={post.date}
+        dateModified={dateModified}
         url={articleUrl}
       />
       <Header />
@@ -2226,6 +2368,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
               <time dateTime={post.date}>{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+              {dateModified !== post.date && (
+                <span className="ml-3 border-l border-white/40 pl-3">
+                  Updated {new Date(`${dateModified}T00:00:00`).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                </span>
+              )}
             </div>
           </div>
         </div>
@@ -2233,8 +2380,27 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         {/* Content */}
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-3xl mx-auto">
+            <div className="mb-10">
+              <ArticleTrustSummary
+                published={post.date}
+                updated={dateModified}
+                reviewedBy={trust?.reviewedBy}
+                policyReviewed={trust?.policyReviewed}
+              />
+            </div>
+
             <div className="prose prose-lg max-w-none">
               {parseMarkdown(post.content)}
+            </div>
+
+            {trust?.sources && (
+              <div className="mt-12">
+                <OfficialSources sources={trust.sources} title="Official sources and verification links" />
+              </div>
+            )}
+
+            <div className="mt-8">
+              <FinancialDisclaimer />
             </div>
 
             {/* CTA Section */}

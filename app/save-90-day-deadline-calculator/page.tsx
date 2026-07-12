@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SaveDeadlineCalculator from '@/components/SaveDeadlineCalculator';
 import { FAQSchema } from '@/components/FAQSchema';
+import { CalculatorDisclosure, officialStudentLoanSources } from '@/components/TrustSignals';
 
 const faqs = [
   {
@@ -59,12 +60,19 @@ export default function SaveDeadlineCalculatorPage() {
             <SaveDeadlineCalculator />
 
             <div className="mx-auto mt-12 max-w-4xl space-y-8">
-              <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 text-amber-900">
-                <p className="font-semibold">Important disclaimer</p>
-                <p className="mt-2 text-sm">
-                  This tool provides planning estimates, not legal, financial, or servicer-specific advice. Your servicer notice and StudentAid.gov account control your final deadline and repayment options.
-                </p>
-              </div>
+              <CalculatorDisclosure
+                title="SAVE deadline assumptions"
+                assumptions={[
+                  'The estimated date is calculated as 90 calendar days after the notice date you enter.',
+                  'If your servicer notice gives a specific deadline, use that date instead of this estimate.',
+                  'The tool does not confirm whether your account is in SAVE, whether your notice was sent, or whether your servicer processed your plan election.',
+                ]}
+                sources={[
+                  officialStudentLoanSources.edRapFactSheet,
+                  officialStudentLoanSources.edRateUpdate,
+                  officialStudentLoanSources.idrApplication,
+                ]}
+              />
 
               <section className="rounded-2xl border bg-white p-6">
                 <h2 className="mb-4 text-2xl font-bold text-gray-900">What to do after calculating your date</h2>

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://repaymentguide.com/images/og-image.png",
+        url: "https://repaymentguide.com/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "RepaymentGuide - Student Loan Repayment Tools",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "RepaymentGuide - Student Loan Payment Calculator",
     description: "Free tools to calculate payments and compare repayment plans",
-    images: ["https://repaymentguide.com/images/og-image.png"],
+    images: ["https://repaymentguide.com/images/og-image.jpg"],
   },
 };
 
@@ -52,7 +52,7 @@ const jsonLd = {
     url: 'https://repaymentguide.com',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://repaymentguide.com/images/logo.png',
+      url: 'https://repaymentguide.com/images/logo.webp',
       width: 200,
       height: 60,
     },

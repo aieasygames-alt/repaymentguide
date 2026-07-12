@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ParentPlusEligibilityChecker from '@/components/ParentPlusEligibilityChecker';
 import { FAQSchema } from '@/components/FAQSchema';
+import { CalculatorDisclosure, officialStudentLoanSources } from '@/components/TrustSignals';
 
 const faqs = [
   {
@@ -55,12 +56,20 @@ export default function ParentPlusRapEligibilityPage() {
 
         <section className="py-12">
           <div className="container mx-auto px-4 space-y-8">
-            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 text-amber-900">
-              <p className="font-semibold">Important disclaimer</p>
-              <p className="mt-2 text-sm">
-                Parent PLUS eligibility can depend on loan type, consolidation history, and servicer records. Use this checker as a planning guide, then verify details in your official StudentAid.gov account.
-              </p>
-            </div>
+            <CalculatorDisclosure
+              title="Parent PLUS checker assumptions"
+              assumptions={[
+                'The checker is a planning guide for Parent PLUS repayment questions, not an official eligibility decision.',
+                'Parent PLUS outcomes depend on the parent borrower, loan type, Direct Consolidation history, and current federal rules.',
+                'If you are pursuing PSLF, the parent borrower must meet PSLF employment and repayment requirements.',
+              ]}
+              sources={[
+                officialStudentLoanSources.studentAidRepaymentPlans,
+                officialStudentLoanSources.consolidation,
+                officialStudentLoanSources.pslfHelpTool,
+                officialStudentLoanSources.edRapFactSheet,
+              ]}
+            />
             <ParentPlusEligibilityChecker />
           </div>
         </section>
