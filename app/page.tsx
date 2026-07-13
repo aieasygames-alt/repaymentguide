@@ -112,6 +112,8 @@ export default function HomePage() {
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 <Link href="/student-loan-faq" className="rounded-lg bg-slate-900 px-5 py-3 font-semibold text-white transition hover:bg-slate-800">Student Loan FAQ</Link>
+                <Link href="/save-ending-what-should-i-do" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">SAVE Next Steps</Link>
+                <Link href="/rap-vs-save-calculator" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">RAP vs SAVE</Link>
                 <Link href="/ibr-vs-rap" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">IBR vs RAP</Link>
                 <Link href="/pslf-rap-qualifying-payments" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">RAP and PSLF</Link>
                 <Link href="/married-filing-separately-student-loans-rap" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">Married Filing Separately</Link>

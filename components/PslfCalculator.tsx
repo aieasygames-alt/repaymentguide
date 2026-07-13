@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useEffect, useState, FormEvent } from 'react';
 import {
   PslfProgressChart,
   PslfTimelineChart,
@@ -29,6 +29,20 @@ export default function PslfCalculator() {
   const [loanType, setLoanType] = useState<LoanType>('direct');
   const [showResults, setShowResults] = useState(false);
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (!params.toString()) return;
+
+    window.requestAnimationFrame(() => {
+      setLoanBalance(params.get('balance') || '50000');
+      setQualifyingPayments(params.get('payments') || '36');
+      setMonthlyPayment(params.get('monthly') || '300');
+      setEmploymentType((params.get('employment') || 'government') as EmploymentType);
+      setLoanType((params.get('loanType') || 'direct') as LoanType);
+      setShowResults(params.get('showResults') === 'true');
+    });
+  }, []);
+
   const calculatePslf = (): PslfResult => {
     const payments = parseInt(qualifyingPayments) || 0;
     const balance = parseFloat(loanBalance) || 0;
@@ -55,6 +69,22 @@ export default function PslfCalculator() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setShowResults(true);
+  };
+
+  const shareResult = async () => {
+    const params = new URLSearchParams({
+      balance: loanBalance,
+      payments: qualifyingPayments,
+      monthly: monthlyPayment,
+      employment: employmentType,
+      loanType,
+      showResults: 'true',
+    });
+    const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
+    window.history.replaceState(null, '', url);
+    if (navigator.clipboard) {
+      await navigator.clipboard.writeText(url);
+    }
   };
 
   const formatCurrency = (amount: number) => {
@@ -307,6 +337,14 @@ export default function PslfCalculator() {
                     {formatCurrency(result.estimatedForgiveness)}
                   </span>
                 </div>
+              </div>
+              <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                <button type="button" onClick={() => window.print()} className="rounded-lg bg-primary-700 px-5 py-3 font-semibold text-white hover:bg-primary-800">
+                  Print PSLF report
+                </button>
+                <button type="button" onClick={shareResult} className="rounded-lg border border-primary-200 bg-white px-5 py-3 font-semibold text-primary-800 hover:bg-primary-50">
+                  Copy shareable link
+                </button>
               </div>
             </div>
 

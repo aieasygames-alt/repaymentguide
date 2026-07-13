@@ -328,11 +328,11 @@ After 120 payments, submit the PSLF application through:
   'idr-plan-comparison': {
     title: 'IDR Plan Comparison: Which Saves You the Most?',
     date: '2025-05-01',
-    excerpt: 'Compare SAVE, PAYE, IBR, and ICR to find your best option.',
+    excerpt: 'Compare RAP, PAYE, IBR, and ICR to find your best current option.',
     content: `
 # IDR Plan Comparison: Which Saves You the Most?
 
-Choosing the right **income-driven repayment plan** can save you thousands of dollars. Here's how the four main plans compare.
+Choosing the right **income-driven repayment plan** can save you thousands of dollars. Here's how the main current options compare after the SAVE transition.
 
 ## Quick Overview
 
@@ -623,7 +623,7 @@ Parent PLUS loans are federal loans that parents take out to pay for their child
 
 ## Income-Driven Options: The ICR Route
 
-**The Challenge**: Parent PLUS loans don't qualify for SAVE, PAYE, or IBR.
+**The Challenge**: Parent PLUS loans and consolidation loans that include Parent PLUS loans can be excluded from RAP, PAYE, or IBR.
 
 **The Solution**: Consolidate into Direct Loans, then enroll in **ICR (Income-Contingent Repayment)**.
 
@@ -1261,9 +1261,9 @@ Student loan forgiveness can **eliminate your remaining balance** after meeting 
 - **Employment requirement**: Government or 501(c)(3) nonprofit
 - **Best for**: Public sector employees
 
-### 2. IDR Forgiveness (SAVE, PAYE, IBR, ICR)
+### 2. IDR Forgiveness (RAP, PAYE, IBR, ICR)
 - **Forgiveness amount**: 100% of remaining balance
-- **Timeline**: 20-25 years of payments
+- **Timeline**: 20-30 years of payments, depending on plan
 - **Employment requirement**: **None** (any job)
 - **Best for**: High debt-to-income borrowers
 
@@ -1294,7 +1294,7 @@ Student loan forgiveness can **eliminate your remaining balance** after meeting 
 - ✅ **120 qualifying monthly payments**
 - ✅ **Full-time employment** (30+ hrs/week)
 - ✅ **Government or 501(c)(3) nonprofit**
-- ✅ **IDR repayment plan** (SAVE, PAYE, IBR, ICR)
+- ✅ **Qualifying repayment plan** (often RAP, PAYE, IBR, ICR, or qualifying 10-year Standard repayment)
 
 ### What Counts as Qualifying Employment
 - **Federal, state, local government** agencies
@@ -1623,7 +1623,7 @@ Log in to [StudentAid.gov](https://studentaid.gov) and review:
 
 ### Step 4: Enroll in IDR Plan
 
-After consolidation, enroll in SAVE, PAYE, IBR, or ICR for income-driven payments.
+After consolidation, compare RAP, PAYE, IBR, or ICR for income-driven payments if your loan type is eligible.
 
 ---
 

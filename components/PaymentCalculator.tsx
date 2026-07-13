@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useEffect, useState, FormEvent } from 'react';
 import Link from 'next/link';
 import {
   calculateStandardRepayment,
@@ -17,80 +17,104 @@ import {
   PaymentTrendChart
 } from '@/components/RepaymentChart';
 
+type PaymentResults = {
+  monthlyPayment?: number;
+  initialPayment?: number;
+  finalPayment?: number;
+  totalPayment: number;
+  totalInterest: number;
+  planLabel: string;
+  isGraduated?: boolean;
+};
+
+function calculatePlanResult(principal: number, rate: number, plan: RepaymentPlan): PaymentResults | null {
+  if (Number.isNaN(principal) || Number.isNaN(rate) || principal <= 0) {
+    return null;
+  }
+
+  switch (plan) {
+    case 'standard-10': {
+      const calculation = calculateStandardRepayment(principal, rate, 10);
+      return {
+        monthlyPayment: calculation.monthlyPayment,
+        totalPayment: calculation.totalPayment,
+        totalInterest: calculation.totalInterest,
+        planLabel: getReaymentPlanLabel('standard-10'),
+      };
+    }
+    case 'standard-20': {
+      const calculation = calculateStandardRepayment(principal, rate, 20);
+      return {
+        monthlyPayment: calculation.monthlyPayment,
+        totalPayment: calculation.totalPayment,
+        totalInterest: calculation.totalInterest,
+        planLabel: getReaymentPlanLabel('standard-20'),
+      };
+    }
+    case 'graduated': {
+      const calculation = calculateGraduatedRepayment(principal, rate, 10);
+      return {
+        initialPayment: calculation.initialPayment,
+        finalPayment: calculation.finalPayment,
+        totalPayment: calculation.totalPayment,
+        totalInterest: calculation.totalInterest,
+        planLabel: getReaymentPlanLabel('graduated'),
+        isGraduated: true,
+      };
+    }
+    case 'extended': {
+      const calculation = calculateExtendedRepayment(principal, rate);
+      return {
+        monthlyPayment: calculation.monthlyPayment,
+        totalPayment: calculation.totalPayment,
+        totalInterest: calculation.totalInterest,
+        planLabel: getReaymentPlanLabel('extended'),
+      };
+    }
+    default:
+      return null;
+  }
+}
+
 export default function PaymentCalculator() {
   const [loanAmount, setLoanAmount] = useState('35000');
   const [interestRate, setInterestRate] = useState('5.5');
   const [selectedPlan, setSelectedPlan] = useState<RepaymentPlan>('standard-10');
-  const [results, setResults] = useState<{
-    monthlyPayment?: number;
-    initialPayment?: number;
-    finalPayment?: number;
-    totalPayment: number;
-    totalInterest: number;
-    planLabel: string;
-    isGraduated?: boolean;
-  } | null>(null);
+  const [results, setResults] = useState<PaymentResults | null>(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (!params.toString()) return;
+
+    window.requestAnimationFrame(() => {
+      const amount = params.get('amount') || '35000';
+      const rate = params.get('rate') || '5.5';
+      const plan = (params.get('plan') || 'standard-10') as RepaymentPlan;
+
+      setLoanAmount(amount);
+      setInterestRate(rate);
+      setSelectedPlan(plan);
+      setResults(calculatePlanResult(Number.parseFloat(amount), Number.parseFloat(rate), plan));
+    });
+  }, []);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     const principal = parseFloat(loanAmount);
     const rate = parseFloat(interestRate);
+    setResults(calculatePlanResult(principal, rate, selectedPlan));
+  };
 
-    if (isNaN(principal) || isNaN(rate) || principal <= 0) {
-      return;
-    }
-
-    let planLabel: string;
-
-    switch (selectedPlan) {
-      case 'standard-10': {
-        const calculation = calculateStandardRepayment(principal, rate, 10);
-        planLabel = getReaymentPlanLabel('standard-10');
-        setResults({
-          monthlyPayment: calculation.monthlyPayment,
-          totalPayment: calculation.totalPayment,
-          totalInterest: calculation.totalInterest,
-          planLabel,
-        });
-        break;
-      }
-      case 'standard-20': {
-        const calculation = calculateStandardRepayment(principal, rate, 20);
-        planLabel = getReaymentPlanLabel('standard-20');
-        setResults({
-          monthlyPayment: calculation.monthlyPayment,
-          totalPayment: calculation.totalPayment,
-          totalInterest: calculation.totalInterest,
-          planLabel,
-        });
-        break;
-      }
-      case 'graduated': {
-        const calculation = calculateGraduatedRepayment(principal, rate, 10);
-        planLabel = getReaymentPlanLabel('graduated');
-        setResults({
-          initialPayment: calculation.initialPayment,
-          finalPayment: calculation.finalPayment,
-          totalPayment: calculation.totalPayment,
-          totalInterest: calculation.totalInterest,
-          planLabel,
-          isGraduated: true,
-        });
-        break;
-      }
-      case 'extended': {
-        const calculation = calculateExtendedRepayment(principal, rate);
-        planLabel = getReaymentPlanLabel('extended');
-        setResults({
-          monthlyPayment: calculation.monthlyPayment,
-          totalPayment: calculation.totalPayment,
-          totalInterest: calculation.totalInterest,
-          planLabel,
-        });
-        break;
-      }
-      default:
-        return;
+  const shareResult = async () => {
+    const params = new URLSearchParams({
+      amount: loanAmount,
+      rate: interestRate,
+      plan: selectedPlan,
+    });
+    const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
+    window.history.replaceState(null, '', url);
+    if (navigator.clipboard) {
+      await navigator.clipboard.writeText(url);
     }
   };
 
@@ -221,6 +245,14 @@ export default function PaymentCalculator() {
                 {formatCurrency(results.totalInterest)}
               </span>
             </div>
+          </div>
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+            <button type="button" onClick={() => window.print()} className="rounded-lg bg-primary-700 px-5 py-3 font-semibold text-white hover:bg-primary-800">
+              Print result report
+            </button>
+            <button type="button" onClick={shareResult} className="rounded-lg border border-primary-200 bg-white px-5 py-3 font-semibold text-primary-800 hover:bg-primary-50">
+              Copy shareable link
+            </button>
           </div>
         </div>
       )}

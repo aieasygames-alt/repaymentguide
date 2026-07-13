@@ -95,7 +95,7 @@ export default function PaymentCalculatorPage() {
                 <div className="bg-white border rounded-lg p-6 text-center">
                   <div className="bg-primary-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-primary-700 font-bold text-lg">2</div>
                   <h3 className="font-semibold mb-2">Add Interest Rate</h3>
-                  <p className="text-gray-600 text-sm">Your current interest rate (usually 5.50% - 7.50%)</p>
+                  <p className="text-gray-600 text-sm">Use your servicer rate or the current federal rate for your loan type</p>
                 </div>
                 <div className="bg-white border rounded-lg p-6 text-center">
                   <div className="bg-primary-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-primary-700 font-bold text-lg">3</div>

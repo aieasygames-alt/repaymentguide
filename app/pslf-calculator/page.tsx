@@ -31,11 +31,11 @@ const faqs = [
   },
   {
     question: 'Do payments made before enrolling in an IDR plan count?',
-    answer: 'Only payments made under an income-driven repayment plan (SAVE, PAYE, IBR, or ICR) count toward PSLF. Standard or graduated repayment payments don\'t qualify. However, the 2024 IDR Account Adjustment may have credited some past payments made under non-qualifying plans.'
+    answer: 'Many PSLF borrowers use qualifying income-driven repayment plans such as RAP, PAYE, IBR, or ICR. Some 10-year Standard repayment payments can qualify, but extended, graduated, or consolidation standard schedules may not be PSLF-safe. Verify your official payment count before relying on any past payments.'
   },
   {
     question: 'What is the IDR Account Adjustment and how does it affect me?',
-    answer: 'The IDR Account Adjustment (implemented in 2024) recategorized past payments made under non-qualifying repayment plans (including deferments and forbearances) as qualifying payments for IDR forgiveness and PSLF. Many borrowers received significant payment count increases, moving them closer to forgiveness.'
+    answer: 'The one-time IDR Account Adjustment gave many borrowers updated credit toward IDR forgiveness and PSLF. For a 2026 decision, rely on your current StudentAid.gov and servicer payment count rather than assuming another adjustment will apply.'
   },
   {
     question: 'Can I work part-time and still qualify?',
@@ -102,7 +102,7 @@ export default function PslfCalculatorPage() {
                     <div className="flex-shrink-0 bg-primary-100 w-8 h-8 rounded-full flex items-center justify-center text-primary-700 font-bold">2</div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-2">120 Qualifying Monthly Payments</h3>
-                      <p className="text-gray-600 text-sm">Payments must be made in full, on time, while enrolled in an income-driven repayment plan (SAVE, PAYE, IBR, or ICR).</p>
+                      <p className="text-gray-600 text-sm">Payments usually need to be made under a PSLF-qualifying repayment plan, such as RAP, PAYE, IBR, ICR, or qualifying 10-year Standard repayment.</p>
                     </div>
                   </div>
 
@@ -126,7 +126,7 @@ export default function PslfCalculatorPage() {
                     <div className="flex-shrink-0 bg-primary-100 w-8 h-8 rounded-full flex items-center justify-center text-primary-700 font-bold">5</div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-2">Qualifying Repayment Plan</h3>
-                      <p className="text-gray-600 text-sm">Must be enrolled in an income-driven repayment plan. Standard and graduated plans DON'T qualify.</p>
+                      <p className="text-gray-600 text-sm">Most PSLF borrowers use IDR, but some 10-year Standard repayment payments can qualify. Extended, graduated, and some consolidation standard schedules can be risky for PSLF.</p>
                     </div>
                   </div>
                 </div>
@@ -206,7 +206,7 @@ export default function PslfCalculatorPage() {
                     <div className="bg-blue-50 rounded-lg p-4">
                       <h4 className="font-semibold text-blue-900 mb-2">Check Your Payment Count</h4>
                       <p className="text-blue-800 text-sm">
-                        Log in to StudentAid.gov and view your loan servicer dashboard to see your current payment count. Due to the IDR Account Adjustment, many borrowers are closer to forgiveness than they thought.
+                        Log in to StudentAid.gov and view your loan servicer dashboard to see your current payment count. If a past account adjustment affected your record, use the updated official count rather than estimating from memory.
                       </p>
                     </div>
                   </div>
@@ -222,7 +222,7 @@ export default function PslfCalculatorPage() {
                 <div className="bg-white border-l-4 border-red-500 rounded-lg p-6">
                   <h3 className="font-semibold text-red-900 mb-2">Wrong Repayment Plan</h3>
                   <p className="text-red-800 text-sm">
-                    Standard and graduated repayment plans don't qualify for PSLF. You MUST be in an income-driven repayment plan (SAVE, PAYE, IBR, or ICR).
+                    Do not assume every non-IDR payment is PSLF-safe. Some 10-year Standard repayment payments can qualify, but extended, graduated, and some consolidation standard schedules may not. Verify plan treatment before switching.
                   </p>
                 </div>
 
@@ -297,8 +297,8 @@ export default function PslfCalculatorPage() {
                     Do payments made before enrolling in an IDR plan count?
                   </summary>
                   <div className="px-6 pb-4 text-gray-600">
-                    <p className="mb-2">Only payments made under an income-driven repayment plan (SAVE, PAYE, IBR, or ICR) count toward PSLF.</p>
-                    <p className="text-sm">Standard or graduated repayment payments don't qualify. However, the 2024 IDR Account Adjustment may have credited some past payments made under non-qualifying plans.</p>
+                    <p className="mb-2">Many PSLF borrowers use qualifying income-driven plans such as RAP, PAYE, IBR, or ICR.</p>
+                    <p className="text-sm">Some 10-year Standard repayment payments can qualify, but extended, graduated, and some consolidation standard schedules may not be PSLF-safe. Check the official PSLF Help Tool and your servicer payment count.</p>
                   </div>
                 </details>
 
@@ -307,8 +307,8 @@ export default function PslfCalculatorPage() {
                     What is the IDR Account Adjustment and how does it affect me?
                   </summary>
                   <div className="px-6 pb-4 text-gray-600">
-                    <p className="mb-2">The IDR Account Adjustment (implemented in 2024) recategorized past payments made under non-qualifying repayment plans (including deferments and forbearances) as qualifying payments for IDR forgiveness and PSLF.</p>
-                    <p className="text-sm">Many borrowers received significant payment count increases, moving them closer to forgiveness.</p>
+                    <p className="mb-2">The one-time IDR Account Adjustment gave many borrowers updated credit toward IDR forgiveness and PSLF.</p>
+                    <p className="text-sm">For a 2026 decision, rely on your current StudentAid.gov and servicer payment count rather than assuming another adjustment will apply.</p>
                   </div>
                 </details>
 

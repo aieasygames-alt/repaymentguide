@@ -23,7 +23,9 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/blog" className="text-gray-600 hover:text-primary-600">Blog</Link></li>
               <li><Link href="/student-loan-changes-2026" className="text-gray-600 hover:text-primary-600">2026 Changes Guide</Link></li>
+              <li><Link href="/save-ending-what-should-i-do" className="text-gray-600 hover:text-primary-600">SAVE Next Steps</Link></li>
               <li><Link href="/student-loan-faq" className="text-gray-600 hover:text-primary-600">Student Loan FAQ</Link></li>
+              <li><Link href="/rap-vs-save-calculator" className="text-gray-600 hover:text-primary-600">RAP vs SAVE</Link></li>
               <li><Link href="/ibr-vs-rap" className="text-gray-600 hover:text-primary-600">IBR vs RAP</Link></li>
               <li><Link href="/pslf-rap-qualifying-payments" className="text-gray-600 hover:text-primary-600">RAP and PSLF</Link></li>
               <li><Link href="/student-loan-default-rehabilitation-2026" className="text-gray-600 hover:text-primary-600">Default Rehabilitation 2026</Link></li>

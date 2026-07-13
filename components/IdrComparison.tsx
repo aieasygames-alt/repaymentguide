@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useEffect, useState, FormEvent } from 'react';
 import {
   idrPlans,
   calculateIdrPayment,
@@ -22,9 +22,33 @@ export default function IdrComparison() {
   const [householdSize, setHouseholdSize] = useState('1');
   const [showResults, setShowResults] = useState(false);
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (!params.toString()) return;
+
+    window.requestAnimationFrame(() => {
+      setAgi(params.get('agi') || '45000');
+      setHouseholdSize(params.get('householdSize') || '1');
+      setShowResults(params.get('showResults') === 'true');
+    });
+  }, []);
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setShowResults(true);
+  };
+
+  const shareResult = async () => {
+    const params = new URLSearchParams({
+      agi,
+      householdSize,
+      showResults: 'true',
+    });
+    const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
+    window.history.replaceState(null, '', url);
+    if (navigator.clipboard) {
+      await navigator.clipboard.writeText(url);
+    }
   };
 
   const formatCurrency = (amount: number) => {
@@ -153,6 +177,15 @@ export default function IdrComparison() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <button type="button" onClick={() => window.print()} className="rounded-lg bg-primary-700 px-5 py-3 font-semibold text-white hover:bg-primary-800">
+              Print comparison report
+            </button>
+            <button type="button" onClick={shareResult} className="rounded-lg border px-5 py-3 font-semibold text-primary-800 hover:bg-primary-50">
+              Copy shareable link
+            </button>
           </div>
 
           {/* Visual Analysis Section */}

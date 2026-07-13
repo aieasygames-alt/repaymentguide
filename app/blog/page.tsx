@@ -40,7 +40,7 @@ const blogPosts = [
   },
   {
     title: 'IDR Plan Comparison: Which Saves You the Most?',
-    excerpt: 'Compare SAVE, PAYE, IBR, and ICR to find your best option with payment examples.',
+    excerpt: 'Compare RAP, PAYE, IBR, and ICR to find your best current option with payment examples.',
     date: '2025-05-01',
     slug: 'idr-plan-comparison',
   },

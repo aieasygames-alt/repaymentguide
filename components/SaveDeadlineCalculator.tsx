@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 function addCalendarDays(dateValue: string, days: number): Date | null {
   if (!dateValue) return null;
@@ -27,9 +27,27 @@ function formatShortDate(date: Date): string {
   }).format(date);
 }
 
+function formatIcsDate(date: Date): string {
+  return date.toISOString().slice(0, 10).replaceAll('-', '');
+}
+
+function escapeIcsText(value: string): string {
+  return value.replaceAll('\\', '\\\\').replaceAll(',', '\\,').replaceAll(';', '\\;').replaceAll('\n', '\\n');
+}
+
 export default function SaveDeadlineCalculator() {
   const [noticeDate, setNoticeDate] = useState('2026-07-01');
   const [windowDays, setWindowDays] = useState('90');
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (!params.toString()) return;
+
+    window.requestAnimationFrame(() => {
+      setNoticeDate(params.get('noticeDate') || '2026-07-01');
+      setWindowDays(params.get('days') || '90');
+    });
+  }, []);
 
   const result = useMemo(() => {
     const days = Number.parseInt(windowDays, 10) || 90;
@@ -40,6 +58,55 @@ export default function SaveDeadlineCalculator() {
 
     return { days, deadline, reminder45, reminder14, reminder7 };
   }, [noticeDate, windowDays]);
+
+  const copyShareableLink = async () => {
+    const params = new URLSearchParams({ noticeDate, days: windowDays });
+    const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
+    window.history.replaceState(null, '', url);
+    if (navigator.clipboard) {
+      await navigator.clipboard.writeText(url);
+    }
+  };
+
+  const downloadCalendarFile = () => {
+    if (!result.deadline) return;
+
+    const milestones = [
+      { title: 'SAVE transition deadline', date: result.deadline },
+      { title: 'Compare repayment plans', date: result.reminder45 },
+      { title: 'Submit repayment plan choice', date: result.reminder14 },
+      { title: 'Verify servicer processing', date: result.reminder7 },
+    ].filter((item): item is { title: string; date: Date } => Boolean(item.date));
+
+    const events = milestones.map((item, index) => [
+      'BEGIN:VEVENT',
+      `UID:save-transition-${index}-${formatIcsDate(item.date)}@repaymentguide.com`,
+      `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z`,
+      `DTSTART;VALUE=DATE:${formatIcsDate(item.date)}`,
+      `SUMMARY:${escapeIcsText(item.title)}`,
+      `DESCRIPTION:${escapeIcsText('RepaymentGuide planning reminder. Verify all dates with your loan servicer notice.')}`,
+      'END:VEVENT',
+    ].join('\r\n'));
+
+    const ics = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//RepaymentGuide//SAVE Deadline Calculator//EN',
+      'CALSCALE:GREGORIAN',
+      ...events,
+      'END:VCALENDAR',
+    ].join('\r\n');
+
+    const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `save-deadline-${noticeDate || 'reminders'}.ics`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  };
 
   return (
     <div className="rounded-2xl border bg-white p-6 shadow-sm">
@@ -105,6 +172,18 @@ export default function SaveDeadlineCalculator() {
                     </div>
                   )
                 ))}
+              </div>
+
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <button type="button" onClick={downloadCalendarFile} className="rounded-lg bg-primary-700 px-5 py-3 font-semibold text-white hover:bg-primary-800">
+                  Download calendar reminders
+                </button>
+                <button type="button" onClick={copyShareableLink} className="rounded-lg border border-primary-200 bg-white px-5 py-3 font-semibold text-primary-800 hover:bg-primary-50">
+                  Copy shareable link
+                </button>
+                <button type="button" onClick={() => window.print()} className="rounded-lg border border-primary-200 bg-white px-5 py-3 font-semibold text-primary-800 hover:bg-primary-50">
+                  Print timeline
+                </button>
               </div>
             </>
           ) : (
