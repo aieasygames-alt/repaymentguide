@@ -31,6 +31,7 @@ const scenarios = [
     links: [
       { href: '/save-ending-what-should-i-do', label: 'SAVE next steps' },
       { href: '/rap-payment-calculator', label: 'Estimate RAP' },
+      { href: '/servicer-contact-toolkit', label: 'Ask your servicer' },
       { href: '/ibr-vs-rap', label: 'Compare IBR vs RAP' },
     ],
   },
@@ -40,6 +41,7 @@ const scenarios = [
     links: [
       { href: '/save-90-day-deadline-calculator', label: 'Calculate deadline' },
       { href: '/repayment-plan-recommendation', label: 'Get plan path' },
+      { href: '/servicer-contact-toolkit', label: 'Prepare questions' },
       { href: '/rap-vs-save-calculator', label: 'RAP vs SAVE' },
     ],
   },
@@ -49,6 +51,7 @@ const scenarios = [
     links: [
       { href: '/pslf-rap-qualifying-payments', label: 'RAP and PSLF' },
       { href: '/pslf-calculator', label: 'PSLF calculator' },
+      { href: '/servicer-contact-toolkit', label: 'Servicer script' },
       { href: 'https://studentaid.gov/pslf', label: 'PSLF Help Tool' },
     ],
   },

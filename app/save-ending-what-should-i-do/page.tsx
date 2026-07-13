@@ -65,6 +65,7 @@ export default function SaveEndingWhatShouldIDoPage() {
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Link href="/save-90-day-deadline-calculator" className="rounded-xl bg-amber-700 px-5 py-3 text-center font-semibold text-white hover:bg-amber-800">Calculate deadline</Link>
                 <Link href="/repayment-plan-recommendation" className="rounded-xl border px-5 py-3 text-center font-semibold text-amber-800 hover:bg-amber-50">Get plan path</Link>
+                <Link href="/servicer-contact-toolkit" className="rounded-xl border px-5 py-3 text-center font-semibold text-amber-800 hover:bg-amber-50">Prepare servicer questions</Link>
               </div>
             </section>
 
