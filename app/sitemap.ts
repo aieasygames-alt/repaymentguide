@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/pslf-calculator/`, lastModified: '2026-07-05', changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${baseUrl}/student-loan-changes-2026/`, lastModified: '2026-07-11', changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${baseUrl}/student-loan-faq/`, lastModified: '2026-07-12', changeFrequency: 'weekly' as const, priority: 0.85 },
+    { url: `${baseUrl}/student-loan-scenarios/`, lastModified: '2026-07-13', changeFrequency: 'weekly' as const, priority: 0.85 },
     { url: `${baseUrl}/save-ending-what-should-i-do/`, lastModified: '2026-07-13', changeFrequency: 'monthly' as const, priority: 0.85 },
     { url: `${baseUrl}/save-90-day-deadline-calculator/`, lastModified: '2026-07-11', changeFrequency: 'weekly' as const, priority: 0.85 },
     { url: `${baseUrl}/repayment-plan-recommendation/`, lastModified: '2026-07-11', changeFrequency: 'weekly' as const, priority: 0.85 },

@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { calculateIdrPayment } from '@/lib/idr-plans';
+import { trackCalculatorAction } from '@/lib/analytics';
 
 const formatCurrency = (amount: number) => new Intl.NumberFormat('en-US', {
   style: 'currency',
@@ -91,6 +92,7 @@ export default function RapPaymentCalculator() {
     if (navigator.clipboard) {
       await navigator.clipboard.writeText(url);
     }
+    trackCalculatorAction('rap_payment', 'share', { loan_type: loanType, pslf });
   };
 
   return (
@@ -185,7 +187,7 @@ export default function RapPaymentCalculator() {
               If you make a full, on-time payment, this estimate suggests about {formatCurrency(result.estimatedBalanceProgress)} could go toward reducing your balance after borrower principal and any RAP principal match. The exact servicer result can vary.
             </p>
             <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-              <button type="button" onClick={() => window.print()} className="rounded-xl bg-slate-900 px-5 py-3 font-semibold text-white hover:bg-slate-800">
+              <button type="button" onClick={() => { trackCalculatorAction('rap_payment', 'print', { loan_type: loanType, pslf }); window.print(); }} className="rounded-xl bg-slate-900 px-5 py-3 font-semibold text-white hover:bg-slate-800">
                 Print result
               </button>
               <button type="button" onClick={shareResult} className="rounded-xl border px-5 py-3 font-semibold text-slate-900 hover:bg-white">

@@ -9,6 +9,7 @@ import {
   EmploymentEligibilityChart,
   PaymentAcceleratorChart
 } from '@/components/PslfChart';
+import { trackCalculatorAction } from '@/lib/analytics';
 
 interface PslfResult {
   qualifyingPayments: number;
@@ -69,6 +70,7 @@ export default function PslfCalculator() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setShowResults(true);
+    trackCalculatorAction('pslf', 'submit', { employment_type: employmentType, loan_type: loanType });
   };
 
   const shareResult = async () => {
@@ -85,6 +87,7 @@ export default function PslfCalculator() {
     if (navigator.clipboard) {
       await navigator.clipboard.writeText(url);
     }
+    trackCalculatorAction('pslf', 'share', { employment_type: employmentType, loan_type: loanType });
   };
 
   const formatCurrency = (amount: number) => {
@@ -339,7 +342,7 @@ export default function PslfCalculator() {
                 </div>
               </div>
               <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-                <button type="button" onClick={() => window.print()} className="rounded-lg bg-primary-700 px-5 py-3 font-semibold text-white hover:bg-primary-800">
+                <button type="button" onClick={() => { trackCalculatorAction('pslf', 'print', { employment_type: employmentType, loan_type: loanType }); window.print(); }} className="rounded-lg bg-primary-700 px-5 py-3 font-semibold text-white hover:bg-primary-800">
                   Print PSLF report
                 </button>
                 <button type="button" onClick={shareResult} className="rounded-lg border border-primary-200 bg-white px-5 py-3 font-semibold text-primary-800 hover:bg-primary-50">

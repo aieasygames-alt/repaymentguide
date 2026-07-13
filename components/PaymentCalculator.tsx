@@ -2,6 +2,7 @@
 
 import { useEffect, useState, FormEvent } from 'react';
 import Link from 'next/link';
+import { trackCalculatorAction } from '@/lib/analytics';
 import {
   calculateStandardRepayment,
   calculateGraduatedRepayment,
@@ -103,6 +104,7 @@ export default function PaymentCalculator() {
     const principal = parseFloat(loanAmount);
     const rate = parseFloat(interestRate);
     setResults(calculatePlanResult(principal, rate, selectedPlan));
+    trackCalculatorAction('payment', 'submit', { plan: selectedPlan });
   };
 
   const shareResult = async () => {
@@ -116,6 +118,7 @@ export default function PaymentCalculator() {
     if (navigator.clipboard) {
       await navigator.clipboard.writeText(url);
     }
+    trackCalculatorAction('payment', 'share', { plan: selectedPlan });
   };
 
   const formatCurrency = (amount: number) => {
@@ -247,7 +250,7 @@ export default function PaymentCalculator() {
             </div>
           </div>
           <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-            <button type="button" onClick={() => window.print()} className="rounded-lg bg-primary-700 px-5 py-3 font-semibold text-white hover:bg-primary-800">
+            <button type="button" onClick={() => { trackCalculatorAction('payment', 'print', { plan: selectedPlan }); window.print(); }} className="rounded-lg bg-primary-700 px-5 py-3 font-semibold text-white hover:bg-primary-800">
               Print result report
             </button>
             <button type="button" onClick={shareResult} className="rounded-lg border border-primary-200 bg-white px-5 py-3 font-semibold text-primary-800 hover:bg-primary-50">

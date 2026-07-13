@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import { trackCalculatorAction } from '@/lib/analytics';
 
 function addCalendarDays(dateValue: string, days: number): Date | null {
   if (!dateValue) return null;
@@ -66,6 +67,7 @@ export default function SaveDeadlineCalculator() {
     if (navigator.clipboard) {
       await navigator.clipboard.writeText(url);
     }
+    trackCalculatorAction('save_deadline', 'share', { window_days: windowDays });
   };
 
   const downloadCalendarFile = () => {
@@ -106,6 +108,7 @@ export default function SaveDeadlineCalculator() {
     link.click();
     link.remove();
     URL.revokeObjectURL(url);
+    trackCalculatorAction('save_deadline', 'calendar_download', { window_days: windowDays });
   };
 
   return (
@@ -181,7 +184,7 @@ export default function SaveDeadlineCalculator() {
                 <button type="button" onClick={copyShareableLink} className="rounded-lg border border-primary-200 bg-white px-5 py-3 font-semibold text-primary-800 hover:bg-primary-50">
                   Copy shareable link
                 </button>
-                <button type="button" onClick={() => window.print()} className="rounded-lg border border-primary-200 bg-white px-5 py-3 font-semibold text-primary-800 hover:bg-primary-50">
+                <button type="button" onClick={() => { trackCalculatorAction('save_deadline', 'print', { window_days: windowDays }); window.print(); }} className="rounded-lg border border-primary-200 bg-white px-5 py-3 font-semibold text-primary-800 hover:bg-primary-50">
                   Print timeline
                 </button>
               </div>

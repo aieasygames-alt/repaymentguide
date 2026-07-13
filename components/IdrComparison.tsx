@@ -5,6 +5,7 @@ import {
   idrPlans,
   calculateIdrPayment,
 } from '@/lib/idr-plans';
+import { trackCalculatorAction } from '@/lib/analytics';
 import {
   IdrPaymentComparison,
   IdrTotalCostProjection,
@@ -36,6 +37,7 @@ export default function IdrComparison() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setShowResults(true);
+    trackCalculatorAction('idr_comparison', 'submit');
   };
 
   const shareResult = async () => {
@@ -49,6 +51,7 @@ export default function IdrComparison() {
     if (navigator.clipboard) {
       await navigator.clipboard.writeText(url);
     }
+    trackCalculatorAction('idr_comparison', 'share');
   };
 
   const formatCurrency = (amount: number) => {
@@ -180,7 +183,7 @@ export default function IdrComparison() {
           </div>
 
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <button type="button" onClick={() => window.print()} className="rounded-lg bg-primary-700 px-5 py-3 font-semibold text-white hover:bg-primary-800">
+            <button type="button" onClick={() => { trackCalculatorAction('idr_comparison', 'print'); window.print(); }} className="rounded-lg bg-primary-700 px-5 py-3 font-semibold text-white hover:bg-primary-800">
               Print comparison report
             </button>
             <button type="button" onClick={shareResult} className="rounded-lg border px-5 py-3 font-semibold text-primary-800 hover:bg-primary-50">
