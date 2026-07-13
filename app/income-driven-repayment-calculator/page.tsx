@@ -7,9 +7,9 @@ import { FAQSchema } from '@/components/FAQSchema';
 import { CalculatorDisclosure, officialStudentLoanSources } from '@/components/TrustSignals';
 
 export const metadata: Metadata = {
-  title: 'IDR Calculator - Compare RAP, IBR, PAYE, ICR & SAVE',
-  description: 'Calculate estimated payments under RAP, SAVE, PAYE, IBR, and ICR plans. Compare income-driven repayment options after the 2026 SAVE transition.',
-  keywords: ['IDR calculator', 'income driven repayment', 'RAP', 'SAVE', 'PAYE', 'IBR', 'ICR'],
+  title: 'IDR Calculator - Compare RAP, IBR, PAYE & ICR',
+  description: 'Calculate estimated payments under RAP, PAYE, IBR, and ICR plans. Compare income-driven repayment options after the 2026 SAVE transition.',
+  keywords: ['IDR calculator', 'income driven repayment', 'RAP', 'PAYE', 'IBR', 'ICR'],
   alternates: {
     canonical: '/income-driven-repayment-calculator/',
   },
@@ -58,7 +58,7 @@ export default function IdrCalculatorPage() {
           <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Income-Driven Repayment Calculator</h1>
             <p className="text-xl text-gray-700 max-w-3xl">
-              Calculate estimated monthly payments under RAP, SAVE, PAYE, IBR, and ICR plans. Find which plan fits your 2026 repayment strategy.
+              Calculate estimated monthly payments under RAP, PAYE, IBR, and ICR plans. Find which plan fits your 2026 repayment strategy.
             </p>
           </div>
         </div>
@@ -236,7 +236,7 @@ export default function IdrCalculatorPage() {
                       <tr className="bg-primary-600 text-white">
                         <th className="p-4 text-left">Plan</th>
                         <th className="p-4 text-right">Monthly Payment</th>
-                        <th className="p-4 text-right">Total Paid (20 yrs)</th>
+                        <th className="p-4 text-right">Estimated Term</th>
                         <th className="p-4 text-right">Forgiveness</th>
                       </tr>
                     </thead>
@@ -244,32 +244,26 @@ export default function IdrCalculatorPage() {
                       <tr className="border-b">
                         <td className="p-4 font-semibold">RAP</td>
                         <td className="p-4 text-right">$167</td>
-                        <td className="p-4 text-right">$60,000</td>
+                        <td className="p-4 text-right">30 years</td>
                         <td className="p-4 text-right">Varies</td>
                       </tr>
                       <tr className="border-b bg-gray-50">
-                        <td className="p-4 font-semibold">SAVE</td>
-                        <td className="p-4 text-right">$158</td>
-                        <td className="p-4 text-right">$38,000</td>
-                        <td className="p-4 text-right text-green-600">~$37,000</td>
-                      </tr>
-                      <tr className="border-b">
                         <td className="p-4 font-semibold">PAYE</td>
                         <td className="p-4 text-right">$317</td>
-                        <td className="p-4 text-right">$76,000</td>
-                        <td className="p-4 text-right">$0</td>
+                        <td className="p-4 text-right">20 years</td>
+                        <td className="p-4 text-right">Depends on balance and interest</td>
                       </tr>
-                      <tr className="border-b bg-gray-50">
+                      <tr className="border-b">
                         <td className="p-4 font-semibold">IBR</td>
                         <td className="p-4 text-right">$317</td>
-                        <td className="p-4 text-right">$76,000</td>
-                        <td className="p-4 text-right">$0</td>
+                        <td className="p-4 text-right">20-25 years</td>
+                        <td className="p-4 text-right">Depends on borrower history</td>
                       </tr>
                       <tr>
                         <td className="p-4 font-semibold">ICR</td>
                         <td className="p-4 text-right">$633</td>
-                        <td className="p-4 text-right">$151,000</td>
-                        <td className="p-4 text-right">$0</td>
+                        <td className="p-4 text-right">25 years</td>
+                        <td className="p-4 text-right">Depends on balance and interest</td>
                       </tr>
                     </tbody>
                   </table>
@@ -336,12 +330,11 @@ export default function IdrCalculatorPage() {
                     <p className="mb-2">Yes. After 20-25 years of qualifying payments (depending on the plan), any remaining loan balance is forgiven.</p>
                     <ul className="space-y-1 text-sm my-2">
                       <li>• RAP: 30 years</li>
-                      <li>• SAVE: ended in 2026 after previously offering 10-25 year timelines</li>
                       <li>• PAYE: 20 years</li>
                       <li>• IBR: 20-25 years</li>
                       <li>• ICR: 25 years</li>
                     </ul>
-                    <p className="text-sm">Note that forgiven amounts may be taxable after 2025.</p>
+                    <p className="text-sm">Note that non-PSLF forgiven amounts may be taxable depending on federal and state law.</p>
                   </div>
                 </details>
 

@@ -39,7 +39,9 @@ export default function IdrComparison() {
   const agiNum = parseFloat(agi);
   const householdSizeNum = parseInt(householdSize);
 
-  const planCalculations = idrPlans.map((plan) => ({
+  const currentPlans = idrPlans.filter((plan) => plan.id !== 'save');
+
+  const planCalculations = currentPlans.map((plan) => ({
     plan,
     ...calculateIdrPayment(agiNum, householdSizeNum, plan.id),
   }));
@@ -101,7 +103,7 @@ export default function IdrComparison() {
           <div className="mb-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
             <h3 className="font-semibold text-blue-900 mb-2">Your Discretionary Income</h3>
             <p className="text-blue-800">
-              Based on your income and household size, your discretionary income ranges from{' '}
+              Based on your income and household size, your calculation base ranges from{' '}
               <strong>{formatCurrency(sortedPlans[0].discretionaryIncome)}</strong> to{' '}
               <strong>{formatCurrency(sortedPlans[sortedPlans.length - 1].discretionaryIncome)}</strong>{' '}
               depending on the plan. RAP uses AGI directly, while legacy IDR plans use discretionary income.

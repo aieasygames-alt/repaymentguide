@@ -264,7 +264,7 @@ You must be enrolled in an **income-driven repayment plan**:
 - IBR
 - ICR
 
-> **Tip:** Standard repayment plans don't qualify for PSLF!
+> **Tip:** Some Standard repayment payments can qualify for PSLF, but many Standard-style or extended schedules are not PSLF-safe. PSLF borrowers should confirm plan treatment through StudentAid.gov before relying on a payment.
 >
 > **Not sure which IDR plan to choose?** Use our [IDR Calculator](/income-driven-repayment-calculator) to compare plans and see which works best for your situation.
 
@@ -395,8 +395,8 @@ Choosing the right **income-driven repayment plan** can save you thousands of do
 **Do you have Parent PLUS loans?**
 - → Yes: ICR (after consolidation)
 - → No: Are your loans after Oct 2007 & Oct 2011?
-    - → Yes: SAVE (if available) or PAYE
-    - → No: IBR
+    - → Yes: Compare RAP, PAYE, and IBR
+    - → No: Compare RAP and IBR
 
 ## Payment Examples
 
@@ -404,10 +404,10 @@ Choosing the right **income-driven repayment plan** can save you thousands of do
 
 | Plan | Monthly Payment | Total Paid (20 yrs) | Forgiveness |
 |------|----------------|---------------------|-------------|
-| SAVE | ~$158 | ~$38,000 | ~$12,000 |
-| PAYE | ~$317 | ~$76,000 | ~$0 |
-| IBR | ~$317 | ~$76,000 | ~$0 |
-| ICR | ~$633 | ~$151,000 | ~$0 |
+| RAP | ~$133 | ~$48,000 over 30 years | Depends on balance and interest |
+| PAYE | ~$317 | ~$76,000 over 20 years | Depends on balance and interest |
+| IBR | ~$317 | ~$76,000 over 20-25 years | Depends on borrower timing |
+| ICR | ~$633 | ~$190,000 over 25 years | Depends on balance and interest |
 
 ## Key Factors to Consider
 
@@ -416,20 +416,20 @@ Choosing the right **income-driven repayment plan** can save you thousands of do
 - Direct Loans? → All options available
 
 ### 2. **Income Level**
-- Low income → SAVE/IBR (lower payments)
+- Low income → Compare RAP against IBR/PAYE; RAP has a $10 minimum and no poverty-line exclusion
 - High income → PAYE (payment cap)
 
 ### 3. **Forgiveness Timeline**
-- Want fastest forgiveness → SAVE (10 years for public service)
+- Want PSLF → Focus on PSLF-qualifying repayment and employer certification, not only the lowest payment
 - Need flexibility → IBR (available to all)
 
 ### 4. **Marital Status**
-- Married filing separately → IBR/PAYE/SAVE (exclude spouse income)
+- Married filing separately → Compare IBR/PAYE spouse-income treatment against RAP's AGI-based formula
 - Married filing jointly → All plans count spouse income
 
 ## Pro Tips
 
-💡 **Strategic move:** If SAVE becomes available, switch immediately for the interest subsidy alone.
+💡 **Strategic move:** Since SAVE is no longer available for new repayment elections, compare RAP's interest and principal benefits against legacy IDR payment formulas before switching.
 
 💡 **Payment cap matters:** PAYE protects you if your income spikes – payments never exceed 10-year standard repayment amount.
 
@@ -698,14 +698,14 @@ Parent PLUS loans are federal loans that parents take out to pay for their child
 ## Tax Implications
 
 ### Current Law (2026)
-- **No student loan interest deduction** for many taxpayers (phase-out limits)
-- Deduction phased out above MAGI $70,000 single/$140,000 joint
-- **No deduction** after 2025 (provision expires)
+- The student loan interest deduction can be up to **$2,500** if you meet IRS requirements
+- The deduction phases out based on modified adjusted gross income and filing status
+- You cannot claim the deduction if your filing status is married filing separately
 
 ### Loan Forgiveness
 - **Forgiven debt typically taxable**
 - **PSLF forgiveness is tax-free** (under current law)
-- **IDR forgiveness may be taxable** after 2025
+- **Non-PSLF IDR forgiveness may be taxable** depending on federal and state law
 
 ---
 
@@ -933,7 +933,7 @@ Program ended in **2024**, but borrowers who received Fresh Start:
 ## Preventing Future Default
 
 ### 1. Enroll in IDR Plan
-- **PAYE/IBR/SAVE**: Payments based on income
+- **RAP, PAYE, IBR, or ICR**: Payments can be based on income, loan type, and plan rules
 - **$0 payments** if income is very low
 - **Forgiveness** after 20-25 years
 
@@ -1326,20 +1326,18 @@ Student loan forgiveness can **eliminate your remaining balance** after meeting 
 ### Plans and Timelines
 | Plan | Forgiveness Timeline |
 |------|---------------------|
-| SAVE | 10-20 years |
+| RAP | 30 years outside PSLF |
 | PAYE | 20 years |
 | IBR | 20-25 years |
 | ICR | 25 years |
 
-### SAVE Plan Special Rules
-- **10 years**: If original loan balance <$12,000 (plus $1,000 per additional $1,000 borrowed)
-- **20 years**: All other borrowers
-- **Interest subsidy**: 100% of unpaid interest covered
+### SAVE Plan Status
+SAVE ended in 2026 and is not available for new repayment elections. Borrowers who were in SAVE should compare RAP, IBR, PAYE, ICR, and Standard repayment before acting on a servicer notice.
 
 ### Tax Implications
-- **Through 2025**: IDR forgiveness is **tax-free**
-- **After 2025**: May be **taxable** (law expires)
-- **Plan ahead**: Could face large tax bill
+- **PSLF forgiveness** remains federally tax-free
+- **Non-PSLF IDR forgiveness** can have tax consequences, especially after the temporary federal exclusion period
+- **Plan ahead** if you expect a large non-PSLF balance to be forgiven
 
 ### Who Benefits Most
 - **High debt-to-income ratio**
@@ -1474,15 +1472,15 @@ Student loan forgiveness can **eliminate your remaining balance** after meeting 
 
 ### Tax-Free Forgiveness
 - ✅ **PSLF** (always tax-free)
-- ✅ **IDR forgiveness** (through 2025)
+- ✅ **PSLF forgiveness**
 - ✅ **Total disability discharge**
 
 ### Potentially Taxable
-- ⚠️ **IDR forgiveness** (after 2025)
+- ⚠️ **Non-PSLF IDR forgiveness** may be taxable depending on federal and state law
 - ⚠️ **Perkins cancellation** (if not employment-related)
 
 ### Plan Ahead
-- **Save for tax bill** if forgiveness after 2025
+- **Plan for taxes** if you expect non-PSLF forgiveness
 - **Consult tax professional**
 - **Consider tax implications** in forgiveness planning
 
@@ -1563,7 +1561,7 @@ A **Direct Consolidation Loan** combines your federal student loans into one loa
 
 Some loans (like older FFEL loans) can't access IDR plans until consolidated.
 
-- Consolidate → Enroll in SAVE/PAYE/IBR/ICR → Get lower payments
+- Consolidate if needed → Compare RAP/PAYE/IBR/ICR eligibility → Choose a plan that fits your loan type and forgiveness goal
 
 ### 3. You're in Default and Want Rehabilitation
 
@@ -1785,16 +1783,15 @@ Student loans have significant tax implications, from interest deductions to for
 
 ## Student Loan Interest Deduction
 
-### Current Status (2024)
+### Current Status (2026)
 
-**Important**: The student loan interest deduction is set to expire after 2025 unless Congress extends it.
+The IRS still lists the student loan interest deduction as available for qualifying taxpayers. Check the current IRS income phase-out amounts for the tax year you are filing.
 
 ### How It Works
 
-- **Maximum deduction**: $2,500 per year
-- **Income limits**: Phase-out begins at $70,000 single ($140,000 joint)
-- **Complete phase-out**: $85,000 single ($170,000 joint)
-- **Loan types**: Federal and private student loans
+- **Maximum deduction**: The lesser of $2,500 or the student loan interest you actually paid during the year
+- **Filing status limit**: Married filing separately cannot claim the deduction
+- **Loan types**: Federal and private student loans can qualify if they meet IRS rules
 
 ---
 
@@ -1810,9 +1807,9 @@ Student loans have significant tax implications, from interest deductions to for
 
 ### IDR Forgiveness
 
-**Through 2025**: IDR forgiveness is **tax-free** due to temporary legislation.
+**PSLF forgiveness** is federally tax-free.
 
-**After 2025**: IDR forgiveness **may be taxable** unless Congress extends the exemption.
+**Non-PSLF IDR forgiveness** may be taxable depending on the tax year and whether federal or state exclusions apply.
 
 **Potential Tax Impact**:
 - Forgive $50,000 → Could add $50,000 to taxable income
@@ -1948,6 +1945,8 @@ const blogTrust: Record<string, BlogTrust> = {
     ],
   },
   'pslf-application-guide': {
+    updated: '2026-07-13',
+    policyReviewed: '2026-07-13',
     sources: [
       officialStudentLoanSources.pslfHelpTool,
       officialStudentLoanSources.idrApplication,
@@ -1955,6 +1954,8 @@ const blogTrust: Record<string, BlogTrust> = {
     ],
   },
   'idr-plan-comparison': {
+    updated: '2026-07-13',
+    policyReviewed: '2026-07-13',
     sources: [
       officialStudentLoanSources.studentAidRepaymentPlans,
       officialStudentLoanSources.idrApplication,
@@ -1970,6 +1971,8 @@ const blogTrust: Record<string, BlogTrust> = {
     ],
   },
   'parent-plus-loan-repayment-options': {
+    updated: '2026-07-13',
+    policyReviewed: '2026-07-13',
     sources: [
       officialStudentLoanSources.studentAidRepaymentPlans,
       officialStudentLoanSources.consolidation,
@@ -1977,6 +1980,8 @@ const blogTrust: Record<string, BlogTrust> = {
     ],
   },
   'student-loan-default-rehabilitation': {
+    updated: '2026-07-13',
+    policyReviewed: '2026-07-13',
     sources: [
       officialStudentLoanSources.defaultResolution,
       officialStudentLoanSources.consolidation,
@@ -1991,6 +1996,8 @@ const blogTrust: Record<string, BlogTrust> = {
     ],
   },
   'student-loan-forgiveness-programs': {
+    updated: '2026-07-13',
+    policyReviewed: '2026-07-13',
     sources: [
       officialStudentLoanSources.pslfHelpTool,
       officialStudentLoanSources.idrApplication,
@@ -1998,6 +2005,8 @@ const blogTrust: Record<string, BlogTrust> = {
     ],
   },
   'student-loan-consolidation-guide': {
+    updated: '2026-07-13',
+    policyReviewed: '2026-07-13',
     sources: [
       officialStudentLoanSources.consolidation,
       officialStudentLoanSources.studentAidRepaymentPlans,
@@ -2005,6 +2014,8 @@ const blogTrust: Record<string, BlogTrust> = {
     ],
   },
   'married-borrowers-repayment-strategy': {
+    updated: '2026-07-13',
+    policyReviewed: '2026-07-13',
     sources: [
       officialStudentLoanSources.idrApplication,
       officialStudentLoanSources.studentAidRepaymentPlans,
@@ -2012,6 +2023,8 @@ const blogTrust: Record<string, BlogTrust> = {
     ],
   },
   'student-loan-tax-implications': {
+    updated: '2026-07-13',
+    policyReviewed: '2026-07-13',
     sources: [
       officialStudentLoanSources.irsStudentLoans,
       employerTaxSource,

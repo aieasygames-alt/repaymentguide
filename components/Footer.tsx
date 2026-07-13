@@ -9,6 +9,7 @@ export default function Footer() {
             <h3 className="font-semibold text-gray-900 mb-4">Calculators</h3>
             <ul className="space-y-2">
               <li><Link href="/student-loan-payment-calculator" className="text-gray-600 hover:text-primary-600">Payment Calculator</Link></li>
+              <li><Link href="/rap-payment-calculator" className="text-gray-600 hover:text-primary-600">RAP Payment Calculator</Link></li>
               <li><Link href="/save-plan-calculator" className="text-gray-600 hover:text-primary-600">SAVE Plan Calculator</Link></li>
               <li><Link href="/income-driven-repayment-calculator" className="text-gray-600 hover:text-primary-600">IDR Calculator</Link></li>
               <li><Link href="/pslf-calculator" className="text-gray-600 hover:text-primary-600">PSLF Calculator</Link></li>
@@ -23,6 +24,9 @@ export default function Footer() {
               <li><Link href="/blog" className="text-gray-600 hover:text-primary-600">Blog</Link></li>
               <li><Link href="/student-loan-changes-2026" className="text-gray-600 hover:text-primary-600">2026 Changes Guide</Link></li>
               <li><Link href="/student-loan-faq" className="text-gray-600 hover:text-primary-600">Student Loan FAQ</Link></li>
+              <li><Link href="/ibr-vs-rap" className="text-gray-600 hover:text-primary-600">IBR vs RAP</Link></li>
+              <li><Link href="/pslf-rap-qualifying-payments" className="text-gray-600 hover:text-primary-600">RAP and PSLF</Link></li>
+              <li><Link href="/student-loan-default-rehabilitation-2026" className="text-gray-600 hover:text-primary-600">Default Rehabilitation 2026</Link></li>
               <li><Link href="/parent-plus-rap-eligibility" className="text-gray-600 hover:text-primary-600">Parent PLUS Checker</Link></li>
               <li><Link href="/news" className="text-gray-600 hover:text-primary-600">News & Updates</Link></li>
               <li><Link href="/about" className="text-gray-600 hover:text-primary-600">About Us</Link></li>

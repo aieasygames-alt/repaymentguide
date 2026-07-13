@@ -33,8 +33,8 @@ export default function HomePage() {
               </Link>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/student-loan-payment-calculator" className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition">
-                Calculate Payments
+              <Link href="/rap-payment-calculator" className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition">
+                Calculate RAP Payment
               </Link>
               <Link href="/income-driven-repayment-calculator" className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition border border-primary-600">
                 Compare IDR Plans
@@ -47,7 +47,17 @@ export default function HomePage() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Our Free Tools</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+              <Link href="/rap-payment-calculator" className="bg-white border rounded-xl p-6 hover:shadow-lg transition">
+                <div className="text-primary-600 mb-4">
+                  <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 11V7a4 4 0 018 0v4m-2 0h2a2 2 0 012 2v6a2 2 0 01-2 2h-6a2 2 0 01-2-2v-2m-6-6h6m-6 4h4m-4 4h2" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">RAP Calculator</h3>
+                <p className="text-gray-600">Estimate your RAP payment, dependent reduction, interest waiver, and principal match.</p>
+              </Link>
+
               <Link href="/student-loan-payment-calculator" className="bg-white border rounded-xl p-6 hover:shadow-lg transition">
                 <div className="text-primary-600 mb-4">
                   <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -100,9 +110,12 @@ export default function HomePage() {
               <p className="mt-4 text-gray-600">
                 Start with short answers for SAVE deadlines, RAP vs IBR, Parent PLUS, PSLF, default, and married filing separately scenarios.
               </p>
-              <Link href="/student-loan-faq" className="mt-6 inline-block rounded-lg bg-slate-900 px-6 py-3 font-semibold text-white transition hover:bg-slate-800">
-                Browse the Student Loan FAQ
-              </Link>
+              <div className="mt-6 flex flex-wrap justify-center gap-3">
+                <Link href="/student-loan-faq" className="rounded-lg bg-slate-900 px-5 py-3 font-semibold text-white transition hover:bg-slate-800">Student Loan FAQ</Link>
+                <Link href="/ibr-vs-rap" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">IBR vs RAP</Link>
+                <Link href="/pslf-rap-qualifying-payments" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">RAP and PSLF</Link>
+                <Link href="/married-filing-separately-student-loans-rap" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">Married Filing Separately</Link>
+              </div>
             </div>
           </div>
         </section>

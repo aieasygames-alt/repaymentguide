@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: 'What interest rate should I use?',
-    answer: 'Check your loan servicer account for your exact rates. For federal Direct Loans: Undergraduate loans are 5.50% (2023-24), graduate/professional loans are 7.05% - 8.05%, and PLUS loans are 8.05%. If you have multiple loans with different rates, use a weighted average or calculate each separately.'
+    answer: 'Check your loan servicer account for your exact rates. For federal Direct Loans: For 2026-27 federal Direct Loans, undergraduate loans are 6.52%, graduate/professional Direct Unsubsidized loans are 8.07%, and PLUS loans are 9.07%. If you have multiple loans with different rates, use a weighted average or calculate each separately.'
   },
   {
     question: 'Can I change my repayment plan later?',
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     question: 'What if I can\'t afford any of these payments?',
-    answer: 'If standard repayment plans don\'t fit your budget, consider income-driven repayment (IDR) plans, which base payments on your income. The SAVE plan uses 5-10% of discretionary income, PAYE/IBR use 10-15%, and payments can be as low as $0 if income is low. IDR plans also offer forgiveness after 20-25 years of payments.'
+    answer: 'If standard repayment plans don\'t fit your budget, compare income-driven repayment (IDR) plans. RAP uses an AGI-based formula with a dependent reduction, while PAYE, IBR, and ICR use discretionary income formulas. Some legacy IDR payments can be as low as $0 if income is low, and forgiveness timelines vary by plan.'
   },
   {
     question: 'Do these plans apply to private student loans?',
@@ -267,9 +267,9 @@ export default function PaymentCalculatorPage() {
                   <div className="px-6 pb-4 text-gray-600">
                     <p className="mb-3">Check your loan servicer account for your exact rates. For federal Direct Loans:</p>
                     <ul className="space-y-1 text-sm">
-                      <li>• Undergraduate loans: 5.50% (2023-24 academic year)</li>
-                      <li>• Graduate/professional: 7.05% - 8.05%</li>
-                      <li>• PLUS loans: 8.05%</li>
+                      <li>• Undergraduate loans: 6.52% (2026-27 academic year)</li>
+                      <li>• Graduate/professional Direct Unsubsidized: 8.07%</li>
+                      <li>• PLUS loans: 9.07%</li>
                     </ul>
                     <p className="mt-3 text-sm">If you have multiple loans with different rates, use a weighted average or calculate each separately.</p>
                   </div>
@@ -306,13 +306,13 @@ export default function PaymentCalculatorPage() {
                     What if I can't afford any of these payments?
                   </summary>
                   <div className="px-6 pb-4 text-gray-600">
-                    <p className="mb-3">If standard repayment plans don't fit your budget, consider <Link href="/income-driven-repayment-calculator" className="text-primary-600 hover:text-primary-700 font-medium">income-driven repayment (IDR) plans</Link>, which base payments on your income:</p>
+                    <p className="mb-3">If standard repayment plans don't fit your budget, compare <Link href="/income-driven-repayment-calculator" className="text-primary-600 hover:text-primary-700 font-medium">income-driven repayment (IDR) plans</Link>, which can base payments on income and household details:</p>
                     <ul className="space-y-1 text-sm">
-                      <li>• SAVE plan: 5-10% of discretionary income</li>
-                      <li>• PAYE/IBR: 10-15% of discretionary income</li>
-                      <li>• Payments can be as low as $0 if income is low</li>
+                      <li>• RAP: 1-10% of AGI, reduced by $50 per dependent, with a minimum payment</li>
+                      <li>• PAYE/IBR: 10-15% of discretionary income if eligible</li>
+                      <li>• ICR: 20% of discretionary income or an alternate fixed-payment formula</li>
                     </ul>
-                    <p className="text-sm mt-3">IDR plans also offer forgiveness after 20-25 years of payments.</p>
+                    <p className="text-sm mt-3">IDR forgiveness timelines vary by plan, and non-PSLF forgiveness may have tax consequences.</p>
                   </div>
                 </details>
 

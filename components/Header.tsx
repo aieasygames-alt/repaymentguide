@@ -26,6 +26,9 @@ export default function Header() {
             <Link href="/student-loan-payment-calculator" className="text-gray-700 hover:text-primary-600">
               Payment Calculator
             </Link>
+            <Link href="/rap-payment-calculator" className="text-gray-700 hover:text-primary-600">
+              RAP Calculator
+            </Link>
             <Link href="/save-plan-calculator" className="text-gray-700 hover:text-primary-600">
               SAVE Alternatives
             </Link>
@@ -64,6 +67,9 @@ export default function Header() {
           <div className="md:hidden py-4 space-y-3 border-t mt-4">
             <Link href="/student-loan-payment-calculator" className="block text-gray-700 hover:text-primary-600" onClick={() => setMobileMenuOpen(false)}>
               Payment Calculator
+            </Link>
+            <Link href="/rap-payment-calculator" className="block text-gray-700 hover:text-primary-600" onClick={() => setMobileMenuOpen(false)}>
+              RAP Calculator
             </Link>
             <Link href="/save-plan-calculator" className="block text-gray-700 hover:text-primary-600" onClick={() => setMobileMenuOpen(false)}>
               SAVE Alternatives
