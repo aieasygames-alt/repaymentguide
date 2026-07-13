@@ -57,7 +57,7 @@ export default function ServicerContactToolkitPage() {
 
             <section className="grid gap-6 md:grid-cols-3">
               <Link href="/save-ending-what-should-i-do" className="rounded-3xl border bg-amber-50 p-6 transition hover:shadow-md"><h2 className="text-xl font-bold text-amber-950">SAVE next steps</h2><p className="mt-2 text-amber-900">Use the checklist before contacting your servicer.</p></Link>
-              <Link href="/rap-payment-calculator" className="rounded-3xl border bg-primary-50 p-6 transition hover:shadow-md"><h2 className="text-xl font-bold text-primary-950">Estimate RAP first</h2><p className="mt-2 text-primary-800">Bring your estimate into the servicer conversation.</p></Link>
+              <Link href="/student-loan-payment-increase" className="rounded-3xl border bg-primary-50 p-6 transition hover:shadow-md"><h2 className="text-xl font-bold text-primary-950">Payment increased?</h2><p className="mt-2 text-primary-800">Calculate the jump and copy verification questions.</p></Link>
               <Link href="/student-loan-servicer-complaint" className="rounded-3xl border bg-white p-6 transition hover:shadow-md"><h2 className="text-xl font-bold text-gray-900">If the answer is unclear</h2><p className="mt-2 text-gray-600">Build an escalation packet with dates and proof.</p></Link>
             </section>
 

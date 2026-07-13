@@ -31,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/student-loan-changes-2026/`, lastModified: '2026-07-11', changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${baseUrl}/student-loan-faq/`, lastModified: '2026-07-12', changeFrequency: 'weekly' as const, priority: 0.85 },
     { url: `${baseUrl}/student-loan-scenarios/`, lastModified: '2026-07-13', changeFrequency: 'weekly' as const, priority: 0.85 },
+    { url: `${baseUrl}/student-loan-payment-increase/`, lastModified: '2026-07-13', changeFrequency: 'monthly' as const, priority: 0.84 },
     { url: `${baseUrl}/servicer-contact-toolkit/`, lastModified: '2026-07-13', changeFrequency: 'monthly' as const, priority: 0.85 },
     { url: `${baseUrl}/student-loan-servicer-complaint/`, lastModified: '2026-07-13', changeFrequency: 'monthly' as const, priority: 0.82 },
     { url: `${baseUrl}/save-ending-what-should-i-do/`, lastModified: '2026-07-13', changeFrequency: 'monthly' as const, priority: 0.85 },

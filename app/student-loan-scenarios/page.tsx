@@ -30,6 +30,7 @@ const scenarios = [
     summary: 'This is common because RAP uses AGI tiers and has a minimum payment. Compare IBR/PAYE before assuming RAP is your best replacement.',
     links: [
       { href: '/save-ending-what-should-i-do', label: 'SAVE next steps' },
+      { href: '/student-loan-payment-increase', label: 'Payment increased?' },
       { href: '/rap-payment-calculator', label: 'Estimate RAP' },
       { href: '/servicer-contact-toolkit', label: 'Ask your servicer' },
       { href: '/ibr-vs-rap', label: 'Compare IBR vs RAP' },
@@ -40,6 +41,7 @@ const scenarios = [
     summary: 'Save the notice, calculate the date, add reminders, compare plans, and submit early enough for servicer processing.',
     links: [
       { href: '/save-90-day-deadline-calculator', label: 'Calculate deadline' },
+      { href: '/student-loan-payment-increase', label: 'Check payment shock' },
       { href: '/repayment-plan-recommendation', label: 'Get plan path' },
       { href: '/servicer-contact-toolkit', label: 'Prepare questions' },
       { href: '/student-loan-servicer-complaint', label: 'Escalate if unresolved' },

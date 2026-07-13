@@ -113,6 +113,7 @@ export default function HomePage() {
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 <Link href="/student-loan-faq" className="rounded-lg bg-slate-900 px-5 py-3 font-semibold text-white transition hover:bg-slate-800">Student Loan FAQ</Link>
                 <Link href="/student-loan-scenarios" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">Borrower Scenarios</Link>
+                <Link href="/student-loan-payment-increase" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">Payment Increased?</Link>
                 <Link href="/servicer-contact-toolkit" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">Servicer Toolkit</Link>
                 <Link href="/student-loan-servicer-complaint" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">Servicer Complaint</Link>
                 <Link href="/save-ending-what-should-i-do" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">SAVE Next Steps</Link>

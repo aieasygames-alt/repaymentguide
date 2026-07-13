@@ -134,7 +134,7 @@ export default function StudentLoanServicerComplaintPage() {
 
             <section className="grid gap-6 md:grid-cols-3">
               <Link href="/save-ending-what-should-i-do" className="rounded-3xl border bg-white p-6 transition hover:shadow-md"><h2 className="text-xl font-bold text-gray-900">SAVE next steps</h2><p className="mt-2 text-gray-600">Handle the plan transition before deadlines pile up.</p></Link>
-              <Link href="/pslf-rap-qualifying-payments" className="rounded-3xl border bg-white p-6 transition hover:shadow-md"><h2 className="text-xl font-bold text-gray-900">PSLF and RAP</h2><p className="mt-2 text-gray-600">Check payment-count risks before switching plans.</p></Link>
+              <Link href="/student-loan-payment-increase" className="rounded-3xl border bg-white p-6 transition hover:shadow-md"><h2 className="text-xl font-bold text-gray-900">Payment increased?</h2><p className="mt-2 text-gray-600">Document the difference before escalating.</p></Link>
               <Link href="/student-loan-scenarios" className="rounded-3xl border bg-white p-6 transition hover:shadow-md"><h2 className="text-xl font-bold text-gray-900">Borrower scenarios</h2><p className="mt-2 text-gray-600">Find the guide that matches your situation.</p></Link>
             </section>
 
