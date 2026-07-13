@@ -25,6 +25,7 @@ export default function Footer() {
               <li><Link href="/student-loan-changes-2026" className="text-gray-600 hover:text-primary-600">2026 Changes Guide</Link></li>
               <li><Link href="/student-loan-scenarios" className="text-gray-600 hover:text-primary-600">Borrower Scenarios</Link></li>
               <li><Link href="/servicer-contact-toolkit" className="text-gray-600 hover:text-primary-600">Servicer Toolkit</Link></li>
+              <li><Link href="/student-loan-servicer-complaint" className="text-gray-600 hover:text-primary-600">Servicer Complaint Guide</Link></li>
               <li><Link href="/save-ending-what-should-i-do" className="text-gray-600 hover:text-primary-600">SAVE Next Steps</Link></li>
               <li><Link href="/student-loan-faq" className="text-gray-600 hover:text-primary-600">Student Loan FAQ</Link></li>
               <li><Link href="/rap-vs-save-calculator" className="text-gray-600 hover:text-primary-600">RAP vs SAVE</Link></li>

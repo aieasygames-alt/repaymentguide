@@ -55,6 +55,16 @@ export const officialStudentLoanSources = {
     url: 'https://studentaid.gov/manage-loans/default',
     note: 'Official options for borrowers in default.',
   },
+  fsaFeedbackCenter: {
+    label: 'Federal Student Aid Feedback and Ombudsman',
+    url: 'https://studentaid.gov/feedback-ombudsman',
+    note: 'Official channel for submitting and tracking federal student aid feedback and complaints.',
+  },
+  cfpbComplaint: {
+    label: 'Consumer Financial Protection Bureau complaint portal',
+    url: 'https://www.consumerfinance.gov/complaint/',
+    note: 'Official CFPB channel for submitting complaints about financial companies, including student loan servicers.',
+  },
   edRapFactSheet: {
     label: 'U.S. Department of Education RAP fact sheet',
     url: 'https://www.ed.gov/about/news/press-release/fact-sheet-trump-administration-simplifying-student-loan-repayment',

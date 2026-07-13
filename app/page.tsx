@@ -114,6 +114,7 @@ export default function HomePage() {
                 <Link href="/student-loan-faq" className="rounded-lg bg-slate-900 px-5 py-3 font-semibold text-white transition hover:bg-slate-800">Student Loan FAQ</Link>
                 <Link href="/student-loan-scenarios" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">Borrower Scenarios</Link>
                 <Link href="/servicer-contact-toolkit" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">Servicer Toolkit</Link>
+                <Link href="/student-loan-servicer-complaint" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">Servicer Complaint</Link>
                 <Link href="/save-ending-what-should-i-do" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">SAVE Next Steps</Link>
                 <Link href="/rap-vs-save-calculator" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">RAP vs SAVE</Link>
                 <Link href="/ibr-vs-rap" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">IBR vs RAP</Link>

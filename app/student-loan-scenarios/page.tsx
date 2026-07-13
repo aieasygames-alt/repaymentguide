@@ -42,6 +42,7 @@ const scenarios = [
       { href: '/save-90-day-deadline-calculator', label: 'Calculate deadline' },
       { href: '/repayment-plan-recommendation', label: 'Get plan path' },
       { href: '/servicer-contact-toolkit', label: 'Prepare questions' },
+      { href: '/student-loan-servicer-complaint', label: 'Escalate if unresolved' },
       { href: '/rap-vs-save-calculator', label: 'RAP vs SAVE' },
     ],
   },
@@ -78,6 +79,7 @@ const scenarios = [
     summary: 'Default resolution comes before plan optimization. Compare rehabilitation vs consolidation, then choose the post-default repayment path.',
     links: [
       { href: '/student-loan-default-rehabilitation-2026', label: 'Default guide' },
+      { href: '/student-loan-servicer-complaint', label: 'Complaint packet' },
       { href: 'https://studentaid.gov/manage-loans/default', label: 'Official default options' },
       { href: '/repayment-plan-recommendation', label: 'Plan after default' },
     ],
