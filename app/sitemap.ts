@@ -31,6 +31,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/idr-payment-estimator/`, lastModified: '2026-07-21', changeFrequency: 'weekly' as const, priority: 0.86 },
     { url: `${baseUrl}/student-loan-idr-payment-calculator/`, lastModified: '2026-07-21', changeFrequency: 'weekly' as const, priority: 0.86 },
     { url: `${baseUrl}/pslf-calculator/`, lastModified: '2026-07-05', changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${baseUrl}/pslf-qualifying-payment-calculator/`, lastModified: '2026-07-21', changeFrequency: 'weekly' as const, priority: 0.86 },
+    { url: `${baseUrl}/pslf-vs-idr-forgiveness-calculator/`, lastModified: '2026-07-21', changeFrequency: 'weekly' as const, priority: 0.84 },
     { url: `${baseUrl}/student-loan-changes-2026/`, lastModified: '2026-07-11', changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${baseUrl}/student-loan-faq/`, lastModified: '2026-07-12', changeFrequency: 'weekly' as const, priority: 0.85 },
     { url: `${baseUrl}/student-loan-scenarios/`, lastModified: '2026-07-13', changeFrequency: 'weekly' as const, priority: 0.85 },

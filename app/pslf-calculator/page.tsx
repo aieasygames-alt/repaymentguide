@@ -263,6 +263,7 @@ export default function PslfCalculatorPage() {
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
                 <p className="text-blue-800 text-sm">
                   <strong>Need detailed PSLF guidance?</strong> Read our complete <Link href="/blog/pslf-application-guide" className="text-blue-700 hover:text-blue-800 underline">PSLF application guide</Link> and learn about <Link href="/blog/student-loan-forgiveness-programs" className="text-blue-700 hover:text-blue-800 underline">all forgiveness programs</Link> available.
+                  {' '}For narrower tools, use the <Link href="/pslf-qualifying-payment-calculator" className="text-blue-700 hover:text-blue-800 underline">PSLF qualifying payment calculator</Link> or compare <Link href="/pslf-vs-idr-forgiveness-calculator" className="text-blue-700 hover:text-blue-800 underline">PSLF vs IDR forgiveness</Link>.
                 </p>
               </div>
 

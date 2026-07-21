@@ -122,6 +122,8 @@ export default function HomePage() {
                 <Link href="/income-based-repayment-calculator" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">IBR Calculator</Link>
                 <Link href="/idr-payment-estimator" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">IDR Payment Estimator</Link>
                 <Link href="/student-loan-idr-payment-calculator" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">Student Loan IDR Calculator</Link>
+                <Link href="/pslf-qualifying-payment-calculator" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">PSLF Payment Count</Link>
+                <Link href="/pslf-vs-idr-forgiveness-calculator" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">PSLF vs IDR</Link>
                 <Link href="/pslf-rap-qualifying-payments" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">RAP and PSLF</Link>
                 <Link href="/married-filing-separately-student-loans-rap" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">Married Filing Separately</Link>
               </div>
