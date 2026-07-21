@@ -12,6 +12,9 @@ export default function Footer() {
               <li><Link href="/rap-payment-calculator" className="text-gray-600 hover:text-primary-600">RAP Payment Calculator</Link></li>
               <li><Link href="/save-plan-calculator" className="text-gray-600 hover:text-primary-600">SAVE Plan Calculator</Link></li>
               <li><Link href="/income-driven-repayment-calculator" className="text-gray-600 hover:text-primary-600">IDR Calculator</Link></li>
+              <li><Link href="/income-based-repayment-calculator" className="text-gray-600 hover:text-primary-600">IBR Calculator</Link></li>
+              <li><Link href="/idr-payment-estimator" className="text-gray-600 hover:text-primary-600">IDR Payment Estimator</Link></li>
+              <li><Link href="/student-loan-idr-payment-calculator" className="text-gray-600 hover:text-primary-600">Student Loan IDR Calculator</Link></li>
               <li><Link href="/pslf-calculator" className="text-gray-600 hover:text-primary-600">PSLF Calculator</Link></li>
               <li><Link href="/save-90-day-deadline-calculator" className="text-gray-600 hover:text-primary-600">SAVE Deadline Tool</Link></li>
               <li><Link href="/repayment-plan-recommendation" className="text-gray-600 hover:text-primary-600">Plan Recommendation</Link></li>

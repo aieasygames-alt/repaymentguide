@@ -278,6 +278,7 @@ export default function IdrCalculatorPage() {
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
                 <p className="text-blue-800 text-sm">
                   <strong>Looking for detailed IDR guidance?</strong> Check out our comprehensive guide on <Link href="/blog/idr-plan-comparison" className="text-blue-700 hover:text-blue-800 underline">IDR plan comparison</Link> and learn about <Link href="/blog/married-borrowers-repayment-strategy" className="text-blue-700 hover:text-blue-800 underline">repayment strategies for married borrowers</Link>.
+                  {' '}If you searched for a narrower tool, use the <Link href="/income-based-repayment-calculator" className="text-blue-700 hover:text-blue-800 underline">Income-Based Repayment calculator</Link>, <Link href="/idr-payment-estimator" className="text-blue-700 hover:text-blue-800 underline">IDR payment estimator</Link>, or <Link href="/student-loan-idr-payment-calculator" className="text-blue-700 hover:text-blue-800 underline">student loan IDR payment calculator</Link>.
                 </p>
               </div>
 
