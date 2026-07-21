@@ -37,7 +37,7 @@ export default function HomePage() {
                 Calculate RAP Payment
               </Link>
               <Link href="/income-driven-repayment-calculator" className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition border border-primary-600">
-                Compare IDR Plans
+                Income-Driven Repayment Calculator
               </Link>
             </div>
           </div>
@@ -84,8 +84,8 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">IDR Calculator</h3>
-                <p className="text-gray-600">Find which income-driven repayment plan saves you the most.</p>
+                <h3 className="text-xl font-semibold mb-2">Income-Driven Repayment Calculator</h3>
+                <p className="text-gray-600">Estimate IDR, IBR, PAYE, ICR, and RAP payments to find the plan that fits.</p>
               </Link>
 
               <Link href="/pslf-calculator" className="bg-white border rounded-xl p-6 hover:shadow-lg transition">

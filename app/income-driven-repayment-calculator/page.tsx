@@ -7,15 +7,15 @@ import { FAQSchema } from '@/components/FAQSchema';
 import { CalculatorDisclosure, officialStudentLoanSources } from '@/components/TrustSignals';
 
 export const metadata: Metadata = {
-  title: 'IDR Calculator - Compare RAP, IBR, PAYE & ICR',
-  description: 'Calculate estimated payments under RAP, PAYE, IBR, and ICR plans. Compare income-driven repayment options after the 2026 SAVE transition.',
-  keywords: ['IDR calculator', 'income driven repayment', 'RAP', 'PAYE', 'IBR', 'ICR'],
+  title: 'Income-Driven Repayment Calculator - IDR, IBR, PAYE, ICR & RAP',
+  description: 'Use this income-driven repayment calculator to estimate IDR payments under RAP, IBR, PAYE, and ICR after the 2026 SAVE transition.',
+  keywords: ['income-driven repayment calculator', 'income driven repayment calculator', 'IDR calculator', 'income based repayment calculator', 'RAP', 'PAYE', 'IBR', 'ICR'],
   alternates: {
     canonical: '/income-driven-repayment-calculator/',
   },
   openGraph: {
-    title: 'IDR Calculator - Compare All Plans',
-    description: 'Find the best income-driven repayment plan',
+    title: 'Income-Driven Repayment Calculator',
+    description: 'Compare estimated monthly payments under IDR, IBR, PAYE, ICR, and RAP.',
     url: 'https://repaymentguide.com/income-driven-repayment-calculator',
   },
 };
@@ -58,7 +58,7 @@ export default function IdrCalculatorPage() {
           <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Income-Driven Repayment Calculator</h1>
             <p className="text-xl text-gray-700 max-w-3xl">
-              Calculate estimated monthly payments under RAP, PAYE, IBR, and ICR plans. Find which plan fits your 2026 repayment strategy.
+              Calculate estimated monthly payments under IDR, IBR, PAYE, ICR, and RAP plans. Find which income-driven repayment option fits your 2026 strategy.
             </p>
           </div>
         </div>

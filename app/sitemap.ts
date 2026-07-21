@@ -22,11 +22,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://repaymentguide.com';
 
   const urls = [
-    { url: `${baseUrl}/`, lastModified: '2026-07-13', changeFrequency: 'daily' as const, priority: 1 },
+    { url: `${baseUrl}/`, lastModified: '2026-07-21', changeFrequency: 'daily' as const, priority: 1 },
     { url: `${baseUrl}/student-loan-payment-calculator/`, lastModified: '2026-07-13', changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${baseUrl}/rap-payment-calculator/`, lastModified: '2026-07-13', changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${baseUrl}/save-plan-calculator/`, lastModified: '2026-07-05', changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${baseUrl}/income-driven-repayment-calculator/`, lastModified: '2026-07-13', changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${baseUrl}/income-driven-repayment-calculator/`, lastModified: '2026-07-21', changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${baseUrl}/pslf-calculator/`, lastModified: '2026-07-05', changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${baseUrl}/student-loan-changes-2026/`, lastModified: '2026-07-11', changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${baseUrl}/student-loan-faq/`, lastModified: '2026-07-12', changeFrequency: 'weekly' as const, priority: 0.85 },

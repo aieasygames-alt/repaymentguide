@@ -33,7 +33,7 @@ export default function Header() {
               SAVE Alternatives
             </Link>
             <Link href="/income-driven-repayment-calculator" className="text-gray-700 hover:text-primary-600">
-              IDR Plans
+              IDR Calculator
             </Link>
             <Link href="/pslf-calculator" className="text-gray-700 hover:text-primary-600">
               PSLF Calculator
@@ -75,7 +75,7 @@ export default function Header() {
               SAVE Alternatives
             </Link>
             <Link href="/income-driven-repayment-calculator" className="block text-gray-700 hover:text-primary-600" onClick={() => setMobileMenuOpen(false)}>
-              IDR Plans
+              IDR Calculator
             </Link>
             <Link href="/pslf-calculator" className="block text-gray-700 hover:text-primary-600" onClick={() => setMobileMenuOpen(false)}>
               PSLF Calculator
