@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const urls = [
     { url: `${baseUrl}/`, lastModified: '2026-07-21', changeFrequency: 'daily' as const, priority: 1 },
+    { url: `${baseUrl}/student-loan-calculators/`, lastModified: '2026-07-21', changeFrequency: 'weekly' as const, priority: 0.92 },
     { url: `${baseUrl}/student-loan-payment-calculator/`, lastModified: '2026-07-13', changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${baseUrl}/rap-payment-calculator/`, lastModified: '2026-07-13', changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${baseUrl}/save-plan-calculator/`, lastModified: '2026-07-05', changeFrequency: 'weekly' as const, priority: 0.9 },

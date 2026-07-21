@@ -8,6 +8,7 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-gray-900 mb-4">Calculators</h3>
             <ul className="space-y-2">
+              <li><Link href="/student-loan-calculators" className="text-gray-600 hover:text-primary-600">All Student Loan Calculators</Link></li>
               <li><Link href="/student-loan-payment-calculator" className="text-gray-600 hover:text-primary-600">Payment Calculator</Link></li>
               <li><Link href="/rap-payment-calculator" className="text-gray-600 hover:text-primary-600">RAP Payment Calculator</Link></li>
               <li><Link href="/save-plan-calculator" className="text-gray-600 hover:text-primary-600">SAVE Plan Calculator</Link></li>

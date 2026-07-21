@@ -111,6 +111,7 @@ export default function HomePage() {
                 Start with short answers for SAVE deadlines, RAP vs IBR, Parent PLUS, PSLF, default, and married filing separately scenarios.
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
+                <Link href="/student-loan-calculators" className="rounded-lg bg-primary-700 px-5 py-3 font-semibold text-white transition hover:bg-primary-800">All Calculators</Link>
                 <Link href="/student-loan-faq" className="rounded-lg bg-slate-900 px-5 py-3 font-semibold text-white transition hover:bg-slate-800">Student Loan FAQ</Link>
                 <Link href="/student-loan-scenarios" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">Borrower Scenarios</Link>
                 <Link href="/student-loan-payment-increase" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">Payment Increased?</Link>
