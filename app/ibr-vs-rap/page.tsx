@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { FAQSchema } from '@/components/FAQSchema';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ArticleTrustSummary, FinancialDisclaimer, OfficialSources, officialStudentLoanSources } from '@/components/TrustSignals';
 
 const faqs = [
@@ -36,6 +37,13 @@ export default function IbrVsRapPage() {
   return (
     <>
       <FAQSchema faqs={faqs} />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://repaymentguide.com/' },
+          { name: '2026 Student Loan Changes', url: 'https://repaymentguide.com/student-loan-changes-2026/' },
+          { name: 'IBR vs RAP', url: 'https://repaymentguide.com/ibr-vs-rap/' },
+        ]}
+      />
       <Header />
       <main className="flex-1">
         <section className="bg-gradient-to-br from-primary-50 to-slate-100 py-14">
@@ -81,6 +89,26 @@ export default function IbrVsRapPage() {
             <section className="grid gap-6 md:grid-cols-2">
               <div className="rounded-3xl border bg-primary-50 p-6"><h2 className="text-xl font-bold text-primary-950">Choose RAP to investigate when</h2><ul className="mt-3 space-y-2 text-primary-900"><li>- Your RAP estimate is meaningfully lower than IBR.</li><li>- Dependents reduce the monthly payment.</li><li>- Interest waiver or principal match could help your balance.</li><li>- You have eligible Direct Loans and no Parent PLUS complication.</li></ul></div>
               <div className="rounded-3xl border bg-white p-6"><h2 className="text-xl font-bold text-gray-900">Choose IBR to investigate when</h2><ul className="mt-3 space-y-2 text-gray-700"><li>- Your income is low after the poverty-guideline allowance.</li><li>- You need a plan with a possible $0 payment.</li><li>- You are not eligible for PAYE.</li><li>- Married filing separately strategy matters.</li></ul></div>
+            </section>
+
+            <section className="rounded-3xl border bg-white p-6">
+              <h2 className="text-2xl font-bold text-gray-900">A practical way to decide what to calculate first</h2>
+              <div className="mt-4 space-y-4 text-gray-700">
+                <p>
+                  If you need the lowest immediate bill, start by comparing the monthly payment under both formulas. RAP can be simple because it starts from AGI and dependents. IBR can be more protective for lower-income households because it starts from discretionary income after a poverty-guideline allowance.
+                </p>
+                <p>
+                  If you are thinking beyond the next bill, compare time to forgiveness, likely income changes, and whether your servicer can process the request before a SAVE transition deadline. A plan that looks slightly cheaper today can be less useful if it stretches repayment longer or creates documentation problems.
+                </p>
+                <p>
+                  If you are married filing separately, pursuing PSLF, or managing older loans, treat this page as a starting point rather than a final answer. Those details can change whether RAP, IBR, PAYE, ICR, or Standard repayment belongs at the top of your list.
+                </p>
+              </div>
+              <div className="mt-6 grid gap-4 md:grid-cols-3">
+                <Link href="/rap-payment-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Estimate RAP</Link>
+                <Link href="/income-based-repayment-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Estimate IBR</Link>
+                <Link href="/married-filing-separately-student-loans-rap" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Review separate filing</Link>
+              </div>
             </section>
 
             <OfficialSources sources={[officialStudentLoanSources.studentAidRepaymentPlans, officialStudentLoanSources.idrApplication, officialStudentLoanSources.edRapFactSheet]} title="Official sources for IBR vs RAP" />

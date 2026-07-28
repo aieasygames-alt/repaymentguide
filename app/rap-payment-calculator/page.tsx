@@ -4,6 +4,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import RapPaymentCalculator from '@/components/RapPaymentCalculator';
 import { FAQSchema } from '@/components/FAQSchema';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { CalculatorSchema } from '@/components/CalculatorSchema';
 import { CalculatorDisclosure, officialStudentLoanSources } from '@/components/TrustSignals';
 
 const faqs = [
@@ -43,6 +45,19 @@ export default function RapPaymentCalculatorPage() {
   return (
     <>
       <FAQSchema faqs={faqs} />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://repaymentguide.com/' },
+          { name: 'Student Loan Calculators', url: 'https://repaymentguide.com/student-loan-calculators/' },
+          { name: 'RAP Payment Calculator', url: 'https://repaymentguide.com/rap-payment-calculator/' },
+        ]}
+      />
+      <CalculatorSchema
+        name="RAP Payment Calculator"
+        description="Estimate Repayment Assistance Plan monthly payments, dependent reductions, unpaid interest treatment, and principal match planning amounts."
+        url="https://repaymentguide.com/rap-payment-calculator/"
+        keywords={['RAP payment calculator', 'Repayment Assistance Plan', 'student loan repayment calculator']}
+      />
       <Header />
       <main className="flex-1">
         <section className="bg-gradient-to-br from-slate-950 via-primary-950 to-slate-800 py-16 text-white">
@@ -128,6 +143,26 @@ export default function RapPaymentCalculatorPage() {
                   <p className="mt-2 text-gray-600">Check whether RAP is even the right starting point.</p>
                 </Link>
               </aside>
+            </section>
+
+            <section className="rounded-3xl border bg-white p-6">
+              <h2 className="text-3xl font-bold text-gray-900">How to use the RAP estimate before you apply</h2>
+              <div className="mt-4 space-y-4 text-gray-700">
+                <p>
+                  Start with the monthly payment estimate, then check whether the same borrower facts produce a better result under IBR, PAYE, ICR, or Standard repayment. RAP uses AGI directly, so two borrowers with the same loan balance can see very different results if one has dependents or one qualifies for a legacy discretionary-income plan.
+                </p>
+                <p>
+                  The estimate is most useful as a screening tool. Before submitting an IDR request, confirm your loan types, whether any consolidation loan includes Parent PLUS debt, your most recent income documentation, and whether you are trying to preserve PSLF-qualifying payments.
+                </p>
+                <p>
+                  If your RAP estimate is close to another plan, compare the full repayment path rather than just the first bill. A lower payment can help your monthly budget, but forgiveness timing, interest treatment, and servicer processing rules can change the long-term cost.
+                </p>
+              </div>
+              <div className="mt-6 grid gap-4 md:grid-cols-3">
+                <Link href="/ibr-vs-rap" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Read IBR vs RAP</Link>
+                <Link href="/rap-vs-save-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Compare RAP vs SAVE</Link>
+                <Link href="/pslf-rap-qualifying-payments" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Check RAP and PSLF</Link>
+              </div>
             </section>
           </div>
         </section>

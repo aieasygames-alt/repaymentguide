@@ -2081,6 +2081,7 @@ function parseMarkdown(content: string) {
   let currentListOrdered = false;
   let tableRows: string[][] = [];
   let inTable = false;
+  let skippedFirstH1 = false;
 
   const flushList = () => {
     if (currentList.length > 0) {
@@ -2191,6 +2192,10 @@ function parseMarkdown(content: string) {
     if (line.startsWith('# ')) {
       flushList();
       flushTable();
+      if (!skippedFirstH1) {
+        skippedFirstH1 = true;
+        return;
+      }
       elements.push(
         <h1 key={index} className="text-3xl font-bold mt-12 mb-6 text-gray-900">
           {parseInline(line.slice(2))}

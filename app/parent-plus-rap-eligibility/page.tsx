@@ -3,6 +3,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ParentPlusEligibilityChecker from '@/components/ParentPlusEligibilityChecker';
 import { FAQSchema } from '@/components/FAQSchema';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { CalculatorSchema } from '@/components/CalculatorSchema';
 import { CalculatorDisclosure, officialStudentLoanSources } from '@/components/TrustSignals';
 
 const faqs = [
@@ -38,6 +40,19 @@ export default function ParentPlusRapEligibilityPage() {
   return (
     <>
       <FAQSchema faqs={faqs} />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://repaymentguide.com/' },
+          { name: 'Student Loan Calculators', url: 'https://repaymentguide.com/student-loan-calculators/' },
+          { name: 'Parent PLUS RAP Eligibility Checker', url: 'https://repaymentguide.com/parent-plus-rap-eligibility/' },
+        ]}
+      />
+      <CalculatorSchema
+        name="Parent PLUS RAP Eligibility Checker"
+        description="Check the first repayment questions Parent PLUS borrowers should answer before relying on RAP, ICR, Standard repayment, or PSLF."
+        url="https://repaymentguide.com/parent-plus-rap-eligibility/"
+        keywords={['Parent PLUS RAP eligibility', 'Parent PLUS repayment', 'Parent PLUS ICR']}
+      />
       <Header />
       <main className="flex-1">
         <section className="bg-gradient-to-br from-green-50 to-primary-100 py-14">
@@ -71,6 +86,26 @@ export default function ParentPlusRapEligibilityPage() {
               ]}
             />
             <ParentPlusEligibilityChecker />
+
+            <section className="rounded-3xl border bg-white p-6">
+              <h2 className="text-2xl font-bold text-gray-900">Why Parent PLUS borrowers need a separate check</h2>
+              <div className="mt-4 space-y-4 text-gray-700">
+                <p>
+                  Parent PLUS loans follow different repayment paths than loans borrowed by the student. The parent borrower, not the student, is the borrower for repayment, PSLF employment, income documentation, and any consolidation strategy.
+                </p>
+                <p>
+                  If a Direct Consolidation Loan includes Parent PLUS debt, do not assume a general RAP estimate applies. Parent borrowers often need to compare ICR after consolidation, Standard repayment, and PSLF rules tied to the parent borrower&apos;s qualifying employment.
+                </p>
+                <p>
+                  The safest next step is to identify the exact loan type in StudentAid.gov, confirm whether Parent PLUS loans were consolidated, then compare payment estimates with the repayment plan that is actually available to the parent borrower.
+                </p>
+              </div>
+              <div className="mt-6 grid gap-4 md:grid-cols-3">
+                <a href="https://studentaid.gov/manage-loans/consolidation" target="_blank" rel="noopener noreferrer" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Review consolidation rules</a>
+                <a href="https://studentaid.gov/pslf" target="_blank" rel="noopener noreferrer" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Check PSLF rules</a>
+                <a href="https://studentaid.gov/manage-loans/repayment/plans" target="_blank" rel="noopener noreferrer" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Compare repayment plans</a>
+              </div>
+            </section>
           </div>
         </section>
       </main>

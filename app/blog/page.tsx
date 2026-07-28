@@ -100,6 +100,40 @@ const blogPosts = [
   },
 ];
 
+const topicClusters = [
+  {
+    title: 'Repayment plan decisions',
+    description: 'Use these guides when you are comparing IDR, RAP, IBR, consolidation, refinancing, or the first bill after SAVE.',
+    links: [
+      { href: '/blog/idr-plan-comparison', label: 'IDR plan comparison' },
+      { href: '/blog/save-plan-alternatives', label: 'SAVE alternatives' },
+      { href: '/blog/student-loan-consolidation-guide', label: 'Consolidation guide' },
+      { href: '/blog/student-loan-refinancing-vs-consolidation', label: 'Refinancing vs consolidation' },
+    ],
+  },
+  {
+    title: 'Borrower situations',
+    description: 'These articles cover borrower-specific questions where the right plan depends on who borrowed, marital status, or career stage.',
+    links: [
+      { href: '/blog/parent-plus-loan-repayment-options', label: 'Parent PLUS options' },
+      { href: '/blog/married-borrowers-repayment-strategy', label: 'Married borrower strategy' },
+      { href: '/blog/recent-graduate-repayment-guide', label: 'Recent graduate guide' },
+      { href: '/student-loan-scenarios', label: 'Scenario library' },
+    ],
+  },
+  {
+    title: 'Forgiveness, tax, and relief',
+    description: 'Use these when you need to protect forgiveness credit, understand tax effects, or choose temporary relief carefully.',
+    links: [
+      { href: '/blog/pslf-application-guide', label: 'PSLF application guide' },
+      { href: '/blog/student-loan-forgiveness-programs', label: 'Forgiveness programs' },
+      { href: '/blog/student-loan-tax-implications', label: 'Tax implications' },
+      { href: '/blog/deferment-vs-forbearance', label: 'Deferment vs forbearance' },
+      { href: '/blog/student-loan-default-rehabilitation', label: 'Default rehabilitation' },
+    ],
+  },
+];
+
 export default function BlogPage() {
   return (
     <>
@@ -110,6 +144,28 @@ export default function BlogPage() {
           <p className="text-xl text-gray-600 mb-8">
             Expert guides and tips to help you navigate student loan repayment.
           </p>
+
+          <section className="mb-10 rounded-2xl border bg-primary-50 p-6">
+            <h2 className="text-2xl font-bold text-primary-950">Find the right student loan guide faster</h2>
+            <p className="mt-3 max-w-3xl text-primary-900">
+              Start with your repayment decision, borrower situation, or forgiveness question. These topic paths help you move from a broad article to the calculator, checklist, or official source that should come next.
+            </p>
+            <div className="mt-6 grid gap-5 md:grid-cols-3">
+              {topicClusters.map((cluster) => (
+                <div key={cluster.title} className="rounded-xl border bg-white p-5">
+                  <h3 className="font-bold text-gray-900">{cluster.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-gray-600">{cluster.description}</p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {cluster.links.map((link) => (
+                      <Link key={link.href} href={link.href} className="rounded-full bg-slate-100 px-3 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-200">
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
 
           <div className="grid md:grid-cols-3 gap-6">
             {blogPosts.map((post) => (

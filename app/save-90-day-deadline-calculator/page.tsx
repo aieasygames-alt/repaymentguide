@@ -4,6 +4,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SaveDeadlineCalculator from '@/components/SaveDeadlineCalculator';
 import { FAQSchema } from '@/components/FAQSchema';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { CalculatorSchema } from '@/components/CalculatorSchema';
 import { CalculatorDisclosure, officialStudentLoanSources } from '@/components/TrustSignals';
 
 const faqs = [
@@ -39,6 +41,19 @@ export default function SaveDeadlineCalculatorPage() {
   return (
     <>
       <FAQSchema faqs={faqs} />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://repaymentguide.com/' },
+          { name: 'Student Loan Calculators', url: 'https://repaymentguide.com/student-loan-calculators/' },
+          { name: 'SAVE 90-Day Deadline Calculator', url: 'https://repaymentguide.com/save-90-day-deadline-calculator/' },
+        ]}
+      />
+      <CalculatorSchema
+        name="SAVE 90-Day Deadline Calculator"
+        description="Estimate the 90-day response date after a SAVE transition notice and plan repayment comparison milestones."
+        url="https://repaymentguide.com/save-90-day-deadline-calculator/"
+        keywords={['SAVE 90 day deadline', 'SAVE transition', 'student loan deadline calculator']}
+      />
       <Header />
       <main className="flex-1">
         <section className="bg-gradient-to-br from-amber-50 to-primary-100 py-14">
@@ -82,6 +97,21 @@ export default function SaveDeadlineCalculatorPage() {
                   <li><strong>3. Submit before the final two weeks.</strong> Waiting until the deadline increases the risk of processing delays or payment shock.</li>
                   <li><strong>4. Verify the new bill.</strong> After submitting, check that your servicer applied the plan you selected.</li>
                 </ol>
+              </section>
+
+              <section className="rounded-2xl border bg-white p-6">
+                <h2 className="mb-4 text-2xl font-bold text-gray-900">Why the notice date matters</h2>
+                <div className="space-y-4 text-gray-700">
+                  <p>
+                    SAVE transition timing is not the same for every borrower. A generic policy date can help you prepare, but your practical deadline depends on the date your servicer sends the notice or the exact due date printed in that notice.
+                  </p>
+                  <p>
+                    If you are close to the deadline, prioritize actions that create a record: save the notice, download confirmation pages, write down representative names when you call, and check your account after submitting a repayment request. Those records can help if your bill changes before the servicer finishes processing the plan election.
+                  </p>
+                  <p>
+                    Borrowers pursuing PSLF should be especially careful. A rushed or automatic placement can affect whether a month counts, so compare the payment estimate and the qualifying-payment rules before assuming the lowest bill is the safest option.
+                  </p>
+                </div>
               </section>
 
               <div className="grid gap-6 md:grid-cols-2">

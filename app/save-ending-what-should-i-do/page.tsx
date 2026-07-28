@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { FAQSchema } from '@/components/FAQSchema';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ArticleTrustSummary, FinancialDisclaimer, OfficialSources, officialStudentLoanSources } from '@/components/TrustSignals';
 
 const faqs = [
@@ -36,6 +37,13 @@ export default function SaveEndingWhatShouldIDoPage() {
   return (
     <>
       <FAQSchema faqs={faqs} />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://repaymentguide.com/' },
+          { name: '2026 Student Loan Changes', url: 'https://repaymentguide.com/student-loan-changes-2026/' },
+          { name: 'SAVE Next Steps', url: 'https://repaymentguide.com/save-ending-what-should-i-do/' },
+        ]}
+      />
       <Header />
       <main className="flex-1">
         <section className="bg-gradient-to-br from-amber-50 to-primary-100 py-14">
@@ -74,6 +82,21 @@ export default function SaveEndingWhatShouldIDoPage() {
               <Link href="/ibr-vs-rap" className="rounded-3xl border bg-white p-6 transition hover:shadow-md"><h2 className="text-xl font-bold text-gray-900">Compare IBR vs RAP</h2><p className="mt-2 text-gray-600">See when a legacy IDR formula may beat RAP.</p></Link>
               <Link href="/pslf-rap-qualifying-payments" className="rounded-3xl border bg-blue-50 p-6 transition hover:shadow-md"><h2 className="text-xl font-bold text-blue-950">Pursuing PSLF?</h2><p className="mt-2 text-blue-900">Do not choose only by the lowest estimated payment. Verify qualifying payment treatment.</p></Link>
               <Link href="/parent-plus-rap-eligibility" className="rounded-3xl border bg-white p-6 transition hover:shadow-md"><h2 className="text-xl font-bold text-gray-900">Have Parent PLUS?</h2><p className="mt-2 text-gray-600">Parent borrowers need a separate eligibility check before assuming RAP applies.</p></Link>
+            </section>
+
+            <section className="rounded-3xl border bg-white p-6">
+              <h2 className="text-2xl font-bold text-gray-900">Common mistakes to avoid during the SAVE transition</h2>
+              <div className="mt-4 space-y-4 text-gray-700">
+                <p>
+                  Do not assume that the lowest estimated payment is automatically the right plan. PSLF treatment, forgiveness timing, spouse income, and Parent PLUS history can matter more than a small monthly difference.
+                </p>
+                <p>
+                  Do not wait until the final days of the response window to submit a plan request. If your servicer needs income documentation or the application is delayed, you may see a temporary bill that does not match the plan you intended to choose.
+                </p>
+                <p>
+                  Do not rely on an old SAVE estimate as if it were still available. Use it as a payment-shock reference, then compare current options and verify the final choice through StudentAid.gov or your servicer account.
+                </p>
+              </div>
             </section>
 
             <OfficialSources sources={[officialStudentLoanSources.edRapFactSheet, officialStudentLoanSources.edRateUpdate, officialStudentLoanSources.idrApplication, officialStudentLoanSources.studentAidRepaymentPlans]} title="Official sources for SAVE next steps" />

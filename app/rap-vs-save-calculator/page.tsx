@@ -4,6 +4,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import RapPaymentCalculator from '@/components/RapPaymentCalculator';
 import { FAQSchema } from '@/components/FAQSchema';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { CalculatorSchema } from '@/components/CalculatorSchema';
 import { ArticleTrustSummary, FinancialDisclaimer, OfficialSources, officialStudentLoanSources } from '@/components/TrustSignals';
 
 const faqs = [
@@ -37,6 +39,19 @@ export default function RapVsSaveCalculatorPage() {
   return (
     <>
       <FAQSchema faqs={faqs} />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://repaymentguide.com/' },
+          { name: 'Student Loan Calculators', url: 'https://repaymentguide.com/student-loan-calculators/' },
+          { name: 'RAP vs SAVE Calculator', url: 'https://repaymentguide.com/rap-vs-save-calculator/' },
+        ]}
+      />
+      <CalculatorSchema
+        name="RAP vs SAVE Calculator"
+        description="Estimate payment shock by comparing a SAVE-era payment reference with a current RAP planning estimate."
+        url="https://repaymentguide.com/rap-vs-save-calculator/"
+        keywords={['RAP vs SAVE calculator', 'SAVE payment change', 'RAP payment after SAVE']}
+      />
       <Header />
       <main className="flex-1">
         <section className="bg-gradient-to-br from-slate-950 via-primary-950 to-slate-800 py-16 text-white">
@@ -66,6 +81,21 @@ export default function RapVsSaveCalculatorPage() {
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Link href="/income-driven-repayment-calculator" className="rounded-xl bg-primary-700 px-5 py-3 text-center font-semibold text-white hover:bg-primary-800">Compare current IDR plans</Link>
                 <Link href="/save-90-day-deadline-calculator" className="rounded-xl border px-5 py-3 text-center font-semibold text-primary-800 hover:bg-primary-50">Calculate SAVE deadline</Link>
+              </div>
+            </section>
+
+            <section className="rounded-3xl border bg-white p-6">
+              <h2 className="text-2xl font-bold text-gray-900">What changed from SAVE to RAP?</h2>
+              <div className="mt-4 space-y-4 text-gray-700">
+                <p>
+                  SAVE used discretionary income after a poverty-line exclusion. RAP uses AGI tiers and a dependent reduction. That difference is why a borrower who had a very low SAVE payment can see a higher RAP estimate even when income has not changed.
+                </p>
+                <p>
+                  RAP may still be worth comparing because its unpaid-interest treatment and possible principal match can matter for borrowers who make full, on-time payments. But the payment formula, minimum monthly payment, and non-PSLF forgiveness timeline should be reviewed before treating RAP as a direct replacement.
+                </p>
+                <p>
+                  If the calculator shows a large increase, use that result as a warning signal. Compare IBR and PAYE, check whether spouse income is included, and confirm whether PSLF or Parent PLUS rules change the plan list you should consider.
+                </p>
               </div>
             </section>
 

@@ -2,9 +2,18 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://repaymentguide.com"),
-  verification: process.env.NEXT_PUBLIC_GSC_VERIFICATION
+  verification: process.env.NEXT_PUBLIC_GSC_VERIFICATION || process.env.NEXT_PUBLIC_BING_VERIFICATION
     ? {
-        google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
+        ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION
+          ? { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION }
+          : {}),
+        ...(process.env.NEXT_PUBLIC_BING_VERIFICATION
+          ? {
+              other: {
+                'msvalidate.01': process.env.NEXT_PUBLIC_BING_VERIFICATION,
+              },
+            }
+          : {}),
       }
     : undefined,
   title: "RepaymentGuide - Student Loan Payment Calculator & IDR Plan Comparison",
