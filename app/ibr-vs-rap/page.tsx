@@ -22,8 +22,8 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'IBR vs RAP: Which Student Loan Plan Should You Compare First?',
-  description: 'Compare IBR vs RAP for 2026 student loan repayment, including payment formulas, PSLF strategy, spouse income, forgiveness timelines, and borrower fit.',
+  title: 'IBR vs RAP: Which Student Loan Repayment Plan Is Better in 2026?',
+  description: 'Compare IBR vs RAP in 2026 with payment examples, eligibility notes, PSLF strategy, spouse income rules, forgiveness timelines, and calculator links.',
   keywords: ['IBR vs RAP', 'RAP vs IBR', 'income based repayment vs RAP', 'student loan RAP plan'],
   alternates: { canonical: '/ibr-vs-rap/' },
   openGraph: {
@@ -50,7 +50,7 @@ export default function IbrVsRapPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl">
               <p className="mb-3 inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-primary-800 ring-1 ring-primary-200">2026 repayment comparison</p>
-              <h1 className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl">IBR vs RAP: Which Plan Should You Compare First?</h1>
+              <h1 className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl">IBR vs RAP: Which Student Loan Repayment Plan Is Better in 2026?</h1>
               <p className="max-w-3xl text-xl text-gray-700">RAP and IBR can both be reasonable after the SAVE transition, but they solve different borrower problems. Start with the formula, then check PSLF, spouse income, and forgiveness timing.</p>
             </div>
           </div>
@@ -66,7 +66,8 @@ export default function IbrVsRapPage() {
               <p className="mt-3 text-gray-700">Compare <strong>RAP first</strong> if you have eligible Direct Loans, dependents, and want to understand the new AGI-based payment plus potential interest and principal benefits. Compare <strong>IBR first</strong> if your income is low relative to household size, you need a legacy IDR formula, you are married filing separately, or PAYE eligibility is uncertain.</p>
               <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                 <Link href="/rap-payment-calculator" className="rounded-xl bg-primary-700 px-5 py-3 text-center font-semibold text-white hover:bg-primary-800">Estimate RAP payment</Link>
-                <Link href="/income-driven-repayment-calculator" className="rounded-xl border px-5 py-3 text-center font-semibold text-primary-700 hover:bg-primary-50">Compare IDR plans</Link>
+                <Link href="/income-driven-repayment-calculator" className="rounded-xl border px-5 py-3 text-center font-semibold text-primary-700 hover:bg-primary-50">Use the IDR payment estimator</Link>
+                <Link href="/income-based-repayment-calculator" className="rounded-xl border px-5 py-3 text-center font-semibold text-primary-700 hover:bg-primary-50">Open the IBR calculator</Link>
               </div>
             </section>
 
@@ -89,6 +90,23 @@ export default function IbrVsRapPage() {
             <section className="grid gap-6 md:grid-cols-2">
               <div className="rounded-3xl border bg-primary-50 p-6"><h2 className="text-xl font-bold text-primary-950">Choose RAP to investigate when</h2><ul className="mt-3 space-y-2 text-primary-900"><li>- Your RAP estimate is meaningfully lower than IBR.</li><li>- Dependents reduce the monthly payment.</li><li>- Interest waiver or principal match could help your balance.</li><li>- You have eligible Direct Loans and no Parent PLUS complication.</li></ul></div>
               <div className="rounded-3xl border bg-white p-6"><h2 className="text-xl font-bold text-gray-900">Choose IBR to investigate when</h2><ul className="mt-3 space-y-2 text-gray-700"><li>- Your income is low after the poverty-guideline allowance.</li><li>- You need a plan with a possible $0 payment.</li><li>- You are not eligible for PAYE.</li><li>- Married filing separately strategy matters.</li></ul></div>
+            </section>
+
+            <section className="rounded-3xl border bg-white p-6">
+              <h2 className="text-2xl font-bold text-gray-900">IBR vs RAP payment examples</h2>
+              <p className="mt-3 text-gray-700">These simplified examples show why neither plan is automatically better. Run your own numbers with the RAP payment calculator and Income-Based Repayment calculator before submitting an official request.</p>
+              <div className="mt-5 overflow-x-auto">
+                <table className="w-full border-collapse text-sm">
+                  <thead>
+                    <tr className="bg-slate-900 text-white"><th className="p-3 text-left">Example borrower</th><th className="p-3 text-left">Why RAP may win</th><th className="p-3 text-left">Why IBR may win</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b"><td className="p-3 font-semibold">Single borrower, moderate income</td><td className="p-3">AGI tier may produce a predictable bill and interest help.</td><td className="p-3">IBR may be lower if discretionary income is small after the poverty allowance.</td></tr>
+                    <tr className="border-b bg-gray-50"><td className="p-3 font-semibold">Borrower with dependents</td><td className="p-3">RAP subtracts $50 per dependent from the monthly payment.</td><td className="p-3">IBR may still be lower when household size creates a large income shield.</td></tr>
+                    <tr><td className="p-3 font-semibold">PSLF borrower</td><td className="p-3">RAP can help if it is the lowest qualifying payment.</td><td className="p-3">IBR can be safer when legacy IDR treatment and payment counts are clearer for your file.</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </section>
 
             <section className="rounded-3xl border bg-white p-6">

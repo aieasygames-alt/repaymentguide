@@ -163,12 +163,12 @@ export default function StudentLoanCalculatorsPage() {
             <section className="rounded-2xl border bg-white p-6">
               <h2 className="text-2xl font-bold text-gray-900">Start With the Closest Match</h2>
               <p className="mt-3 text-gray-700">
-                If you only need a fixed-payment estimate, start with the standard payment calculator. If your payment depends on income, household size, public service, or a SAVE transition notice, use the IDR, RAP, PSLF, or deadline tools below.
+                If you only need a fixed-payment estimate, start with the standard payment calculator. If your payment depends on income, household size, public service, or a SAVE transition notice, use the IDR, IBR payment calculator, RAP, PSLF, or deadline tools below.
               </p>
               <div className="mt-5 grid gap-4 md:grid-cols-3">
                 <Link href="/income-driven-repayment-calculator" className="rounded-xl bg-primary-700 p-5 text-white transition hover:bg-primary-800">
                   <h3 className="font-bold">Need an income-based payment?</h3>
-                  <p className="mt-2 text-sm text-primary-50">Compare IDR, IBR, PAYE, ICR, and RAP.</p>
+                  <p className="mt-2 text-sm text-primary-50">Use the IDR payment estimator to compare IBR, PAYE, ICR, and RAP.</p>
                 </Link>
                 <Link href="/pslf-calculator" className="rounded-xl border bg-white p-5 transition hover:bg-primary-50">
                   <h3 className="font-bold text-gray-900">Pursuing PSLF?</h3>
@@ -178,6 +178,17 @@ export default function StudentLoanCalculatorsPage() {
                   <h3 className="font-bold text-amber-950">Got a SAVE notice?</h3>
                   <p className="mt-2 text-sm text-amber-900">Estimate your 90-day planning window.</p>
                 </Link>
+              </div>
+            </section>
+
+            <section className="rounded-2xl border bg-white p-6">
+              <h2 className="text-2xl font-bold text-gray-900">Popular calculator searches</h2>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <Link href="/income-driven-repayment-calculator" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">income driven repayment calculator</Link>
+                <Link href="/income-based-repayment-calculator" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">income based repayment calculator</Link>
+                <Link href="/idr-payment-estimator" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">IDR payment estimator</Link>
+                <Link href="/ibr-vs-rap" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">IBR vs RAP</Link>
+                <Link href="/rap-payment-calculator" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">RAP payment calculator</Link>
               </div>
             </section>
 

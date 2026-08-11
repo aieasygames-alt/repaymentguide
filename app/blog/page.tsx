@@ -21,6 +21,30 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    title: 'IDR Payment Examples by Income: $50k, $85k, and $100k Salaries',
+    excerpt: 'Compare IDR payment examples for $50k, $85k, and $100k salaries before choosing a repayment plan.',
+    date: '2026-08-12',
+    slug: 'idr-payment-examples-by-income',
+  },
+  {
+    title: 'IBR Payment Examples for Student Loans in 2026',
+    excerpt: 'See how Income-Based Repayment payments can change by income, household size, and borrower situation.',
+    date: '2026-08-12',
+    slug: 'ibr-payment-examples-2026',
+  },
+  {
+    title: 'IBR vs RAP Examples by Income: Which Plan Looks Better?',
+    excerpt: 'Compare IBR vs RAP examples by income level, dependents, PSLF status, and borrower fit.',
+    date: '2026-08-12',
+    slug: 'ibr-vs-rap-examples-by-income',
+  },
+  {
+    title: 'IDR Payment Estimator Guide: What Counts Before You Apply?',
+    excerpt: 'Learn what an IDR payment estimator can and cannot tell you before comparing federal repayment plans.',
+    date: '2026-08-12',
+    slug: 'idr-payment-estimator-guide',
+  },
+  {
     title: 'SAVE Is Ending: RAP vs SAVE and Your 90-Day Checklist',
     excerpt: 'SAVE borrowers are entering a 2026 transition window. Compare RAP, IBR, PAYE, ICR, and Tiered Standard before your servicer deadline.',
     date: '2026-07-01',
@@ -105,6 +129,10 @@ const topicClusters = [
     title: 'Repayment plan decisions',
     description: 'Use these guides when you are comparing IDR, RAP, IBR, consolidation, refinancing, or the first bill after SAVE.',
     links: [
+      { href: '/blog/idr-payment-examples-by-income', label: 'IDR examples by income' },
+      { href: '/blog/idr-payment-estimator-guide', label: 'IDR payment estimator guide' },
+      { href: '/blog/ibr-payment-examples-2026', label: 'IBR payment examples' },
+      { href: '/blog/ibr-vs-rap-examples-by-income', label: 'IBR vs RAP examples' },
       { href: '/blog/idr-plan-comparison', label: 'IDR plan comparison' },
       { href: '/blog/save-plan-alternatives', label: 'SAVE alternatives' },
       { href: '/blog/student-loan-consolidation-guide', label: 'Consolidation guide' },

@@ -47,6 +47,184 @@ const teacherForgivenessSource: SourceLink = {
 };
 
 const blogPosts: Record<string, BlogPost> = {
+  'idr-payment-examples-by-income': {
+    title: 'IDR Payment Examples by Income: $50k, $85k, and $100k Salaries',
+    date: '2026-08-12',
+    excerpt: 'Compare IDR payment examples for $50k, $85k, and $100k salaries, including IBR, PAYE, RAP, PSLF, and Standard repayment tradeoffs.',
+    content: `
+# IDR Payment Examples by Income: $50k, $85k, and $100k Salaries
+
+Income-driven repayment estimates change as income changes. A borrower earning $50,000 may care most about lowering the monthly bill. A borrower earning $85,000 may need to compare PAYE, IBR, RAP, and Standard repayment more carefully. A borrower earning $100,000 may need to ask whether IDR still fits unless PSLF is realistic.
+
+These examples are planning scenarios, not official payment quotes. Use them to decide which calculator to open next.
+
+## What changes when salary changes?
+
+Legacy IDR plans such as IBR, PAYE, and ICR use discretionary income. RAP uses adjusted gross income tiers and a dependent reduction. As salary rises, the gap between these formulas can change quickly.
+
+Household size also matters. A single borrower at $85,000 can see a very different estimate from a borrower with two dependents at the same salary.
+
+## $50k salary example
+
+At a $50,000 salary, borrowers should compare IBR, PAYE, and RAP first. IBR or PAYE may be helped by the poverty-guideline allowance. RAP may be helped by its AGI tier and dependent reduction.
+
+Best next steps:
+
+1. Use the [income-driven repayment calculator](/income-driven-repayment-calculator).
+2. Check the [Income-Based Repayment calculator](/income-based-repayment-calculator) if IBR looks close.
+3. Compare RAP separately with the [RAP payment calculator](/rap-payment-calculator).
+
+## $85k salary example
+
+At an $85,000 salary, the best plan depends heavily on PSLF, family size, and whether a payment cap matters. If you are pursuing PSLF, the lowest qualifying monthly payment can be valuable. If you are not pursuing PSLF, a lower monthly payment can increase total interest by stretching repayment.
+
+This is why searches like IDR repayment calculator for 85k salary should not stop at one estimate. Compare the income-driven result with the [student loan payment calculator](/student-loan-payment-calculator) before choosing.
+
+## $100k salary example
+
+At a $100,000 salary, IDR can still make sense for PSLF borrowers or borrowers with very high debt. Without PSLF, Standard repayment may be cheaper over time if the payment is affordable.
+
+PAYE can deserve a look when the borrower is eligible and the payment cap protects against higher income. IBR can matter when PAYE is unavailable. RAP may still be relevant after the SAVE transition, especially if dependents reduce the payment.
+
+## Quick comparison table
+
+| Salary | First question | Best calculator |
+|---|---|---|
+| $50k | Can IBR or PAYE lower the bill? | Income-driven repayment calculator |
+| $85k | Is IDR still better than Standard? | IDR plus standard payment calculator |
+| $100k | Is PSLF or a payment cap the reason to use IDR? | PSLF and plan recommendation tools |
+
+## Final takeaway
+
+Use salary examples as a first filter. Then run your real AGI, household size, loan balance, and PSLF status through the calculator. The right answer is usually not just the lowest monthly bill; it is the plan that fits your eligibility, forgiveness path, and total repayment strategy.
+    `,
+  },
+  'ibr-payment-examples-2026': {
+    title: 'IBR Payment Examples for Student Loans in 2026',
+    date: '2026-08-12',
+    excerpt: 'See how Income-Based Repayment payments can change by income, household size, and borrower situation, then compare IBR with RAP and other IDR plans.',
+    content: `
+# IBR Payment Examples for Student Loans in 2026
+
+Income-Based Repayment can look simple from a distance, but the payment estimate changes quickly when income, household size, and borrower history change. Use these examples to understand when an IBR calculator is worth using before you submit an official IDR request.
+
+## What an IBR calculator is estimating
+
+IBR is one income-driven repayment option. It generally starts with adjusted gross income, subtracts a poverty-guideline allowance based on family size, and applies a percentage to the remaining discretionary income. The final amount can also depend on whether you are treated as a newer or older borrower.
+
+That is why the same loan balance can produce different IBR payments for two borrowers with different income or household size. Balance matters for interest and payoff strategy, but income and family size usually drive the monthly IBR estimate.
+
+## Example 1: Single borrower with moderate income
+
+A single borrower earning $45,000 may see an IBR estimate that is higher than a very low-income borrower but still lower than Standard repayment. This borrower should compare three numbers: the IBR estimate, the RAP estimate, and the 10-year Standard payment.
+
+If the Standard payment is affordable, it may reduce total interest. If the budget is tight or PSLF is possible, an income-driven plan may be worth deeper review.
+
+## Example 2: Borrower with dependents
+
+A borrower with dependents should not assume RAP automatically wins because RAP includes a dependent reduction. IBR also accounts for household size through the poverty-guideline allowance.
+
+Run both estimates. RAP can look better when the dependent reduction is large relative to income. IBR can look better when the discretionary-income shield is more valuable.
+
+## Example 3: Married borrower filing separately
+
+Married borrowers need a careful comparison because tax filing status can affect income counted for repayment and taxes owed. A lower student loan payment is not automatically better if it creates a larger tax cost.
+
+Start with the [Income-Based Repayment calculator](/income-based-repayment-calculator), then review the [married filing separately guide](/married-filing-separately-student-loans-rap) before making a tax-driven repayment decision.
+
+## IBR vs RAP: what to compare
+
+| Question | Why it matters | Next step |
+|---|---|---|
+| Is your income low relative to family size? | IBR can produce a low or zero estimate when discretionary income is low. | Use the IBR calculator. |
+| Do you have dependents? | RAP subtracts a dependent amount from the monthly payment. | Compare RAP and IBR side by side. |
+| Are you pursuing PSLF? | The lowest bill only helps if payments qualify. | Check plan and employment rules. |
+| Do you have Parent PLUS history? | Eligibility can change after consolidation. | Verify loan type before switching. |
+
+## Where to go next
+
+Use the [IDR payment estimator](/idr-payment-estimator) for a broad comparison, the [IBR vs RAP guide](/ibr-vs-rap) for plan tradeoffs, and the official IDR application when you are ready to request a final payment amount.
+    `,
+  },
+  'ibr-vs-rap-examples-by-income': {
+    title: 'IBR vs RAP Examples by Income: Which Plan Looks Better?',
+    date: '2026-08-12',
+    excerpt: 'Compare IBR vs RAP examples by income level, dependents, PSLF status, and borrower fit before choosing a 2026 student loan repayment plan.',
+    content: `
+# IBR vs RAP Examples by Income: Which Plan Looks Better?
+
+IBR and RAP use different formulas, so the better plan can change as income rises. RAP uses AGI tiers and a dependent reduction. IBR uses discretionary income after a poverty-guideline allowance.
+
+The practical answer is to compare both before switching, especially if you are leaving SAVE, pursuing PSLF, or filing taxes separately from a spouse.
+
+## Lower income borrowers
+
+Lower income borrowers should check IBR carefully because discretionary income may be very small. IBR can sometimes produce a very low or zero payment estimate. RAP has a minimum monthly payment, so it may not match the lowest legacy IDR estimates for every borrower.
+
+Use the [Income-Based Repayment calculator](/income-based-repayment-calculator) first if your main question is whether IBR can lower the bill.
+
+## Middle income borrowers
+
+Middle income borrowers often need the closest comparison. RAP may look attractive when its AGI tier creates a predictable payment and dependents reduce the bill. IBR may look better when family size produces a larger allowance.
+
+This is the group most likely to benefit from the [IBR vs RAP comparison](/ibr-vs-rap), because the winner can flip based on dependents, tax filing, and PSLF.
+
+## Higher income borrowers
+
+Higher income borrowers should watch payment caps, Standard repayment, and total cost. A lower monthly payment can stretch repayment longer and increase total interest unless forgiveness is realistic.
+
+If PSLF is not in the picture, compare income-driven estimates with the [student loan payment calculator](/student-loan-payment-calculator) so you can see the cost of paying faster.
+
+## PSLF borrowers
+
+For PSLF, the question is not only which estimate is lowest. The payment must qualify, employment must qualify, and loan type must be correct. RAP may be useful if it is the lowest qualifying option, but IBR may be clearer for some legacy IDR borrowers.
+
+Use the [PSLF calculator](/pslf-calculator) after you compare monthly payment estimates.
+
+## Best next step
+
+Start with the broad [IDR payment estimator](/idr-payment-estimator), then use the specific [RAP payment calculator](/rap-payment-calculator) and [IBR calculator](/income-based-repayment-calculator) before applying through official channels.
+    `,
+  },
+  'idr-payment-estimator-guide': {
+    title: 'IDR Payment Estimator Guide: What Counts Before You Apply?',
+    date: '2026-08-12',
+    excerpt: 'Learn what an IDR payment estimator can and cannot tell you before comparing IBR, RAP, PAYE, ICR, PSLF, and Standard repayment.',
+    content: `
+# IDR Payment Estimator Guide: What Counts Before You Apply?
+
+An IDR payment estimator is a planning tool. It can help you compare IBR, RAP, PAYE, ICR, and Standard repayment before you apply, but it does not replace the official IDR application or your servicer's final calculation.
+
+## Inputs that usually matter
+
+The most important inputs are adjusted gross income, household size, dependents, loan type, interest rate, loan balance, and PSLF status. For married borrowers, tax filing status can also change the comparison.
+
+A good estimate should tell you which plan deserves attention, not promise that the final servicer bill will match exactly.
+
+## Why IDR estimates differ by plan
+
+IBR, PAYE, and ICR are legacy income-driven plans based on discretionary income. RAP uses AGI tiers, has a minimum payment, and includes a dependent reduction. That means one borrower can see very different estimates across plans even when the loan balance is unchanged.
+
+Use the [income-driven repayment calculator](/income-driven-repayment-calculator) for the broad view, then open a plan-specific tool when one result looks promising.
+
+## Common estimator mistakes
+
+| Mistake | Better approach |
+|---|---|
+| Using gross income instead of AGI | Use the income figure that matches the plan estimate. |
+| Ignoring household size | Family size can change discretionary-income plans. |
+| Looking only at monthly payment | Compare forgiveness timeline, interest, and PSLF fit. |
+| Forgetting loan type | Parent PLUS and consolidation history can change eligibility. |
+
+## When to use a specific calculator
+
+Use the [Income-Based Repayment calculator](/income-based-repayment-calculator) when GSC-style searches like income based repayment calculator or student loan IBR calculator match your question. Use the [RAP payment calculator](/rap-payment-calculator) when you need the AGI-tier estimate. Use the [IBR vs RAP guide](/ibr-vs-rap) when both plans look close.
+
+## Final step
+
+After you estimate, apply or update your plan through StudentAid.gov or your servicer. Save screenshots of your estimates, application confirmation, and servicer notices so you can resolve discrepancies later.
+    `,
+  },
   'save-ending-rap-vs-save-2026': {
     title: 'SAVE Is Ending: RAP vs SAVE and Your 90-Day Checklist',
     date: '2026-07-01',
@@ -1924,6 +2102,42 @@ Graduating with student loans? Here's everything you need to know to manage your
 };
 
 const blogTrust: Record<string, BlogTrust> = {
+  'idr-payment-examples-by-income': {
+    updated: '2026-08-12',
+    policyReviewed: '2026-08-12',
+    sources: [
+      officialStudentLoanSources.studentAidRepaymentPlans,
+      officialStudentLoanSources.idrApplication,
+      officialStudentLoanSources.loanSimulator,
+    ],
+  },
+  'ibr-payment-examples-2026': {
+    updated: '2026-08-12',
+    policyReviewed: '2026-08-12',
+    sources: [
+      officialStudentLoanSources.studentAidRepaymentPlans,
+      officialStudentLoanSources.idrApplication,
+      officialStudentLoanSources.loanSimulator,
+    ],
+  },
+  'ibr-vs-rap-examples-by-income': {
+    updated: '2026-08-12',
+    policyReviewed: '2026-08-12',
+    sources: [
+      officialStudentLoanSources.studentAidRepaymentPlans,
+      officialStudentLoanSources.idrApplication,
+      officialStudentLoanSources.edRapFactSheet,
+    ],
+  },
+  'idr-payment-estimator-guide': {
+    updated: '2026-08-12',
+    policyReviewed: '2026-08-12',
+    sources: [
+      officialStudentLoanSources.studentAidRepaymentPlans,
+      officialStudentLoanSources.idrApplication,
+      officialStudentLoanSources.loanSimulator,
+    ],
+  },
   'save-ending-rap-vs-save-2026': {
     updated: '2026-07-12',
     policyReviewed: '2026-07-12',

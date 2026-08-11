@@ -8,7 +8,7 @@ import { CalculatorDisclosure, officialStudentLoanSources } from '@/components/T
 
 export const metadata: Metadata = {
   title: 'Income-Driven Repayment Calculator - IDR, IBR, PAYE, ICR & RAP',
-  description: 'Use this income-driven repayment calculator to estimate IDR payments under RAP, IBR, PAYE, and ICR after the 2026 SAVE transition.',
+  description: 'Use this income-driven repayment calculator to estimate IDR payments under RAP, IBR, PAYE, and ICR, with 2026 examples by income and salary.',
   keywords: ['income-driven repayment calculator', 'income driven repayment calculator', 'IDR calculator', 'income based repayment calculator', 'RAP', 'PAYE', 'IBR', 'ICR'],
   alternates: {
     canonical: '/income-driven-repayment-calculator/',
@@ -58,7 +58,7 @@ export default function IdrCalculatorPage() {
           <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Income-Driven Repayment Calculator</h1>
             <p className="text-xl text-gray-700 max-w-3xl">
-              Calculate estimated monthly payments under IDR, IBR, PAYE, ICR, and RAP plans. Find which income-driven repayment option fits your 2026 strategy.
+              Calculate estimated monthly payments under IDR, IBR, PAYE, ICR, and RAP plans. Compare how IDR payments are calculated, including PAYE estimates and examples by income.
             </p>
           </div>
         </div>
@@ -268,6 +268,57 @@ export default function IdrCalculatorPage() {
                     </tbody>
                   </table>
                 </div>
+              </div>
+            </section>
+
+            <section className="rounded-2xl border bg-white p-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-5">How IDR payments are calculated</h2>
+              <div className="space-y-4 text-gray-700">
+                <p>
+                  Legacy IDR plans such as IBR, PAYE, and ICR generally start with adjusted gross income, subtract a poverty-guideline allowance, then apply the plan percentage to the remaining discretionary income. RAP is different because it uses AGI tiers directly and then applies the dependent reduction.
+                </p>
+                <p>
+                  This is why two borrowers with the same loan balance can see very different IDR estimates. Income, household size, tax filing status, loan type, and PSLF goals can matter more than the balance itself when you are choosing an income-driven repayment plan.
+                </p>
+              </div>
+              <div className="mt-5 grid gap-4 md:grid-cols-3">
+                <Link href="/blog/idr-payment-estimator-guide" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">IDR payment estimator guide</Link>
+                <Link href="/income-based-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Income-Based Repayment calculator</Link>
+                <Link href="/rap-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">RAP payment calculator</Link>
+              </div>
+            </section>
+
+            <section className="rounded-2xl border bg-white p-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-5">PAYE payment estimate</h2>
+              <p className="text-gray-700">
+                PAYE can be worth checking when you meet borrower-history eligibility rules and want a legacy income-driven plan with a payment cap and a 20-year forgiveness timeline. In this calculator, PAYE is shown beside IBR, ICR, and RAP so you can see whether a PAYE payment estimate is actually lower for your income and household size.
+              </p>
+              <div className="mt-5 rounded-xl bg-blue-50 p-5 text-blue-950">
+                <h3 className="font-bold">When PAYE deserves a closer look</h3>
+                <ul className="mt-3 space-y-2 text-sm">
+                  <li>- You are eligible based on loan timing and financial hardship rules.</li>
+                  <li>- You want to compare PAYE against IBR before choosing a legacy IDR plan.</li>
+                  <li>- You are pursuing PSLF and need the lowest qualifying payment.</li>
+                </ul>
+              </div>
+            </section>
+
+            <section className="rounded-2xl border bg-white p-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-5">IDR examples by income</h2>
+              <p className="text-gray-700">
+                Salary-based examples help you sanity-check the calculator before entering your own numbers. A borrower searching for an IDR repayment calculator for an $85k salary should compare IBR, PAYE, ICR, RAP, and Standard repayment because the lowest monthly payment may not be the lowest total-cost strategy.
+              </p>
+              <div className="mt-5 overflow-x-auto">
+                <table className="w-full border-collapse text-sm">
+                  <thead>
+                    <tr className="bg-slate-900 text-white"><th className="p-3 text-left">Income example</th><th className="p-3 text-left">What to compare first</th><th className="p-3 text-left">Best next tool</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b"><td className="p-3 font-semibold">$50k salary</td><td className="p-3">IBR/PAYE discretionary-income estimates vs RAP AGI tier.</td><td className="p-3"><Link href="/blog/idr-payment-examples-by-income" className="text-primary-700 underline">IDR examples by income</Link></td></tr>
+                    <tr className="border-b bg-gray-50"><td className="p-3 font-semibold">$85k salary</td><td className="p-3">Payment cap, PSLF fit, and whether Standard repayment is cheaper long-term.</td><td className="p-3"><Link href="/student-loan-payment-calculator" className="text-primary-700 underline">Standard payment calculator</Link></td></tr>
+                    <tr><td className="p-3 font-semibold">$100k salary</td><td className="p-3">Whether income-driven repayment still makes sense without PSLF.</td><td className="p-3"><Link href="/repayment-plan-recommendation" className="text-primary-700 underline">Plan recommendation tool</Link></td></tr>
+                  </tbody>
+                </table>
               </div>
             </section>
 
