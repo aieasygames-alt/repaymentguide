@@ -47,6 +47,110 @@ const teacherForgivenessSource: SourceLink = {
 };
 
 const blogPosts: Record<string, BlogPost> = {
+  'rap-vs-ibr-pslf-payment-examples': {
+    title: 'RAP vs IBR PSLF Payment Examples: Which Plan Usually Wins?',
+    date: '2026-08-28',
+    excerpt: 'Compare RAP vs IBR for PSLF borrowers using payment examples, qualifying payment rules, and plan tradeoffs.',
+    content: `
+# RAP vs IBR PSLF Payment Examples: Which Plan Usually Wins?
+
+For PSLF borrowers, the best repayment plan is often the one that produces the lowest qualifying payment without creating processing risk. RAP and IBR can both fit that job, but they do it differently.
+
+## Example 1: borrower with moderate income and dependents
+
+RAP may win if the AGI tier is low and the dependent reduction is meaningful. IBR may win if the poverty-guideline allowance creates a lower discretionary-income result. If both are close, use the [PSLF calculator](/pslf-calculator) and confirm your payment count.
+
+## Example 2: borrower with lower income and no dependents
+
+IBR may produce the lower monthly estimate because discretionary income can shrink quickly. RAP still deserves a look, especially if you are leaving SAVE and want a simple AGI-based formula.
+
+## Example 3: borrower close to 120 payments
+
+Near the finish line, do not change plans casually. A lower estimate is helpful only if the payment still counts and the servicer processes it correctly. That is why the [PSLF and RAP guide](/pslf-rap-qualifying-payments) matters.
+
+## Quick decision rule
+
+- If RAP is clearly lower and the plan counts, RAP deserves first look.
+- If IBR is lower or more stable for your records, IBR may be safer.
+- If the counts are close, protect the PSLF path first and the discount second.
+
+## Bottom line
+
+There is no universal winner. The right answer is the plan that keeps you moving toward 120 qualifying payments with the least risk to your official record.
+    `,
+  },
+  'ibr-payment-estimate-examples-2026': {
+    title: 'IBR Payment Estimate Examples for Student Loan Borrowers in 2026',
+    date: '2026-08-28',
+    excerpt: 'See how IBR payment estimates can change for different incomes, household sizes, and borrower types before you use the calculator.',
+    content: `
+# IBR Payment Estimate Examples for Student Loan Borrowers in 2026
+
+If you are searching for a student loan income based repayment calculator, the main question is often simple: how much would IBR actually cost for me? The answer changes based on income, household size, borrower history, and whether you need a PSLF-friendly payment.
+
+## Why IBR can look very different by borrower
+
+IBR uses discretionary income, so the poverty-guideline allowance matters a lot. Two people with the same loan balance can get very different estimates if one has a larger family size or lower AGI.
+
+## Example: lower income borrower
+
+A lower income borrower may see a very small IBR estimate, sometimes low enough that Standard repayment looks unnecessary. In that case, compare IBR with RAP and the broader IDR calculator before choosing a plan.
+
+## Example: borrower with dependents
+
+Dependents can make IBR more attractive because household size reduces discretionary income. Still, RAP may be competitive because it also rewards dependents through its own formula. That is why the [IBR vs RAP guide](/ibr-vs-rap) matters.
+
+## Example: borrower around $85k income
+
+At a higher income level, IBR may still help, but payment caps, PSLF, and total interest matter more. Searchers looking for an IBR calculator for a student loan at an $85k salary should compare IBR, RAP, PAYE, and Standard repayment together.
+
+## What to do next
+
+Use the [Income-Based Repayment calculator](/income-based-repayment-calculator) for a direct estimate, the [student loan IDR calculator](/student-loan-idr-payment-calculator) for broader comparison, and the [PSLF calculator](/pslf-calculator) if forgiveness is part of your strategy.
+    `,
+  },
+  'pslf-rap-qualifying-payment-examples': {
+    title: 'PSLF RAP Qualifying Payment Examples: How RAP Fits PSLF',
+    date: '2026-08-28',
+    excerpt: 'See how RAP can fit into a PSLF strategy, what counts as a qualifying payment, and when to compare RAP against IBR and other IDR plans.',
+    content: `
+# PSLF RAP Qualifying Payment Examples: How RAP Fits PSLF
+
+RAP can matter for PSLF when it produces your lowest qualifying payment. The important part is not just the repayment formula. Employment, loan type, and servicer tracking all have to line up before a payment helps you reach 120.
+
+## What qualifies under PSLF?
+
+A payment only helps if the borrower has Direct Loans, qualifying full-time employment, and a repayment plan that counts for PSLF under current rules. RAP can be one of the plans worth comparing, but it is not enough to simply choose the lowest monthly bill.
+
+## When RAP may help PSLF borrowers
+
+RAP may be useful when:
+
+- your AGI-based RAP estimate is lower than IBR or PAYE
+- dependents reduce the monthly payment
+- you want to compare RAP against the standard IDR path
+- your employer already qualifies and your payment count is in progress
+
+If RAP is the lowest qualifying payment, it may be the best short-term choice. But compare it with the [PSLF calculator](/pslf-calculator) and the [Income-Driven Repayment calculator](/income-driven-repayment-calculator) before locking anything in.
+
+## When IBR or PAYE may still win
+
+IBR may be better if discretionary income leaves you with a lower bill. PAYE may be worth checking if you qualify and its payment cap protects you. RAP is not automatically the right answer just because it is the new 2026 option.
+
+Use the [IBR vs RAP guide](/ibr-vs-rap) when the choice is close.
+
+## Simple decision rule
+
+1. Confirm PSLF employment and loan type.
+2. Compare RAP, IBR, PAYE, and ICR.
+3. Pick the lowest qualifying payment, not just the lowest estimate.
+4. Keep certifying employment and tracking payment counts.
+
+## Final note
+
+A PSLF strategy is only as good as the payment count behind it. RAP can fit the plan, but the official PSLF record still decides the finish line.
+    `,
+  },
   'idr-payment-examples-by-income': {
     title: 'IDR Payment Examples by Income: $50k, $85k, and $100k Salaries',
     date: '2026-08-12',
@@ -2102,6 +2206,33 @@ Graduating with student loans? Here's everything you need to know to manage your
 };
 
 const blogTrust: Record<string, BlogTrust> = {
+  'rap-vs-ibr-pslf-payment-examples': {
+    updated: '2026-08-28',
+    policyReviewed: '2026-08-28',
+    sources: [
+      officialStudentLoanSources.pslfHelpTool,
+      officialStudentLoanSources.studentAidRepaymentPlans,
+      officialStudentLoanSources.idrApplication,
+    ],
+  },
+  'ibr-payment-estimate-examples-2026': {
+    updated: '2026-08-28',
+    policyReviewed: '2026-08-28',
+    sources: [
+      officialStudentLoanSources.studentAidRepaymentPlans,
+      officialStudentLoanSources.idrApplication,
+      officialStudentLoanSources.loanSimulator,
+    ],
+  },
+  'pslf-rap-qualifying-payment-examples': {
+    updated: '2026-08-28',
+    policyReviewed: '2026-08-28',
+    sources: [
+      officialStudentLoanSources.pslfHelpTool,
+      officialStudentLoanSources.studentAidRepaymentPlans,
+      officialStudentLoanSources.idrApplication,
+    ],
+  },
   'idr-payment-examples-by-income': {
     updated: '2026-08-12',
     policyReviewed: '2026-08-12',

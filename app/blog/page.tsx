@@ -21,6 +21,24 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    title: 'RAP vs IBR PSLF Payment Examples: Which Plan Usually Wins?',
+    excerpt: 'Compare RAP vs IBR for PSLF borrowers using payment examples, qualifying payment rules, and plan tradeoffs.',
+    date: '2026-08-28',
+    slug: 'rap-vs-ibr-pslf-payment-examples',
+  },
+  {
+    title: 'IBR Payment Estimate Examples for Student Loan Borrowers in 2026',
+    excerpt: 'See how IBR payment estimates can change for different incomes, household sizes, and borrower types before you use the calculator.',
+    date: '2026-08-28',
+    slug: 'ibr-payment-estimate-examples-2026',
+  },
+  {
+    title: 'PSLF RAP Qualifying Payment Examples: How RAP Fits PSLF',
+    excerpt: 'See how RAP can fit into a PSLF strategy, what counts as a qualifying payment, and when to compare RAP against IBR and other IDR plans.',
+    date: '2026-08-28',
+    slug: 'pslf-rap-qualifying-payment-examples',
+  },
+  {
     title: 'IDR Payment Examples by Income: $50k, $85k, and $100k Salaries',
     excerpt: 'Compare IDR payment examples for $50k, $85k, and $100k salaries before choosing a repayment plan.',
     date: '2026-08-12',
@@ -130,6 +148,7 @@ const topicClusters = [
     description: 'Use these guides when you are comparing IDR, RAP, IBR, consolidation, refinancing, or the first bill after SAVE.',
     links: [
       { href: '/blog/idr-payment-examples-by-income', label: 'IDR examples by income' },
+      { href: '/blog/pslf-rap-qualifying-payment-examples', label: 'PSLF RAP examples' },
       { href: '/blog/idr-payment-estimator-guide', label: 'IDR payment estimator guide' },
       { href: '/blog/ibr-payment-examples-2026', label: 'IBR payment examples' },
       { href: '/blog/ibr-vs-rap-examples-by-income', label: 'IBR vs RAP examples' },

@@ -101,6 +101,18 @@ export default function PslfQualifyingPaymentCalculatorPage() {
               </div>
             </section>
 
+            <section className="rounded-2xl border bg-white p-6">
+              <h2 className="text-2xl font-bold text-gray-900">Which tool should PSLF borrowers open next?</h2>
+              <p className="mt-3 text-gray-700">
+                If you are close to 120, use this PSLF qualifying payment calculator to check the count you already have, then compare payment strategy with the IDR and RAP tools. Many borrowers only need to know whether RAP, IBR, or PAYE creates the lowest qualifying bill.
+              </p>
+              <div className="mt-5 grid gap-4 md:grid-cols-3">
+                <Link href="/pslf-calculator" className="rounded-xl border bg-primary-50 p-4 font-semibold text-primary-950 hover:bg-primary-100">PSLF calculator</Link>
+                <Link href="/income-driven-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare IDR plans</Link>
+                <Link href="/rap-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">RAP payment calculator</Link>
+              </div>
+            </section>
+
             <section className="overflow-x-auto rounded-2xl border bg-white p-6">
               <h2 className="mb-4 text-2xl font-bold text-gray-900">PSLF Payment Count Checkpoints</h2>
               <table className="w-full border-collapse text-sm">

@@ -3,6 +3,9 @@ import { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 const blogPosts = [
+  { slug: 'rap-vs-ibr-pslf-payment-examples', lastModified: '2026-08-28' },
+  { slug: 'ibr-payment-estimate-examples-2026', lastModified: '2026-08-28' },
+  { slug: 'pslf-rap-qualifying-payment-examples', lastModified: '2026-08-28' },
   { slug: 'idr-payment-examples-by-income', lastModified: '2026-08-12' },
   { slug: 'ibr-payment-examples-2026', lastModified: '2026-08-12' },
   { slug: 'ibr-vs-rap-examples-by-income', lastModified: '2026-08-12' },

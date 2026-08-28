@@ -68,7 +68,7 @@ export default function RapPaymentCalculatorPage() {
               </p>
               <h1 className="mb-4 text-4xl font-bold md:text-5xl">RAP Payment Calculator</h1>
               <p className="max-w-3xl text-xl text-primary-50">
-                Estimate your Repayment Assistance Plan payment, dependent reduction, possible interest waiver, and possible principal match before choosing a repayment plan.
+                Estimate your Repayment Assistance Plan payment, dependent reduction, possible interest waiver, and possible principal match before choosing a repayment plan or comparing RAP vs IBR.
               </p>
             </div>
           </div>
@@ -133,6 +133,10 @@ export default function RapPaymentCalculatorPage() {
                 <Link href="/income-driven-repayment-calculator" className="block rounded-3xl border bg-primary-50 p-6 transition hover:shadow-md">
                   <h3 className="text-xl font-bold text-primary-950">Compare all IDR plans</h3>
                   <p className="mt-2 text-primary-800">Run RAP, IBR, PAYE, and ICR side by side.</p>
+                </Link>
+                <Link href="/pslf-calculator" className="block rounded-3xl border bg-white p-6 transition hover:shadow-md">
+                  <h3 className="text-xl font-bold text-gray-900">Planning PSLF?</h3>
+                  <p className="mt-2 text-gray-600">See whether RAP is the lowest qualifying payment.</p>
                 </Link>
                 <Link href="/save-90-day-deadline-calculator" className="block rounded-3xl border bg-amber-50 p-6 transition hover:shadow-md">
                   <h3 className="text-xl font-bold text-amber-950">SAVE deadline coming?</h3>

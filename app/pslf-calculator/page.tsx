@@ -8,7 +8,7 @@ import { CalculatorDisclosure, officialStudentLoanSources } from '@/components/T
 
 export const metadata: Metadata = {
   title: 'PSLF Calculator - Public Service Loan Forgiveness Estimator',
-  description: 'Estimate your Public Service Loan Forgiveness amount. Track your progress toward 120 qualifying payments with detailed guidance.',
+  description: 'Estimate your Public Service Loan Forgiveness progress, compare qualifying repayment plans, and track your 120-payment path.',
   keywords: ['PSLF calculator', 'public service loan forgiveness', 'loan forgiveness', 'PSLF'],
   alternates: {
     canonical: '/pslf-calculator/',
@@ -57,8 +57,8 @@ export default function PslfCalculatorPage() {
         <div className="bg-gradient-to-br from-primary-50 to-primary-100 py-12">
           <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Public Service Loan Forgiveness Calculator</h1>
-            <p className="text-xl text-gray-700 max-w-3xl">
-              Estimate your forgiveness amount and track your progress toward 120 qualifying payments.
+              <p className="text-xl text-gray-700 max-w-3xl">
+              Estimate your forgiveness progress, compare qualifying repayment plans, and track your path toward 120 qualifying payments.
             </p>
           </div>
         </div>
@@ -172,9 +172,26 @@ export default function PslfCalculatorPage() {
               </div>
             </section>
 
+            <section className="rounded-2xl border bg-white p-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-5">Which repayment plan should PSLF borrowers compare first?</h2>
+              <p className="text-gray-700">
+                If you are choosing a PSLF payment strategy, compare RAP, IBR, and PAYE before you worry about the exact forgiveness amount. The right plan is the one that gives you a qualifying payment you can actually sustain through 120 months.
+              </p>
+              <div className="mt-5 grid gap-4 md:grid-cols-3">
+                <Link href="/ibr-vs-rap" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">IBR vs RAP</Link>
+                <Link href="/income-driven-repayment-calculator" className="rounded-2xl border bg-primary-50 p-5 font-semibold text-primary-950 hover:bg-primary-100">Compare all IDR plans</Link>
+                <Link href="/rap-payment-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">RAP payment calculator</Link>
+              </div>
+            </section>
+
             {/* Payment Tracking */}
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">How to Track Your Payments</h2>
+              <div className="mb-6 grid gap-4 md:grid-cols-3">
+                <Link href="/income-driven-repayment-calculator" className="rounded-2xl border bg-primary-50 p-5 font-semibold text-primary-950 hover:bg-primary-100">Compare IDR plans</Link>
+                <Link href="/rap-payment-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Check RAP for PSLF</Link>
+                <Link href="/ibr-vs-rap" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Compare IBR vs RAP</Link>
+              </div>
 
               <div className="bg-white border rounded-xl overflow-hidden">
                 <div className="p-6">

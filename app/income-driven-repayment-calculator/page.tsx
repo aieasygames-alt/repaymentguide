@@ -304,6 +304,18 @@ export default function IdrCalculatorPage() {
             </section>
 
             <section className="rounded-2xl border bg-white p-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-5">How to compare a student loan calculator for income-based repayment</h2>
+              <p className="text-gray-700">
+                If you searched for a student loan calculator income based payment, start by comparing IBR, PAYE, RAP, and the standard plan side by side. A calculator is most useful when it shows not just the monthly payment, but also whether PSLF, forgiveness timing, or a payment cap changes the answer.
+              </p>
+              <div className="mt-5 grid gap-4 md:grid-cols-3">
+                <Link href="/student-loan-idr-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Student loan IDR calculator</Link>
+                <Link href="/income-based-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Income-Based Repayment calculator</Link>
+                <Link href="/rap-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">RAP payment calculator</Link>
+              </div>
+            </section>
+
+            <section className="rounded-2xl border bg-white p-6">
               <h2 className="text-3xl font-bold text-gray-900 mb-5">IDR examples by income</h2>
               <p className="text-gray-700">
                 Salary-based examples help you sanity-check the calculator before entering your own numbers. A borrower searching for an IDR repayment calculator for an $85k salary should compare IBR, PAYE, ICR, RAP, and Standard repayment because the lowest monthly payment may not be the lowest total-cost strategy.

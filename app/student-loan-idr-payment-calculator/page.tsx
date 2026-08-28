@@ -99,6 +99,18 @@ export default function StudentLoanIdrPaymentCalculatorPage() {
               </div>
             </section>
 
+            <section className="rounded-2xl border bg-white p-6">
+              <h2 className="text-2xl font-bold text-gray-900">Where to go after this IDR estimate</h2>
+              <p className="mt-3 text-gray-700">
+                If this student loan income based repayment calculator looks close, compare it with the plan-specific pages before you apply. IBR, RAP, PAYE, and PSLF all have slightly different rules, and the cheapest estimate is not always the best overall fit.
+              </p>
+              <div className="mt-5 grid gap-4 md:grid-cols-3">
+                <Link href="/income-based-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Income-Based Repayment calculator</Link>
+                <Link href="/rap-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">RAP payment calculator</Link>
+                <Link href="/pslf-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">PSLF calculator</Link>
+              </div>
+            </section>
+
             <section className="overflow-x-auto rounded-2xl border bg-white p-6">
               <h2 className="mb-4 text-2xl font-bold text-gray-900">Calculator Path by Search Intent</h2>
               <table className="w-full border-collapse text-sm">

@@ -163,7 +163,7 @@ export default function StudentLoanCalculatorsPage() {
             <section className="rounded-2xl border bg-white p-6">
               <h2 className="text-2xl font-bold text-gray-900">Start With the Closest Match</h2>
               <p className="mt-3 text-gray-700">
-                If you only need a fixed-payment estimate, start with the standard payment calculator. If your payment depends on income, household size, public service, or a SAVE transition notice, use the IDR, IBR payment calculator, RAP, PSLF, or deadline tools below.
+                If you only need a fixed-payment estimate, start with the standard payment calculator. If your payment depends on income, household size, public service, or a SAVE transition notice, use the IDR estimator, IBR payment calculator, RAP calculator, PSLF calculator, or deadline tools below.
               </p>
               <div className="mt-5 grid gap-4 md:grid-cols-3">
                 <Link href="/income-driven-repayment-calculator" className="rounded-xl bg-primary-700 p-5 text-white transition hover:bg-primary-800">
@@ -173,6 +173,10 @@ export default function StudentLoanCalculatorsPage() {
                 <Link href="/pslf-calculator" className="rounded-xl border bg-white p-5 transition hover:bg-primary-50">
                   <h3 className="font-bold text-gray-900">Pursuing PSLF?</h3>
                   <p className="mt-2 text-sm text-gray-700">Estimate progress toward 120 qualifying payments.</p>
+                </Link>
+                <Link href="/ibr-vs-rap" className="rounded-xl border bg-white p-5 transition hover:bg-primary-50">
+                  <h3 className="font-bold text-gray-900">IBR vs RAP?</h3>
+                  <p className="mt-2 text-sm text-gray-700">Compare the two plans before you commit.</p>
                 </Link>
                 <Link href="/save-90-day-deadline-calculator" className="rounded-xl border bg-amber-50 p-5 transition hover:bg-amber-100">
                   <h3 className="font-bold text-amber-950">Got a SAVE notice?</h3>
