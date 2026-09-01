@@ -16,6 +16,10 @@ const faqs = [
     answer: 'Start with adjusted gross income and household size. For a complete repayment decision, also check loan type, loan balance, interest rate, spouse income treatment, Parent PLUS history, PSLF goals, and any official servicer notice about plan changes or recertification.',
   },
   {
+    question: 'Can this help with an IDR deadline?',
+    answer: 'Yes, as a planning step. If you have a servicer deadline, use this estimator to compare plans early, then use the deadline calculator or your servicer notice to confirm the exact date.',
+  },
+  {
     question: 'Is the lowest IDR estimate always the best plan?',
     answer: 'No. A lower monthly payment can be helpful, but it is not the only factor. Compare forgiveness timing, PSLF eligibility, interest treatment, loan type restrictions, spouse-income rules, and whether the plan is available for your borrower history before applying.',
   },
@@ -126,6 +130,17 @@ export default function IdrPaymentEstimatorPage() {
                   <h3 className="font-semibold text-gray-900">PSLF Calculator</h3>
                   <p className="mt-2 text-sm text-gray-700">Estimate forgiveness if public service is part of your plan.</p>
                 </Link>
+              </div>
+            </section>
+
+            <section className="rounded-2xl border bg-white p-6">
+              <h2 className="text-2xl font-bold text-gray-900">Using the estimator before an IDR deadline</h2>
+              <p className="mt-3 text-gray-700">
+                If your servicer gave you an IDR recertification deadline, SAVE transition deadline, or plan-selection deadline, run estimates before the final week. Compare RAP, IBR, PAYE, and ICR, then save the confirmation from your official application or servicer account.
+              </p>
+              <div className="mt-5 grid gap-4 md:grid-cols-2">
+                <Link href="/save-90-day-deadline-calculator" className="rounded-xl border bg-amber-50 p-4 font-semibold text-amber-950 hover:bg-amber-100">SAVE and IDR deadline calculator</Link>
+                <Link href="/servicer-contact-toolkit" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Ask your servicer for the deadline</Link>
               </div>
             </section>
 

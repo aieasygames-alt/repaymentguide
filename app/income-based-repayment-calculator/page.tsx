@@ -23,6 +23,10 @@ const faqs = [
     question: 'Should married borrowers use this IBR calculator?',
     answer: 'Yes, but treat the result as a planning estimate. Married filing status can change which income is counted under some legacy IDR plans. Compare the repayment effect with tax consequences before changing filing status, and confirm final treatment through official channels.',
   },
+  {
+    question: 'Does IBR use AGI that includes capital gains?',
+    answer: 'IBR estimates usually start with adjusted gross income from tax information. Capital gains can be part of AGI, so borrowers with unusual tax-year income should compare tax-return income with any allowed current-income documentation through the official IDR process.',
+  },
 ];
 
 export const metadata: Metadata = {
@@ -92,6 +96,17 @@ export default function IncomeBasedRepaymentCalculatorPage() {
                 <Link href="/blog/ibr-payment-estimate-examples-2026" className="rounded-xl border bg-primary-50 p-4 font-semibold text-primary-950 hover:bg-primary-100">IBR payment examples</Link>
                 <Link href="/paye-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">PAYE payment calculator</Link>
                 <Link href="/student-loan-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Standard payment calculator</Link>
+              </div>
+            </section>
+
+            <section className="rounded-2xl border bg-white p-6">
+              <h2 className="text-2xl font-bold text-gray-900">Does the IBR calculation use AGI with capital gains?</h2>
+              <p className="mt-3 text-gray-700">
+                IBR planning estimates usually begin with AGI, and AGI can include capital gains or other one-time income from the tax year. If your tax return does not reflect current income, check whether the official IDR application lets you document current income instead of relying only on the prior return.
+              </p>
+              <div className="mt-5 grid gap-4 md:grid-cols-2">
+                <Link href="/income-driven-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare IDR formulas</Link>
+                <Link href="/married-filing-separately-student-loans-rap" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Review filing status effects</Link>
               </div>
             </section>
 
