@@ -16,6 +16,10 @@ const faqs = [
     answer: 'Save the notice, compare plans, check the due date, and ask your servicer to confirm the calculation in writing. If the answer is unclear, keep dated records and consider filing an official complaint packet.',
   },
   {
+    question: 'Can AGI or capital gains make my IDR payment increase?',
+    answer: 'Yes. If your IDR payment was recalculated from tax-return AGI, capital gains or other one-time income can raise the estimate. Ask which income documentation was used and whether current-income documentation is available through the official IDR process.',
+  },
+  {
     question: 'Should PSLF borrowers choose the lowest payment after an increase?',
     answer: 'Not automatically. PSLF borrowers should confirm that the plan, loan type, employer, and monthly payment treatment still produce PSLF-qualifying payments before switching based only on the lowest estimate.',
   },
@@ -31,6 +35,11 @@ const causes = [
     title: 'Income or family size update',
     body: 'IDR payments can change when income, household size, tax filing status, or documentation changes. Ask which inputs were used and whether updated documentation is allowed.',
     link: { href: '/income-driven-repayment-calculator', label: 'Compare IDR payments' },
+  },
+  {
+    title: 'AGI spike or one-time income',
+    body: 'Capital gains, bonuses, or other unusual tax-year income can make an IDR estimate look higher than your current budget. Compare the AGI-based estimate with any current-income documentation your servicer will accept.',
+    link: { href: '/income-based-repayment-calculator', label: 'Check IBR income inputs' },
   },
   {
     title: 'PSLF risk',
@@ -78,7 +87,7 @@ export default function StudentLoanPaymentIncreasePage() {
 
         <section className="container mx-auto px-4 py-12">
           <div className="mx-auto max-w-5xl space-y-8">
-            <ArticleTrustSummary published="2026-07-13" updated="2026-07-13" policyReviewed="2026-07-13" />
+            <ArticleTrustSummary published="2026-07-13" updated="2026-09-01" policyReviewed="2026-09-01" />
             <FinancialDisclaimer />
 
             <section className="rounded-3xl border bg-white p-6 shadow-sm">
@@ -103,6 +112,18 @@ export default function StudentLoanPaymentIncreasePage() {
             <section className="rounded-3xl border bg-amber-50 p-6 text-amber-950">
               <h2 className="text-2xl font-bold">If the due date is close</h2>
               <p className="mt-3">Do not wait for a perfect answer if a bill is due soon. Ask the servicer what action prevents delinquency while your plan review, IDR application, or complaint is pending. Get the answer in writing or save a confirmation number.</p>
+            </section>
+
+            <section className="rounded-3xl border bg-white p-6">
+              <h2 className="text-2xl font-bold text-gray-900">If the increase came from AGI or recertification</h2>
+              <p className="mt-3 text-gray-700">
+                Ask your servicer which AGI, family size, tax filing status, and income documentation were used. If the higher payment reflects capital gains, a bonus, or another one-time tax-year event, compare that bill with an official current-income review before switching plans.
+              </p>
+              <div className="mt-5 grid gap-4 md:grid-cols-3">
+                <Link href="/income-based-repayment-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Review IBR AGI inputs</Link>
+                <Link href="/servicer-contact-toolkit" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Ask for calculation proof</Link>
+                <Link href="/save-90-day-deadline-calculator" className="rounded-2xl border bg-amber-50 p-5 font-semibold text-amber-950 hover:bg-amber-100">Check IDR deadline</Link>
+              </div>
             </section>
 
             <section className="grid gap-6 md:grid-cols-3">
