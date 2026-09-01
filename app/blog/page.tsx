@@ -21,6 +21,12 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    title: 'PAYE Payment Estimate Examples for Student Loan Borrowers in 2026',
+    excerpt: 'See when a PAYE payment estimate is worth comparing with IBR, RAP, Standard repayment, and PSLF planning.',
+    date: '2026-09-01',
+    slug: 'paye-payment-estimate-examples-2026',
+  },
+  {
     title: 'RAP vs IBR PSLF Payment Examples: Which Plan Usually Wins?',
     excerpt: 'Compare RAP vs IBR for PSLF borrowers using payment examples, qualifying payment rules, and plan tradeoffs.',
     date: '2026-08-28',
@@ -147,6 +153,7 @@ const topicClusters = [
     title: 'Repayment plan decisions',
     description: 'Use these guides when you are comparing IDR, RAP, IBR, consolidation, refinancing, or the first bill after SAVE.',
     links: [
+      { href: '/blog/paye-payment-estimate-examples-2026', label: 'PAYE payment examples' },
       { href: '/blog/idr-payment-examples-by-income', label: 'IDR examples by income' },
       { href: '/blog/pslf-rap-qualifying-payment-examples', label: 'PSLF RAP examples' },
       { href: '/blog/idr-payment-estimator-guide', label: 'IDR payment estimator guide' },

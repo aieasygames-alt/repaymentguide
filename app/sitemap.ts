@@ -3,6 +3,7 @@ import { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 const blogPosts = [
+  { slug: 'paye-payment-estimate-examples-2026', lastModified: '2026-09-01' },
   { slug: 'rap-vs-ibr-pslf-payment-examples', lastModified: '2026-08-28' },
   { slug: 'ibr-payment-estimate-examples-2026', lastModified: '2026-08-28' },
   { slug: 'pslf-rap-qualifying-payment-examples', lastModified: '2026-08-28' },
@@ -30,16 +31,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const urls = [
     { url: `${baseUrl}/`, lastModified: '2026-07-21', changeFrequency: 'daily' as const, priority: 1 },
-    { url: `${baseUrl}/student-loan-calculators/`, lastModified: '2026-08-12', changeFrequency: 'weekly' as const, priority: 0.92 },
+    { url: `${baseUrl}/student-loan-calculators/`, lastModified: '2026-09-01', changeFrequency: 'weekly' as const, priority: 0.92 },
     { url: `${baseUrl}/student-loan-payment-calculator/`, lastModified: '2026-07-13', changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${baseUrl}/rap-payment-calculator/`, lastModified: '2026-07-13', changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${baseUrl}/rap-payment-calculator/`, lastModified: '2026-08-28', changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${baseUrl}/save-plan-calculator/`, lastModified: '2026-07-05', changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${baseUrl}/income-driven-repayment-calculator/`, lastModified: '2026-08-12', changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${baseUrl}/income-based-repayment-calculator/`, lastModified: '2026-08-12', changeFrequency: 'weekly' as const, priority: 0.86 },
+    { url: `${baseUrl}/income-driven-repayment-calculator/`, lastModified: '2026-08-28', changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${baseUrl}/income-based-repayment-calculator/`, lastModified: '2026-09-01', changeFrequency: 'weekly' as const, priority: 0.86 },
+    { url: `${baseUrl}/paye-payment-calculator/`, lastModified: '2026-09-01', changeFrequency: 'weekly' as const, priority: 0.86 },
     { url: `${baseUrl}/idr-payment-estimator/`, lastModified: '2026-07-21', changeFrequency: 'weekly' as const, priority: 0.86 },
-    { url: `${baseUrl}/student-loan-idr-payment-calculator/`, lastModified: '2026-07-21', changeFrequency: 'weekly' as const, priority: 0.86 },
-    { url: `${baseUrl}/pslf-calculator/`, lastModified: '2026-07-05', changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${baseUrl}/pslf-qualifying-payment-calculator/`, lastModified: '2026-07-21', changeFrequency: 'weekly' as const, priority: 0.86 },
+    { url: `${baseUrl}/student-loan-idr-payment-calculator/`, lastModified: '2026-08-28', changeFrequency: 'weekly' as const, priority: 0.86 },
+    { url: `${baseUrl}/pslf-calculator/`, lastModified: '2026-08-28', changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${baseUrl}/pslf-qualifying-payment-calculator/`, lastModified: '2026-08-28', changeFrequency: 'weekly' as const, priority: 0.86 },
     { url: `${baseUrl}/pslf-vs-idr-forgiveness-calculator/`, lastModified: '2026-07-21', changeFrequency: 'weekly' as const, priority: 0.84 },
     { url: `${baseUrl}/student-loan-changes-2026/`, lastModified: '2026-07-11', changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${baseUrl}/student-loan-faq/`, lastModified: '2026-07-12', changeFrequency: 'weekly' as const, priority: 0.85 },
@@ -50,7 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/save-ending-what-should-i-do/`, lastModified: '2026-07-13', changeFrequency: 'monthly' as const, priority: 0.85 },
     { url: `${baseUrl}/save-90-day-deadline-calculator/`, lastModified: '2026-07-11', changeFrequency: 'weekly' as const, priority: 0.85 },
     { url: `${baseUrl}/repayment-plan-recommendation/`, lastModified: '2026-07-11', changeFrequency: 'weekly' as const, priority: 0.85 },
-    { url: `${baseUrl}/parent-plus-rap-eligibility/`, lastModified: '2026-07-11', changeFrequency: 'weekly' as const, priority: 0.85 },
+    { url: `${baseUrl}/parent-plus-rap-eligibility/`, lastModified: '2026-09-01', changeFrequency: 'weekly' as const, priority: 0.85 },
     { url: `${baseUrl}/rap-vs-save-calculator/`, lastModified: '2026-07-13', changeFrequency: 'monthly' as const, priority: 0.85 },
     { url: `${baseUrl}/ibr-vs-rap/`, lastModified: '2026-08-12', changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${baseUrl}/pslf-rap-qualifying-payments/`, lastModified: '2026-07-13', changeFrequency: 'monthly' as const, priority: 0.8 },

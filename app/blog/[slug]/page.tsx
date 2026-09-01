@@ -47,6 +47,42 @@ const teacherForgivenessSource: SourceLink = {
 };
 
 const blogPosts: Record<string, BlogPost> = {
+  'paye-payment-estimate-examples-2026': {
+    title: 'PAYE Payment Estimate Examples for Student Loan Borrowers in 2026',
+    date: '2026-09-01',
+    excerpt: 'See when a PAYE payment estimate is worth comparing with IBR, RAP, Standard repayment, and PSLF planning.',
+    content: `
+# PAYE Payment Estimate Examples for Student Loan Borrowers in 2026
+
+PAYE can be a useful comparison point when you qualify for Pay As You Earn and want a legacy income-driven repayment plan with a payment cap. It should not be checked in isolation. Compare PAYE with IBR, RAP, Standard repayment, and PSLF strategy before choosing a plan.
+
+## When PAYE may be worth estimating
+
+PAYE deserves a closer look when you may meet borrower-history rules, your income is high enough that a payment cap matters, or you are pursuing PSLF and need the lowest qualifying monthly payment.
+
+Use the [PAYE payment calculator](/paye-payment-calculator) to compare PAYE with IBR, RAP, and ICR in one place.
+
+## PAYE vs IBR
+
+PAYE and IBR can look similar in a simple calculator, but eligibility and forgiveness timing may differ. IBR is often the next plan to check when PAYE eligibility is uncertain.
+
+Start with the [Income-Based Repayment calculator](/income-based-repayment-calculator) if you searched for an IBR payment calculator or income based repayment calculator.
+
+## PAYE vs RAP
+
+RAP uses AGI tiers and a dependent reduction. PAYE uses discretionary income. That means one plan can look better for a borrower with dependents, while the other can look better when the payment cap or PSLF strategy matters.
+
+Use the [IBR vs RAP guide](/ibr-vs-rap) and [RAP payment calculator](/rap-payment-calculator) if PAYE is not clearly lower.
+
+## PAYE and PSLF
+
+For PSLF borrowers, PAYE can help only if the payment qualifies and the borrower is eligible. Compare the estimate with the [PSLF calculator](/pslf-calculator) before changing plans.
+
+## Bottom line
+
+A PAYE estimate is useful because it gives you a benchmark. The final choice still depends on eligibility, documentation, servicer processing, and whether forgiveness or total repayment cost matters more.
+    `,
+  },
   'rap-vs-ibr-pslf-payment-examples': {
     title: 'RAP vs IBR PSLF Payment Examples: Which Plan Usually Wins?',
     date: '2026-08-28',
@@ -106,7 +142,7 @@ At a higher income level, IBR may still help, but payment caps, PSLF, and total 
 
 ## What to do next
 
-Use the [Income-Based Repayment calculator](/income-based-repayment-calculator) for a direct estimate, the [student loan IDR calculator](/student-loan-idr-payment-calculator) for broader comparison, and the [PSLF calculator](/pslf-calculator) if forgiveness is part of your strategy.
+Use the [Income-Based Repayment calculator](/income-based-repayment-calculator) for a direct estimate, the [PAYE payment calculator](/paye-payment-calculator) when PAYE eligibility matters, the [student loan IDR calculator](/student-loan-idr-payment-calculator) for broader comparison, and the [PSLF calculator](/pslf-calculator) if forgiveness is part of your strategy.
     `,
   },
   'pslf-rap-qualifying-payment-examples': {
@@ -2206,6 +2242,15 @@ Graduating with student loans? Here's everything you need to know to manage your
 };
 
 const blogTrust: Record<string, BlogTrust> = {
+  'paye-payment-estimate-examples-2026': {
+    updated: '2026-09-01',
+    policyReviewed: '2026-09-01',
+    sources: [
+      officialStudentLoanSources.studentAidRepaymentPlans,
+      officialStudentLoanSources.idrApplication,
+      officialStudentLoanSources.loanSimulator,
+    ],
+  },
   'rap-vs-ibr-pslf-payment-examples': {
     updated: '2026-08-28',
     policyReviewed: '2026-08-28',

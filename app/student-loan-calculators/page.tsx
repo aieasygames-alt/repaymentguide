@@ -42,6 +42,11 @@ const calculatorGroups = [
         description: 'Focus on IBR and compare it with RAP, PAYE, and ICR.',
       },
       {
+        name: 'PAYE Payment Calculator',
+        href: '/paye-payment-calculator',
+        description: 'Estimate Pay As You Earn payments and compare PAYE with IBR, RAP, and PSLF strategy.',
+      },
+      {
         name: 'Student Loan IDR Payment Calculator',
         href: '/student-loan-idr-payment-calculator',
         description: 'Estimate federal student loan IDR payments with plain-language next steps.',
@@ -113,8 +118,8 @@ const faqs = [
 
 export const metadata: Metadata = {
   title: 'Student Loan Calculators - IDR, IBR, PSLF, RAP & SAVE',
-  description: 'Find the right student loan calculator for IDR, IBR, PSLF, RAP, SAVE deadlines, and federal repayment plan comparisons.',
-  keywords: ['student loan calculators', 'student loan repayment calculator', 'IDR calculator', 'IBR calculator', 'PSLF calculator', 'RAP calculator'],
+  description: 'Find the right student loan calculator for IDR, IBR, PAYE, PSLF, RAP, SAVE deadlines, and federal repayment plan comparisons.',
+  keywords: ['student loan calculators', 'student loan repayment calculator', 'IDR calculator', 'IBR calculator', 'PAYE calculator', 'PSLF calculator', 'RAP calculator'],
   alternates: { canonical: '/student-loan-calculators/' },
   openGraph: {
     title: 'Student Loan Calculators',
@@ -152,7 +157,7 @@ export default function StudentLoanCalculatorsPage() {
               <p className="mb-3 inline-flex rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-primary-100 ring-1 ring-white/20">Calculator hub</p>
               <h1 className="mb-4 text-4xl font-bold md:text-5xl">Student Loan Calculators</h1>
               <p className="max-w-3xl text-xl text-primary-50">
-                Choose the right student loan calculator for federal repayment planning, including IDR, IBR, PSLF, RAP, SAVE deadlines, and payment comparisons.
+                Choose the right student loan calculator for federal repayment planning, including IDR, IBR, PAYE, PSLF, RAP, SAVE deadlines, and payment comparisons.
               </p>
             </div>
           </div>
@@ -192,6 +197,7 @@ export default function StudentLoanCalculatorsPage() {
                 <Link href="/income-based-repayment-calculator" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">income based repayment calculator</Link>
                 <Link href="/idr-payment-estimator" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">IDR payment estimator</Link>
                 <Link href="/ibr-vs-rap" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">IBR vs RAP</Link>
+                <Link href="/paye-payment-calculator" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">PAYE payment calculator</Link>
                 <Link href="/rap-payment-calculator" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">RAP payment calculator</Link>
               </div>
             </section>

@@ -26,8 +26,8 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Income-Based Repayment Calculator - Student Loan IBR Payment Estimate',
-  description: 'Use this Income-Based Repayment calculator to estimate student loan IBR payments and compare IBR with IDR, RAP, PAYE, and ICR options.',
+  title: 'Income-Based Repayment Calculator - Estimate Student Loan IBR',
+  description: 'Estimate your student loan IBR payment, see how income and household size affect the result, and compare IBR with RAP and PAYE.',
   keywords: ['income based repayment calculator', 'Income-Based Repayment calculator', 'IBR calculator', 'student loan income based repayment calculator'],
   alternates: { canonical: '/income-based-repayment-calculator/' },
   openGraph: {
@@ -49,7 +49,7 @@ export default function IncomeBasedRepaymentCalculatorPage() {
               <p className="mb-3 inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-primary-800 ring-1 ring-primary-200">IBR payment estimate</p>
               <h1 className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl">Income-Based Repayment Calculator</h1>
               <p className="max-w-3xl text-xl text-gray-700">
-                Estimate student loan Income-Based Repayment payments, compare IBR with RAP, PAYE, and ICR, and decide whether the broader IDR payment estimator is a better first stop.
+                Estimate your student loan IBR payment, see how income and household size affect the result, and compare Income-Based Repayment with RAP, PAYE, and ICR.
               </p>
             </div>
           </div>
@@ -80,6 +80,18 @@ export default function IncomeBasedRepaymentCalculatorPage() {
                 <Link href="/idr-payment-estimator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">IDR payment estimator</Link>
                 <Link href="/ibr-vs-rap" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">IBR vs RAP comparison</Link>
                 <Link href="/student-loan-calculators" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">All student loan calculators</Link>
+              </div>
+            </section>
+
+            <section className="rounded-2xl border bg-white p-6">
+              <h2 className="text-2xl font-bold text-gray-900">How to read your IBR payment estimate</h2>
+              <p className="mt-3 text-gray-700">
+                IBR estimates are most useful when you compare them against at least two alternatives. If IBR is lower than RAP, check whether you qualify and whether the forgiveness timeline fits your plan. If RAP or PAYE is lower, look at eligibility, payment caps, PSLF, and long-term cost before switching.
+              </p>
+              <div className="mt-5 grid gap-4 md:grid-cols-3">
+                <Link href="/blog/ibr-payment-estimate-examples-2026" className="rounded-xl border bg-primary-50 p-4 font-semibold text-primary-950 hover:bg-primary-100">IBR payment examples</Link>
+                <Link href="/paye-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">PAYE payment calculator</Link>
+                <Link href="/student-loan-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Standard payment calculator</Link>
               </div>
             </section>
 

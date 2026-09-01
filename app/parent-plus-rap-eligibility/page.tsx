@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ParentPlusEligibilityChecker from '@/components/ParentPlusEligibilityChecker';
@@ -10,7 +11,7 @@ import { CalculatorDisclosure, officialStudentLoanSources } from '@/components/T
 const faqs = [
   {
     question: 'Are Parent PLUS loans eligible for RAP?',
-    answer: 'Parent PLUS eligibility can be limited. Direct Consolidation loans that include Parent PLUS loans may not be eligible for RAP, so borrowers should verify loan type details before relying on RAP.',
+    answer: 'Parent PLUS loans and consolidation loans that include Parent PLUS debt are generally not a clean RAP fit. Parent borrowers should verify loan type and consolidation history before relying on a RAP estimate.',
   },
   {
     question: 'What repayment plan should Parent PLUS borrowers compare?',
@@ -23,8 +24,8 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Parent PLUS RAP Eligibility Checker - 2026 Repayment Guide',
-  description: 'Check whether Parent PLUS loans should rely on RAP, ICR, Standard repayment, or a PSLF strategy after the 2026 student loan repayment changes.',
+  title: 'Are Parent PLUS Loans Eligible for RAP? 2026 Checker',
+  description: 'Check whether Parent PLUS loans are eligible for RAP, when ICR or Standard repayment may apply, and how PSLF changes the parent borrower strategy.',
   keywords: ['Parent PLUS RAP eligibility', 'Parent PLUS repayment 2026', 'Parent PLUS ICR', 'Parent PLUS PSLF', 'RAP Parent PLUS'],
   alternates: {
     canonical: '/parent-plus-rap-eligibility/',
@@ -63,7 +64,7 @@ export default function ParentPlusRapEligibilityPage() {
               </p>
               <h1 className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl">Parent PLUS RAP Eligibility Checker</h1>
               <p className="max-w-3xl text-xl text-gray-700">
-                Parent PLUS borrowers need a separate repayment strategy. Use this checker to identify whether RAP, ICR, Standard repayment, or PSLF deserves the first look.
+                Parent PLUS borrowers need a separate repayment strategy. Use this checker to answer whether Parent PLUS loans are eligible for RAP, ICR, Standard repayment, or PSLF planning.
               </p>
             </div>
           </div>
@@ -86,6 +87,18 @@ export default function ParentPlusRapEligibilityPage() {
               ]}
             />
             <ParentPlusEligibilityChecker />
+
+            <section className="rounded-3xl border bg-white p-6">
+              <h2 className="text-2xl font-bold text-gray-900">Are Parent PLUS loans eligible for RAP?</h2>
+              <p className="mt-3 text-gray-700">
+                For most parent borrowers, the safer starting assumption is that Parent PLUS loans need a separate path. A Direct Consolidation Loan that includes Parent PLUS debt may not be eligible for RAP, so do not rely on a general RAP calculator until you verify the loan type in StudentAid.gov.
+              </p>
+              <div className="mt-5 grid gap-4 md:grid-cols-3">
+                <a href="https://studentaid.gov/manage-loans/consolidation" target="_blank" rel="noopener noreferrer" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Check consolidation</a>
+                <Link href="/rap-payment-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">RAP calculator</Link>
+                <Link href="/pslf-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">PSLF calculator</Link>
+              </div>
+            </section>
 
             <section className="rounded-3xl border bg-white p-6">
               <h2 className="text-2xl font-bold text-gray-900">Why Parent PLUS borrowers need a separate check</h2>
