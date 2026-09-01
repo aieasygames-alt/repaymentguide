@@ -19,6 +19,14 @@ const faqs = [
     answer: 'Parent PLUS and consolidation loans that include Parent PLUS require separate review. Do not assume RAP applies before checking loan type and consolidation history.',
   },
   {
+    question: 'My income included capital gains. Which calculator should I use?',
+    answer: 'Start with the IBR or IDR calculator using AGI from your tax information, then compare whether current-income documentation is allowed through the official IDR process if the capital gain was unusual.',
+  },
+  {
+    question: 'I know my AGI and dependents. Should I estimate PAYE?',
+    answer: 'Yes, if PAYE may be available to you. Run PAYE with AGI and household size, then compare IBR, RAP, PSLF, and the standard payment cap before choosing a repayment plan.',
+  },
+  {
     question: 'I am in default. Should I choose RAP first?',
     answer: 'Resolve default first by comparing rehabilitation and consolidation. After returning to good standing, compare available repayment plans including RAP, IBR, PAYE, ICR, and Standard repayment.',
   },
@@ -38,9 +46,10 @@ const scenarios = [
   },
   {
     title: 'I got a SAVE notice and have 90 days.',
-    summary: 'Save the notice, calculate the date, add reminders, compare plans, and submit early enough for servicer processing.',
+    summary: 'Save the notice, calculate the date, add reminders, compare plans, and submit early enough for servicer processing. Use the same workflow for an IDR recertification or plan-selection deadline.',
     links: [
       { href: '/save-90-day-deadline-calculator', label: 'Calculate deadline' },
+      { href: '/idr-payment-estimator', label: 'Estimate before deadline' },
       { href: '/student-loan-payment-increase', label: 'Check payment shock' },
       { href: '/repayment-plan-recommendation', label: 'Get plan path' },
       { href: '/servicer-contact-toolkit', label: 'Prepare questions' },
@@ -60,7 +69,7 @@ const scenarios = [
   },
   {
     title: 'I am married and considering filing separately.',
-    summary: 'Run the tax and loan math together. A lower payment can be outweighed by higher taxes or lost deductions.',
+    summary: 'Run the tax and loan math together. A lower payment can be outweighed by higher taxes or lost deductions, especially when borrower-only income differs sharply from household income.',
     links: [
       { href: '/married-filing-separately-student-loans-rap', label: 'MFS and RAP guide' },
       { href: '/income-driven-repayment-calculator', label: 'Compare IDR plans' },
@@ -77,6 +86,24 @@ const scenarios = [
     ],
   },
   {
+    title: 'My tax return AGI includes capital gains.',
+    summary: 'Use the tax-return AGI estimate first, then check whether the official IDR process lets you document current income if the gain was one-time income.',
+    links: [
+      { href: '/income-based-repayment-calculator', label: 'IBR AGI estimate' },
+      { href: '/income-driven-repayment-calculator', label: 'Compare IDR plans' },
+      { href: '/servicer-contact-toolkit', label: 'Ask about income proof' },
+    ],
+  },
+  {
+    title: 'I want a PAYE estimate from AGI and dependents.',
+    summary: 'Run PAYE as a scenario when household size, dependents, and payment caps matter. Then compare the result against IBR, RAP, Standard repayment, and PSLF goals.',
+    links: [
+      { href: '/paye-payment-calculator', label: 'PAYE calculator' },
+      { href: '/income-based-repayment-calculator', label: 'Compare IBR' },
+      { href: '/pslf-calculator', label: 'Check PSLF' },
+    ],
+  },
+  {
     title: 'My loans are in default.',
     summary: 'Default resolution comes before plan optimization. Compare rehabilitation vs consolidation, then choose the post-default repayment path.',
     links: [
@@ -90,8 +117,8 @@ const scenarios = [
 
 export const metadata: Metadata = {
   title: 'Student Loan Scenarios: What Should I Do Next?',
-  description: 'Find the right next step for common 2026 student loan scenarios: SAVE ending, RAP payment shock, PSLF, Parent PLUS, married filing separately, and default.',
-  keywords: ['student loan scenarios', 'SAVE ending what should I do', 'RAP payment changed', 'student loan help 2026'],
+  description: 'Find the right next step for common 2026 student loan scenarios: SAVE and IDR deadlines, RAP payment shock, PSLF, Parent PLUS, married filing separately, AGI changes, PAYE, and default.',
+  keywords: ['student loan scenarios', 'SAVE ending what should I do', 'IDR deadline calculator', 'PAYE AGI dependents', 'IBR AGI capital gains', 'RAP payment changed', 'student loan help 2026'],
   alternates: { canonical: '/student-loan-scenarios/' },
   openGraph: {
     title: 'Student Loan Scenarios: What Should I Do Next?',
@@ -118,7 +145,7 @@ export default function StudentLoanScenariosPage() {
 
         <section className="container mx-auto px-4 py-12">
           <div className="mx-auto max-w-5xl space-y-8">
-            <ArticleTrustSummary published="2026-07-13" updated="2026-07-13" policyReviewed="2026-07-13" />
+            <ArticleTrustSummary published="2026-07-13" updated="2026-09-01" policyReviewed="2026-09-01" />
             <FinancialDisclaimer />
 
             <div className="grid gap-6 md:grid-cols-2">
