@@ -44,7 +44,7 @@ const calculatorGroups = [
       {
         name: 'PAYE Payment Calculator',
         href: '/paye-payment-calculator',
-        description: 'Estimate Pay As You Earn payments and compare PAYE with IBR, RAP, and PSLF strategy.',
+        description: 'Estimate Pay As You Earn payments from AGI and household size, then compare PAYE with IBR, RAP, and PSLF strategy.',
       },
       {
         name: 'Student Loan IDR Payment Calculator',
@@ -68,9 +68,9 @@ const calculatorGroups = [
         description: 'Compare a former SAVE reference point with current RAP planning estimates.',
       },
       {
-        name: 'SAVE 90-Day Deadline Calculator',
+        name: 'SAVE and IDR Deadline Calculator',
         href: '/save-90-day-deadline-calculator',
-        description: 'Estimate the response window from a servicer notice date.',
+        description: 'Estimate the response window from a SAVE transition, IDR recertification, or servicer plan-selection notice.',
       },
     ],
   },
@@ -113,6 +113,10 @@ const faqs = [
   {
     question: 'Why are there separate IDR, IBR, and PSLF calculators?',
     answer: 'Borrowers search with different levels of specificity. A broad IDR calculator compares plans, an IBR calculator focuses on Income-Based Repayment, and PSLF tools focus on qualifying employment, 120 payments, and forgiveness progress.',
+  },
+  {
+    question: 'Which calculator helps with AGI, dependents, and PAYE?',
+    answer: 'Use the PAYE Payment Calculator when you want a Pay As You Earn estimate using AGI and household size. Then compare the result with IBR, RAP, and the standard payment cap before choosing a plan.',
   },
 ];
 
@@ -198,7 +202,10 @@ export default function StudentLoanCalculatorsPage() {
                 <Link href="/idr-payment-estimator" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">IDR payment estimator</Link>
                 <Link href="/ibr-vs-rap" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">IBR vs RAP</Link>
                 <Link href="/paye-payment-calculator" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">PAYE payment calculator</Link>
+                <Link href="/paye-payment-calculator" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">PAYE AGI dependents estimate</Link>
                 <Link href="/rap-payment-calculator" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">RAP payment calculator</Link>
+                <Link href="/save-90-day-deadline-calculator" className="rounded-full bg-amber-50 px-4 py-2 font-semibold text-amber-900 hover:bg-amber-100">IDR deadline calculator</Link>
+                <Link href="/parent-plus-rap-eligibility" className="rounded-full bg-green-50 px-4 py-2 font-semibold text-green-900 hover:bg-green-100">Parent PLUS RAP eligibility</Link>
               </div>
             </section>
 

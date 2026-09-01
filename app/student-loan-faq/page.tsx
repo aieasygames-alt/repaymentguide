@@ -35,6 +35,14 @@ const faqs = [
     answer: 'Parent PLUS rules are separate from ordinary Direct Loan rules. Parent PLUS borrowers should verify whether the loan is a Parent PLUS loan, whether it has been consolidated, and whether ICR, Standard repayment, or a PSLF strategy is the realistic path.',
   },
   {
+    question: 'Does an IBR calculation use AGI that includes capital gains?',
+    answer: 'IBR estimates usually start with adjusted gross income from tax information, and capital gains can be part of AGI. If the tax year included unusual income, compare the tax-return estimate with any current-income documentation allowed by the official IDR process.',
+  },
+  {
+    question: 'How do I estimate PAYE with AGI and dependents?',
+    answer: 'Use AGI and household size as the starting point for a PAYE estimate, then compare PAYE with IBR, RAP, and the standard payment cap. Dependents can reduce discretionary income through household size, but eligibility and borrower history still matter.',
+  },
+  {
     question: 'Can RAP payments count for PSLF?',
     answer: 'RAP may be part of a PSLF strategy if the borrower has eligible loans, qualifying employment, and payments that meet PSLF rules. PSLF borrowers should verify plan treatment through StudentAid.gov and their servicer before switching.',
   },
@@ -73,6 +81,16 @@ const quickLinks = [
     href: '/parent-plus-rap-eligibility',
     description: 'Sort out Parent PLUS, consolidation, ICR, RAP, and PSLF considerations.',
   },
+  {
+    title: 'Estimate PAYE with AGI',
+    href: '/paye-payment-calculator',
+    description: 'Compare PAYE when AGI, household size, dependents, or PSLF affect the estimate.',
+  },
+  {
+    title: 'Check IBR income inputs',
+    href: '/income-based-repayment-calculator',
+    description: 'Review how IBR estimates use AGI, household size, and unusual tax-year income.',
+  },
 ];
 
 const sources = [
@@ -93,6 +111,9 @@ export const metadata: Metadata = {
     'SAVE ending what should I do',
     'RAP vs IBR',
     'Parent PLUS RAP eligibility',
+    'IBR AGI capital gains',
+    'PAYE AGI dependents',
+    'IDR deadline calculator',
     'PSLF RAP qualifying payments',
     'student loan default rehabilitation 2026',
   ],

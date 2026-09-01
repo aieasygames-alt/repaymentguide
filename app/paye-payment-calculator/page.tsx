@@ -21,6 +21,10 @@ const faqs = [
     question: 'Can PAYE help PSLF borrowers?',
     answer: 'PAYE can be worth checking for PSLF if the borrower is eligible and PAYE creates a lower qualifying payment than IBR, RAP, ICR, or Standard repayment.',
   },
+  {
+    question: 'How do AGI and dependents affect a PAYE estimate?',
+    answer: 'PAYE planning estimates usually start with adjusted gross income, household size, and the poverty-guideline allowance. Dependents can matter through household size, so a borrower with a higher AGI and several dependents should compare PAYE, IBR, RAP, and the standard payment cap.',
+  },
 ];
 
 export const metadata: Metadata = {
@@ -95,6 +99,18 @@ export default function PayePaymentCalculatorPage() {
                 <Link href="/income-based-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare PAYE vs IBR</Link>
                 <Link href="/rap-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare PAYE vs RAP</Link>
                 <Link href="/pslf-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Check PAYE for PSLF</Link>
+              </div>
+            </section>
+
+            <section className="rounded-2xl border bg-white p-6">
+              <h2 className="text-2xl font-bold text-gray-900">Estimating PAYE with AGI and dependents</h2>
+              <p className="mt-3 text-gray-700">
+                If your question starts with a specific AGI, such as $108,000, and a specific number of dependents, run PAYE as one scenario rather than the final answer. Household size can lower discretionary income, but PAYE eligibility, the standard repayment cap, spouse income, and PSLF goals can still change which plan is best.
+              </p>
+              <div className="mt-5 grid gap-4 md:grid-cols-3">
+                <Link href="/income-driven-repayment-calculator" className="rounded-xl border bg-primary-50 p-4 font-semibold text-primary-950 hover:bg-primary-100">Run AGI scenarios</Link>
+                <Link href="/income-based-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare IBR</Link>
+                <Link href="/student-loan-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Check standard cap</Link>
               </div>
             </section>
 
