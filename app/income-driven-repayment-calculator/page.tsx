@@ -34,6 +34,10 @@ const faqs = [
     answer: 'Yes. You can use your most recent tax return, current pay stubs, or alternative documentation of income. If your income has significantly decreased since your last tax return, using pay stubs or alternative documentation can result in lower monthly payments.'
   },
   {
+    question: 'Which IDR calculator should I use for IBR, PAYE, or RAP?',
+    answer: 'Use this broad IDR calculator to compare plans side by side. Use the IBR calculator for Income-Based Repayment questions, the PAYE calculator for Pay As You Earn estimates, and the RAP calculator for the 2026 AGI-tier formula and dependent reduction.'
+  },
+  {
     question: 'What happens if I get married or have a child?',
     answer: 'If you get married or have a child, your family size increases, which increases the poverty guideline deduction and potentially lowers your discretionary income. You must update this information during your annual recertification. If you file taxes separately, you can exclude your spouse\'s income from PAYE, IBR, and SAVE calculations.'
   },
@@ -285,6 +289,19 @@ export default function IdrCalculatorPage() {
                 <Link href="/blog/idr-payment-estimator-guide" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">IDR payment estimator guide</Link>
                 <Link href="/income-based-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Income-Based Repayment calculator</Link>
                 <Link href="/rap-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">RAP payment calculator</Link>
+              </div>
+            </section>
+
+            <section className="rounded-2xl border bg-white p-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-5">Find the right IDR calculator for your query</h2>
+              <p className="text-gray-700">
+                Broad IDR searches belong here, but a query that names IBR, PAYE, RAP, Parent PLUS, or a servicer deadline usually needs a more focused next step. Use this map when the first estimate is close and you need to verify the plan-specific rules.
+              </p>
+              <div className="mt-5 grid gap-4 md:grid-cols-2">
+                <Link href="/income-based-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Income based repayment calculator</Link>
+                <Link href="/paye-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">PAYE payment calculator</Link>
+                <Link href="/parent-plus-rap-eligibility" className="rounded-xl border bg-green-50 p-4 font-semibold text-green-950 hover:bg-green-100">Parent PLUS RAP eligibility</Link>
+                <Link href="/save-90-day-deadline-calculator" className="rounded-xl border bg-amber-50 p-4 font-semibold text-amber-950 hover:bg-amber-100">IDR deadline calculator</Link>
               </div>
             </section>
 

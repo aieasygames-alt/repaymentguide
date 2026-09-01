@@ -25,6 +25,10 @@ const faqs = [
     question: 'Are Parent PLUS loans eligible for RAP?',
     answer: 'Parent PLUS treatment is limited. Consolidation loans that include Parent PLUS loans may not be eligible for RAP, so parent borrowers should verify loan type details before relying on this calculator.',
   },
+  {
+    question: 'Is RAP a good first estimate for Parent PLUS borrowers?',
+    answer: 'Usually no. Parent PLUS borrowers should first check the Parent PLUS RAP eligibility page, because loan type and consolidation history can make ICR, Standard repayment, or PSLF planning more relevant than a general RAP estimate.',
+  },
 ];
 
 export const metadata: Metadata = {
@@ -166,6 +170,18 @@ export default function RapPaymentCalculatorPage() {
                 <Link href="/ibr-vs-rap" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Read IBR vs RAP</Link>
                 <Link href="/rap-vs-save-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Compare RAP vs SAVE</Link>
                 <Link href="/pslf-rap-qualifying-payments" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Check RAP and PSLF</Link>
+              </div>
+            </section>
+
+            <section className="rounded-3xl border bg-white p-6">
+              <h2 className="text-3xl font-bold text-gray-900">Parent PLUS and the RAP program</h2>
+              <p className="mt-4 text-gray-700">
+                If you are asking whether Parent PLUS loans are eligible for the RAP program, pause before using a general RAP payment estimate. Parent PLUS loans and Direct Consolidation Loans that include Parent PLUS debt can follow different repayment rules, so the better first step is to identify the loan type and compare ICR, Standard repayment, and any PSLF path for the parent borrower.
+              </p>
+              <div className="mt-6 grid gap-4 md:grid-cols-3">
+                <Link href="/parent-plus-rap-eligibility" className="rounded-2xl border bg-green-50 p-5 font-semibold text-green-950 hover:bg-green-100">Check Parent PLUS RAP eligibility</Link>
+                <Link href="/income-driven-repayment-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Compare IDR plans</Link>
+                <Link href="/pslf-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Review PSLF path</Link>
               </div>
             </section>
           </div>
