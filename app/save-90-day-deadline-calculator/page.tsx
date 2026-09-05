@@ -104,11 +104,16 @@ export default function SaveDeadlineCalculatorPage() {
                 <p className="text-gray-700">
                   Use this page for any student loan deadline where you need a planning date from a servicer notice. SAVE transition notices, IDR recertification reminders, and plan-selection messages can use different wording, so always compare this estimate with the exact date shown in your account.
                 </p>
-                <div className="mt-5 grid gap-4 md:grid-cols-2">
-                  <Link href="/idr-payment-estimator" className="rounded-xl border bg-primary-50 p-4 font-semibold text-primary-950 hover:bg-primary-100">Estimate IDR payments first</Link>
-                  <Link href="/income-driven-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare repayment plans</Link>
-                </div>
-              </section>
+              <div className="mt-5 grid gap-4 md:grid-cols-2">
+                <Link href="/idr-payment-estimator" className="rounded-xl border bg-primary-50 p-4 font-semibold text-primary-950 hover:bg-primary-100">Estimate IDR payments first</Link>
+                <Link href="/income-driven-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare repayment plans</Link>
+              </div>
+              <div className="mt-4 grid gap-4 md:grid-cols-3">
+                <Link href="/rap-vs-save-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">RAP vs SAVE</Link>
+                <Link href="/ibr-vs-rap" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">IBR vs RAP</Link>
+                <Link href="/parent-plus-rap-eligibility" className="rounded-xl border bg-green-50 p-4 font-semibold text-green-950 hover:bg-green-100">Parent PLUS RAP eligibility</Link>
+              </div>
+            </section>
 
               <section className="rounded-2xl border bg-white p-6">
                 <h2 className="mb-4 text-2xl font-bold text-gray-900">Why the notice date matters</h2>

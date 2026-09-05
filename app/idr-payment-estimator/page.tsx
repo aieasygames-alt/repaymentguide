@@ -131,6 +131,20 @@ export default function IdrPaymentEstimatorPage() {
                   <p className="mt-2 text-sm text-gray-700">Estimate forgiveness if public service is part of your plan.</p>
                 </Link>
               </div>
+              <div className="mt-6 grid gap-4 md:grid-cols-3">
+                <Link href="/save-90-day-deadline-calculator" className="rounded-xl border bg-amber-50 p-4 hover:bg-amber-100">
+                  <h3 className="font-semibold text-amber-950">SAVE and IDR deadline calculator</h3>
+                  <p className="mt-2 text-sm text-amber-900">Use this if your servicer gave you a plan-selection or recertification deadline.</p>
+                </Link>
+                <Link href="/paye-payment-calculator" className="rounded-xl border bg-slate-50 p-4 hover:bg-slate-100">
+                  <h3 className="font-semibold text-gray-900">PAYE payment calculator</h3>
+                  <p className="mt-2 text-sm text-gray-700">Check whether PAYE beats IBR or RAP for your income and family size.</p>
+                </Link>
+                <Link href="/parent-plus-rap-eligibility" className="rounded-xl border bg-green-50 p-4 hover:bg-green-100">
+                  <h3 className="font-semibold text-green-950">Parent PLUS RAP eligibility</h3>
+                  <p className="mt-2 text-sm text-green-900">Verify whether Parent PLUS loans need a separate path.</p>
+                </Link>
+              </div>
             </section>
 
             <section className="rounded-2xl border bg-white p-6">

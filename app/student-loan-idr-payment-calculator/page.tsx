@@ -109,6 +109,11 @@ export default function StudentLoanIdrPaymentCalculatorPage() {
                 <Link href="/rap-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">RAP payment calculator</Link>
                 <Link href="/pslf-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">PSLF calculator</Link>
               </div>
+              <div className="mt-4 grid gap-4 md:grid-cols-3">
+                <Link href="/save-90-day-deadline-calculator" className="rounded-xl border bg-amber-50 p-4 font-semibold text-amber-950 hover:bg-amber-100">SAVE deadline calculator</Link>
+                <Link href="/paye-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">PAYE payment calculator</Link>
+                <Link href="/parent-plus-rap-eligibility" className="rounded-xl border bg-green-50 p-4 font-semibold text-green-950 hover:bg-green-100">Parent PLUS RAP eligibility</Link>
+              </div>
             </section>
 
             <section className="overflow-x-auto rounded-2xl border bg-white p-6">

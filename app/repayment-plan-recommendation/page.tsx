@@ -3,6 +3,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import RepaymentRecommendationFlow from '@/components/RepaymentRecommendationFlow';
 import { FAQSchema } from '@/components/FAQSchema';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { CalculatorSchema } from '@/components/CalculatorSchema';
 import { CalculatorDisclosure, officialStudentLoanSources } from '@/components/TrustSignals';
 
 const faqs = [
@@ -38,6 +40,19 @@ export default function RepaymentPlanRecommendationPage() {
   return (
     <>
       <FAQSchema faqs={faqs} />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://repaymentguide.com/' },
+          { name: 'Student Loan Calculators', url: 'https://repaymentguide.com/student-loan-calculators/' },
+          { name: 'Repayment Recommendation', url: 'https://repaymentguide.com/repayment-plan-recommendation/' },
+        ]}
+      />
+      <CalculatorSchema
+        name="Repayment Plan Recommendation Tool"
+        description="Answer a few questions to identify which student loan repayment plans to compare first after the 2026 SAVE transition."
+        url="https://repaymentguide.com/repayment-plan-recommendation/"
+        keywords={['repayment plan recommendation', 'RAP vs IBR', 'student loan recommendation tool']}
+      />
       <Header />
       <main className="flex-1">
         <section className="bg-gradient-to-br from-primary-50 to-blue-100 py-14">

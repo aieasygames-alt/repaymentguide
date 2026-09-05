@@ -100,6 +100,10 @@ export default function PayePaymentCalculatorPage() {
                 <Link href="/rap-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare PAYE vs RAP</Link>
                 <Link href="/pslf-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Check PAYE for PSLF</Link>
               </div>
+              <div className="mt-4 grid gap-4 md:grid-cols-2">
+                <Link href="/income-driven-repayment-calculator" className="rounded-xl border bg-primary-50 p-4 font-semibold text-primary-950 hover:bg-primary-100">Open the IDR payment estimator</Link>
+                <Link href="/save-90-day-deadline-calculator" className="rounded-xl border bg-amber-50 p-4 font-semibold text-amber-950 hover:bg-amber-100">Check your deadline first</Link>
+              </div>
             </section>
 
             <section className="rounded-2xl border bg-white p-6">
@@ -111,6 +115,10 @@ export default function PayePaymentCalculatorPage() {
                 <Link href="/income-driven-repayment-calculator" className="rounded-xl border bg-primary-50 p-4 font-semibold text-primary-950 hover:bg-primary-100">Run AGI scenarios</Link>
                 <Link href="/income-based-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare IBR</Link>
                 <Link href="/student-loan-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Check standard cap</Link>
+              </div>
+              <div className="mt-4 grid gap-4 md:grid-cols-2">
+                <Link href="/parent-plus-rap-eligibility" className="rounded-xl border bg-green-50 p-4 font-semibold text-green-950 hover:bg-green-100">Parent PLUS RAP eligibility</Link>
+                <Link href="/ibr-vs-rap" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">See IBR vs RAP next</Link>
               </div>
             </section>
 

@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { FAQSchema } from '@/components/FAQSchema';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { CalculatorSchema } from '@/components/CalculatorSchema';
 import { ArticleTrustSummary, FinancialDisclaimer, OfficialSources, officialStudentLoanSources } from '@/components/TrustSignals';
 
 const faqs = [
@@ -37,6 +38,12 @@ export default function SaveEndingWhatShouldIDoPage() {
   return (
     <>
       <FAQSchema faqs={faqs} />
+      <CalculatorSchema
+        name="SAVE Next Steps Checklist"
+        description="Plan the next step after a SAVE transition notice by comparing deadlines, repayment plans, PSLF rules, and Parent PLUS issues."
+        url="https://repaymentguide.com/save-ending-what-should-i-do/"
+        keywords={['SAVE next steps', 'SAVE ending checklist', 'student loan transition plan']}
+      />
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://repaymentguide.com/' },

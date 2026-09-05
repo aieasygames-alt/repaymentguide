@@ -98,6 +98,10 @@ export default function ParentPlusRapEligibilityPage() {
                 <Link href="/rap-payment-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">RAP calculator</Link>
                 <Link href="/pslf-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">PSLF calculator</Link>
               </div>
+              <div className="mt-4 grid gap-4 md:grid-cols-2">
+                <Link href="/income-driven-repayment-calculator" className="rounded-2xl border bg-primary-50 p-5 font-semibold text-primary-950 hover:bg-primary-100">Compare IDR plans</Link>
+                <Link href="/income-based-repayment-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Estimate IBR next</Link>
+              </div>
             </section>
 
             <section className="rounded-3xl border bg-white p-6">

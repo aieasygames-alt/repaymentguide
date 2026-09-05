@@ -4,6 +4,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import IdrComparison from '@/components/IdrComparison';
 import { FAQSchema } from '@/components/FAQSchema';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { CalculatorSchema } from '@/components/CalculatorSchema';
 import { CalculatorDisclosure, officialStudentLoanSources } from '@/components/TrustSignals';
 
 export const metadata: Metadata = {
@@ -47,6 +49,19 @@ export default function SavePlanCalculatorPage() {
   return (
     <>
       <FAQSchema faqs={faqs} />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://repaymentguide.com/' },
+          { name: 'Student Loan Calculators', url: 'https://repaymentguide.com/student-loan-calculators/' },
+          { name: 'SAVE Plan Calculator', url: 'https://repaymentguide.com/save-plan-calculator/' },
+        ]}
+      />
+      <CalculatorSchema
+        name="SAVE Plan Calculator"
+        description="Compare the former SAVE plan reference point with RAP, IBR, PAYE, ICR, and standard repayment after the 2026 transition."
+        url="https://repaymentguide.com/save-plan-calculator/"
+        keywords={['SAVE plan calculator', 'SAVE alternatives', 'student loan repayment calculator']}
+      />
       <Header />
       <main className="flex-1">
         {/* Hero Section */}

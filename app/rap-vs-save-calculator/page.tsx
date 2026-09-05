@@ -82,6 +82,10 @@ export default function RapVsSaveCalculatorPage() {
                 <Link href="/income-driven-repayment-calculator" className="rounded-xl bg-primary-700 px-5 py-3 text-center font-semibold text-white hover:bg-primary-800">Compare current IDR plans</Link>
                 <Link href="/save-90-day-deadline-calculator" className="rounded-xl border px-5 py-3 text-center font-semibold text-primary-800 hover:bg-primary-50">Calculate SAVE deadline</Link>
               </div>
+              <div className="mt-4 grid gap-4 md:grid-cols-2">
+                <Link href="/ibr-vs-rap" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Open IBR vs RAP</Link>
+                <Link href="/parent-plus-rap-eligibility" className="rounded-xl border bg-green-50 p-4 font-semibold text-green-950 hover:bg-green-100">Check Parent PLUS eligibility</Link>
+              </div>
             </section>
 
             <section className="rounded-3xl border bg-white p-6">
