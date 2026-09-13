@@ -68,7 +68,7 @@ const quickLinks = [
   },
   {
     title: 'Compare RAP, IBR, PAYE, and ICR',
-    href: '/income-driven-repayment-calculator',
+    href: '/income-driven-repayment-calculator/',
     description: 'Run payment estimates using income, family size, balance, and interest rate.',
   },
   {
@@ -88,7 +88,7 @@ const quickLinks = [
   },
   {
     title: 'Check IBR income inputs',
-    href: '/income-based-repayment-calculator',
+    href: '/income-based-repayment-calculator/',
     description: 'Review how IBR estimates use AGI, household size, and unusual tax-year income.',
   },
 ];

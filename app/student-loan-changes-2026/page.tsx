@@ -41,13 +41,13 @@ const actionCards = [
   {
     title: 'Choosing between RAP, IBR, PAYE, and ICR',
     description: 'Run estimates with your AGI, household size, balance, and forgiveness goals before submitting a plan choice.',
-    href: '/income-driven-repayment-calculator',
+    href: '/income-driven-repayment-calculator/',
     cta: 'Compare IDR payments',
   },
   {
     title: 'Pursuing PSLF',
     description: 'A low payment is not enough; the plan also needs to fit PSLF rules and your qualifying employment strategy.',
-    href: '/pslf-calculator',
+    href: '/pslf-calculator/',
     cta: 'Estimate PSLF forgiveness',
   },
   {

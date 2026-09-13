@@ -97,7 +97,7 @@ export default function NewsPage() {
                 <p className="text-red-800 mb-3">
                   SAVE borrowers should watch for servicer notices and compare RAP, IBR, PAYE, ICR, and Standard repayment before choosing a new plan.
                 </p>
-                <Link href="/student-loan-changes-2026" className="text-red-700 hover:text-red-800 font-medium">
+                <Link href="/student-loan-changes-2026/" className="text-red-700 hover:text-red-800 font-medium">
                   Open the 2026 changes guide →
                 </Link>
               </div>
@@ -133,7 +133,7 @@ export default function NewsPage() {
                 <p className="text-gray-600 mb-3">
                   SAVE borrowers should compare replacement plans and track servicer deadlines before a default placement creates a payment surprise.
                 </p>
-                <Link href="/student-loan-changes-2026" className="text-primary-600 hover:text-primary-700 font-medium text-sm">
+                <Link href="/student-loan-changes-2026/" className="text-primary-600 hover:text-primary-700 font-medium text-sm">
                   Read the 2026 guide →
                 </Link>
               </div>

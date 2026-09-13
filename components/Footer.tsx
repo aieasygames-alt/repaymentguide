@@ -28,7 +28,7 @@ export default function Footer() {
             <h3 className="font-semibold text-gray-900 mb-4">Resources</h3>
             <ul className="space-y-2">
               <li><Link href="/blog" className="text-gray-600 hover:text-primary-600">Blog</Link></li>
-              <li><Link href="/student-loan-changes-2026" className="text-gray-600 hover:text-primary-600">2026 Changes Guide</Link></li>
+              <li><Link href="/student-loan-changes-2026/" className="text-gray-600 hover:text-primary-600">2026 Changes Guide</Link></li>
               <li><Link href="/student-loan-scenarios" className="text-gray-600 hover:text-primary-600">Borrower Scenarios</Link></li>
               <li><Link href="/student-loan-payment-increase" className="text-gray-600 hover:text-primary-600">Payment Increase Guide</Link></li>
               <li><Link href="/servicer-contact-toolkit" className="text-gray-600 hover:text-primary-600">Servicer Toolkit</Link></li>

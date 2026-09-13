@@ -38,7 +38,7 @@ export default function Header() {
             <Link href="/pslf-calculator" className="text-gray-700 hover:text-primary-600">
               PSLF Calculator
             </Link>
-            <Link href="/student-loan-changes-2026" className="text-gray-700 hover:text-primary-600">
+            <Link href="/student-loan-changes-2026/" className="text-gray-700 hover:text-primary-600">
               2026 Changes
             </Link>
             <Link href="/blog" className="text-gray-700 hover:text-primary-600">
@@ -80,7 +80,7 @@ export default function Header() {
             <Link href="/pslf-calculator" className="block text-gray-700 hover:text-primary-600" onClick={() => setMobileMenuOpen(false)}>
               PSLF Calculator
             </Link>
-            <Link href="/student-loan-changes-2026" className="block text-gray-700 hover:text-primary-600" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/student-loan-changes-2026/" className="block text-gray-700 hover:text-primary-600" onClick={() => setMobileMenuOpen(false)}>
               2026 Changes
             </Link>
             <Link href="/blog" className="block text-gray-700 hover:text-primary-600" onClick={() => setMobileMenuOpen(false)}>

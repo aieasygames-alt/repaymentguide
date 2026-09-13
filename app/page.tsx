@@ -4,6 +4,8 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+  title: 'Student Loan Repayment Calculator | IDR, IBR, RAP & PSLF',
+  description: 'Calculate student loan payments and compare income driven repayment plans, including IBR, PAYE, ICR, RAP, standard repayment, and PSLF.',
   alternates: {
     canonical: '/',
   },
@@ -28,7 +30,7 @@ export default function HomePage() {
               <p className="text-gray-700">
                 SAVE borrowers are being notified to choose another plan within 90 days. Compare RAP, IBR, PAYE, ICR, and standard repayment before your servicer deadline.
               </p>
-              <Link href="/student-loan-changes-2026" className="inline-block mt-2 text-primary-700 font-semibold hover:text-primary-800">
+              <Link href="/student-loan-changes-2026/" className="inline-block mt-2 text-primary-700 font-semibold hover:text-primary-800">
                 Start with the 2026 changes guide →
               </Link>
             </div>

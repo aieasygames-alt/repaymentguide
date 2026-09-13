@@ -34,12 +34,12 @@ const causes = [
   {
     title: 'Income or family size update',
     body: 'IDR payments can change when income, household size, tax filing status, or documentation changes. Ask which inputs were used and whether updated documentation is allowed.',
-    link: { href: '/income-driven-repayment-calculator', label: 'Compare IDR payments' },
+    link: { href: '/income-driven-repayment-calculator/', label: 'Compare IDR payments' },
   },
   {
     title: 'AGI spike or one-time income',
     body: 'Capital gains, bonuses, or other unusual tax-year income can make an IDR estimate look higher than your current budget. Compare the AGI-based estimate with any current-income documentation your servicer will accept.',
-    link: { href: '/income-based-repayment-calculator', label: 'Check IBR income inputs' },
+    link: { href: '/income-based-repayment-calculator/', label: 'Check IBR income inputs' },
   },
   {
     title: 'PSLF risk',
