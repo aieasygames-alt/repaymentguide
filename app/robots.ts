@@ -12,7 +12,8 @@ export default function robots(): MetadataRoute.Robots {
       },
       {
         userAgent: ['GPTBot', 'Google-Extended', 'Bytespider', 'CCBot', 'ClaudeBot', 'SemrushBot'],
-        disallow: '/',
+        allow: '/',
+        disallow: ['/api/', '/admin/'],
       },
       {
         userAgent: 'AhrefsBot',
