@@ -72,7 +72,7 @@ const scenarios = [
     summary: 'Run the tax and loan math together. A lower payment can be outweighed by higher taxes or lost deductions, especially when borrower-only income differs sharply from household income.',
     links: [
       { href: '/married-filing-separately-student-loans-rap', label: 'MFS and RAP guide' },
-      { href: '/income-driven-repayment-calculator', label: 'Compare IDR plans' },
+      { href: '/income-driven-repayment-calculator/', label: 'Compare IDR plans' },
       { href: '/blog/married-borrowers-repayment-strategy', label: 'Married borrower guide' },
     ],
   },
@@ -89,8 +89,8 @@ const scenarios = [
     title: 'My tax return AGI includes capital gains.',
     summary: 'Use the tax-return AGI estimate first, then check whether the official IDR process lets you document current income if the gain was one-time income.',
     links: [
-      { href: '/income-based-repayment-calculator', label: 'IBR AGI estimate' },
-      { href: '/income-driven-repayment-calculator', label: 'Compare IDR plans' },
+      { href: '/income-based-repayment-calculator/', label: 'IBR AGI estimate' },
+      { href: '/income-driven-repayment-calculator/', label: 'Compare IDR plans' },
       { href: '/servicer-contact-toolkit', label: 'Ask about income proof' },
     ],
   },
@@ -99,7 +99,7 @@ const scenarios = [
     summary: 'Run PAYE as a scenario when household size, dependents, and payment caps matter. Then compare the result against IBR, RAP, Standard repayment, and PSLF goals.',
     links: [
       { href: '/paye-payment-calculator', label: 'PAYE calculator' },
-      { href: '/income-based-repayment-calculator', label: 'Compare IBR' },
+      { href: '/income-based-repayment-calculator/', label: 'Compare IBR' },
       { href: '/pslf-calculator', label: 'Check PSLF' },
     ],
   },

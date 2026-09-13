@@ -17,7 +17,7 @@ const calculatorGroups = [
       },
       {
         name: 'Income-Driven Repayment Calculator',
-        href: '/income-driven-repayment-calculator',
+        href: '/income-driven-repayment-calculator/',
         description: 'Compare RAP, IBR, PAYE, ICR, and other income-driven repayment estimates.',
       },
       {
@@ -38,7 +38,7 @@ const calculatorGroups = [
       },
       {
         name: 'Income-Based Repayment Calculator',
-        href: '/income-based-repayment-calculator',
+        href: '/income-based-repayment-calculator/',
         description: 'Focus on IBR and compare it with RAP, PAYE, and ICR.',
       },
       {
@@ -48,7 +48,7 @@ const calculatorGroups = [
       },
       {
         name: 'Student Loan IDR Payment Calculator',
-        href: '/student-loan-idr-payment-calculator',
+        href: '/student-loan-idr-payment-calculator/',
         description: 'Estimate federal student loan IDR payments with plain-language next steps.',
       },
     ],
