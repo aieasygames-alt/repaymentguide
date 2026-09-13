@@ -306,7 +306,7 @@ export default function PaymentCalculatorPage() {
                     What if I can't afford any of these payments?
                   </summary>
                   <div className="px-6 pb-4 text-gray-600">
-                    <p className="mb-3">If standard repayment plans don't fit your budget, compare <Link href="/income-driven-repayment-calculator" className="text-primary-600 hover:text-primary-700 font-medium">income-driven repayment (IDR) plans</Link>, which can base payments on income and household details:</p>
+                    <p className="mb-3">If standard repayment plans don't fit your budget, compare <Link href="/income-driven-repayment-calculator/" className="text-primary-600 hover:text-primary-700 font-medium">income-driven repayment (IDR) plans</Link>, which can base payments on income and household details:</p>
                     <ul className="space-y-1 text-sm">
                       <li>• RAP: 1-10% of AGI, reduced by $50 per dependent, with a minimum payment</li>
                       <li>• PAYE/IBR: 10-15% of discretionary income if eligible</li>
@@ -351,7 +351,7 @@ export default function PaymentCalculatorPage() {
                 If standard repayment plans don't fit your budget, explore income-driven repayment options based on your income and family size.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/income-driven-repayment-calculator" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition text-center">
+                <Link href="/income-driven-repayment-calculator/" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition text-center">
                   Compare IDR Plans
                 </Link>
                 <Link href="/pslf-calculator" className="bg-primary-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-900 transition text-center">

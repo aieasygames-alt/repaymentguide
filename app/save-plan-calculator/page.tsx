@@ -469,7 +469,7 @@ export default function SavePlanCalculatorPage() {
                 Use our IDR calculator to see exactly what your monthly payment would be under each available plan based on your income and family size.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/income-driven-repayment-calculator" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition text-center">
+                <Link href="/income-driven-repayment-calculator/" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition text-center">
                   Calculate IDR Payments
                 </Link>
                 <Link href="/blog/save-plan-alternatives" className="bg-primary-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-900 transition text-center">

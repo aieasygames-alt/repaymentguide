@@ -82,7 +82,7 @@ export default function PslfVsIdrForgivenessCalculatorPage() {
               </p>
               <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                 <Link href="/pslf-qualifying-payment-calculator" className="rounded-xl bg-primary-700 px-5 py-3 text-center font-semibold text-white hover:bg-primary-800">Track PSLF payments</Link>
-                <Link href="/income-driven-repayment-calculator" className="rounded-xl border px-5 py-3 text-center font-semibold text-primary-700 hover:bg-primary-50">Compare IDR plans</Link>
+                <Link href="/income-driven-repayment-calculator/" className="rounded-xl border px-5 py-3 text-center font-semibold text-primary-700 hover:bg-primary-50">Compare IDR plans</Link>
               </div>
             </section>
 

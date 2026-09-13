@@ -143,7 +143,7 @@ export default function NewsPage() {
                 <p className="text-gray-600 mb-3">
                   RAP may lower payments for some borrowers, but the AGI-based formula, dependent adjustment, and timeline differ from SAVE.
                 </p>
-                <Link href="/income-driven-repayment-calculator" className="text-primary-600 hover:text-primary-700 font-medium text-sm">
+                <Link href="/income-driven-repayment-calculator/" className="text-primary-600 hover:text-primary-700 font-medium text-sm">
                   Compare IDR plans →
                 </Link>
               </div>
@@ -208,7 +208,7 @@ export default function NewsPage() {
               <Link href="/blog" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition text-center">
                 Read Latest Blog Posts
               </Link>
-              <Link href="/income-driven-repayment-calculator" className="bg-primary-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-900 transition text-center">
+              <Link href="/income-driven-repayment-calculator/" className="bg-primary-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-900 transition text-center">
                 Calculate Your Payments
               </Link>
             </div>

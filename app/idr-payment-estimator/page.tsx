@@ -118,11 +118,11 @@ export default function IdrPaymentEstimatorPage() {
             <section className="rounded-2xl border bg-white p-6">
               <h2 className="text-2xl font-bold text-gray-900">Related Calculators</h2>
               <div className="mt-5 grid gap-4 md:grid-cols-3">
-                <Link href="/income-driven-repayment-calculator" className="rounded-xl border p-4 hover:bg-primary-50">
+                <Link href="/income-driven-repayment-calculator/" className="rounded-xl border p-4 hover:bg-primary-50">
                   <h3 className="font-semibold text-gray-900">Income-Driven Repayment Calculator</h3>
                   <p className="mt-2 text-sm text-gray-700">Use the broader IDR comparison page for detailed plan guidance.</p>
                 </Link>
-                <Link href="/income-based-repayment-calculator" className="rounded-xl border p-4 hover:bg-primary-50">
+                <Link href="/income-based-repayment-calculator/" className="rounded-xl border p-4 hover:bg-primary-50">
                   <h3 className="font-semibold text-gray-900">Income-Based Repayment Calculator</h3>
                   <p className="mt-2 text-sm text-gray-700">Focus on IBR and income-based repayment search intent.</p>
                 </Link>

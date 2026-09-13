@@ -106,7 +106,7 @@ export default function SaveDeadlineCalculatorPage() {
                 </p>
               <div className="mt-5 grid gap-4 md:grid-cols-2">
                 <Link href="/idr-payment-estimator" className="rounded-xl border bg-primary-50 p-4 font-semibold text-primary-950 hover:bg-primary-100">Estimate IDR payments first</Link>
-                <Link href="/income-driven-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare repayment plans</Link>
+                <Link href="/income-driven-repayment-calculator/" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare repayment plans</Link>
               </div>
               <div className="mt-4 grid gap-4 md:grid-cols-3">
                 <Link href="/rap-vs-save-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">RAP vs SAVE</Link>
@@ -131,7 +131,7 @@ export default function SaveDeadlineCalculatorPage() {
               </section>
 
               <div className="grid gap-6 md:grid-cols-2">
-                <Link href="/income-driven-repayment-calculator" className="rounded-2xl border bg-primary-50 p-6 transition hover:shadow-md">
+                <Link href="/income-driven-repayment-calculator/" className="rounded-2xl border bg-primary-50 p-6 transition hover:shadow-md">
                   <h3 className="mb-2 text-xl font-bold text-primary-900">Compare IDR plans next</h3>
                   <p className="text-primary-800">Estimate RAP, IBR, PAYE, ICR, and SAVE-era comparisons with your income and household size.</p>
                 </Link>

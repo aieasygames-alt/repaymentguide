@@ -198,7 +198,7 @@ export default function StudentLoanChanges2026Page() {
                 If your repayment plan is changing, do not guess. Use this guide to identify your borrower type, compare the right plans, and avoid deadline surprises.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <Link href="/income-driven-repayment-calculator" className="rounded-lg bg-white px-6 py-3 text-center font-semibold text-primary-700 transition hover:bg-primary-50">
+                <Link href="/income-driven-repayment-calculator/" className="rounded-lg bg-white px-6 py-3 text-center font-semibold text-primary-700 transition hover:bg-primary-50">
                   Compare IDR Plans
                 </Link>
                 <Link href="/blog/save-ending-rap-vs-save-2026" className="rounded-lg bg-primary-950/50 px-6 py-3 text-center font-semibold text-white ring-1 ring-white/30 transition hover:bg-primary-950">
@@ -350,7 +350,7 @@ export default function StudentLoanChanges2026Page() {
                   If you only have 10 minutes, run the IDR calculator first, then read the guide for whichever plan looks best.
                 </p>
                 <div className="space-y-3">
-                  <Link href="/income-driven-repayment-calculator" className="block rounded-lg bg-primary-700 px-4 py-3 text-center font-semibold text-white hover:bg-primary-800">
+                  <Link href="/income-driven-repayment-calculator/" className="block rounded-lg bg-primary-700 px-4 py-3 text-center font-semibold text-white hover:bg-primary-800">
                     Run IDR Calculator
                   </Link>
                   <Link href="/save-plan-calculator" className="block rounded-lg bg-white px-4 py-3 text-center font-semibold text-primary-700 ring-1 ring-primary-200 hover:bg-primary-100">
@@ -454,7 +454,7 @@ export default function StudentLoanChanges2026Page() {
             <p className="mx-auto mb-8 max-w-2xl text-primary-100">
               Compare payments now, then use the official application or your servicer account to confirm the final repayment plan.
             </p>
-            <Link href="/income-driven-repayment-calculator" className="inline-block rounded-lg bg-white px-8 py-3 font-semibold text-primary-700 hover:bg-primary-50">
+            <Link href="/income-driven-repayment-calculator/" className="inline-block rounded-lg bg-white px-8 py-3 font-semibold text-primary-700 hover:bg-primary-50">
               Start Comparing Plans
             </Link>
           </div>

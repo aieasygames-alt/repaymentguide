@@ -66,8 +66,8 @@ export default function IbrVsRapPage() {
               <p className="mt-3 text-gray-700">Compare <strong>RAP first</strong> if you have eligible Direct Loans, dependents, and want to understand the new AGI-based payment plus potential interest and principal benefits. Compare <strong>IBR first</strong> if your income is low relative to household size, you need a legacy IDR formula, you are married filing separately, or PAYE eligibility is uncertain.</p>
               <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                 <Link href="/rap-payment-calculator" className="rounded-xl bg-primary-700 px-5 py-3 text-center font-semibold text-white hover:bg-primary-800">Estimate RAP payment</Link>
-                <Link href="/income-driven-repayment-calculator" className="rounded-xl border px-5 py-3 text-center font-semibold text-primary-700 hover:bg-primary-50">Use the IDR payment estimator</Link>
-                <Link href="/income-based-repayment-calculator" className="rounded-xl border px-5 py-3 text-center font-semibold text-primary-700 hover:bg-primary-50">Open the IBR calculator</Link>
+                <Link href="/income-driven-repayment-calculator/" className="rounded-xl border px-5 py-3 text-center font-semibold text-primary-700 hover:bg-primary-50">Use the IDR payment estimator</Link>
+                <Link href="/income-based-repayment-calculator/" className="rounded-xl border px-5 py-3 text-center font-semibold text-primary-700 hover:bg-primary-50">Open the IBR calculator</Link>
               </div>
             </section>
 
@@ -124,7 +124,7 @@ export default function IbrVsRapPage() {
               </div>
               <div className="mt-6 grid gap-4 md:grid-cols-3">
                 <Link href="/rap-payment-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Estimate RAP</Link>
-                <Link href="/income-based-repayment-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Estimate IBR</Link>
+                <Link href="/income-based-repayment-calculator/" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Estimate IBR</Link>
                 <Link href="/married-filing-separately-student-loans-rap" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Review separate filing</Link>
               </div>
             </section>

@@ -30,8 +30,8 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Income-Based Repayment Calculator - Estimate Student Loan IBR',
-  description: 'Estimate your student loan IBR payment, see how income and household size affect the result, and compare IBR with RAP and PAYE.',
+  title: 'Income Based Repayment Calculator | Estimate IBR Payment',
+  description: 'Use this student loan income based repayment calculator to estimate IBR payments by AGI and household size, then compare RAP and PAYE.',
   keywords: ['income based repayment calculator', 'Income-Based Repayment calculator', 'IBR calculator', 'student loan income based repayment calculator'],
   alternates: { canonical: '/income-based-repayment-calculator/' },
   openGraph: {
@@ -78,6 +78,16 @@ export default function IncomeBasedRepaymentCalculatorPage() {
           </div>
 
           <div className="mx-auto mt-16 max-w-4xl space-y-12">
+            <section className="rounded-2xl border bg-primary-50 p-6">
+              <h2 className="text-2xl font-bold text-gray-900">Estimate your IBR payment by income</h2>
+              <p className="mt-3 text-gray-700">An IBR repayment calculator is most useful when you test more than one income scenario. These examples are illustrative only; the official IDR application uses verified income, family size, loan type, and borrower history.</p>
+              <div className="mt-5 grid gap-4 md:grid-cols-3">
+                <div className="rounded-xl border bg-white p-4"><strong>$40,000 AGI</strong><p className="mt-2 text-sm text-gray-700">Test whether the poverty-guideline allowance makes IBR materially lower than a fixed payment.</p></div>
+                <div className="rounded-xl border bg-white p-4"><strong>$60,000 AGI</strong><p className="mt-2 text-sm text-gray-700">Add dependents and compare IBR discretionary income with RAP's AGI tier.</p></div>
+                <div className="rounded-xl border bg-white p-4"><strong>$100,000 AGI</strong><p className="mt-2 text-sm text-gray-700">Check IBR payment caps, PAYE eligibility, PSLF, and total cost before switching.</p></div>
+              </div>
+            </section>
+
             <section className="rounded-2xl border bg-white p-6">
               <h2 className="text-2xl font-bold text-gray-900">Student loan IBR calculator quick paths</h2>
               <div className="mt-5 grid gap-4 md:grid-cols-3">
@@ -105,7 +115,7 @@ export default function IncomeBasedRepaymentCalculatorPage() {
                 IBR planning estimates usually begin with AGI, and AGI can include capital gains or other one-time income from the tax year. If your tax return does not reflect current income, check whether the official IDR application lets you document current income instead of relying only on the prior return.
               </p>
               <div className="mt-5 grid gap-4 md:grid-cols-2">
-                <Link href="/income-driven-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare IDR formulas</Link>
+                <Link href="/income-driven-repayment-calculator/" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare IDR formulas</Link>
                 <Link href="/married-filing-separately-student-loans-rap" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Review filing status effects</Link>
               </div>
             </section>

@@ -36,7 +36,7 @@ export default function HomePage() {
               <Link href="/rap-payment-calculator" className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition">
                 Calculate RAP Payment
               </Link>
-              <Link href="/income-driven-repayment-calculator" className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition border border-primary-600">
+              <Link href="/income-driven-repayment-calculator/" className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition border border-primary-600">
                 Income-Driven Repayment Calculator
               </Link>
             </div>
@@ -78,7 +78,7 @@ export default function HomePage() {
                 <p className="text-gray-600">Compare RAP, IBR, PAYE, ICR, and standard options after SAVE.</p>
               </Link>
 
-              <Link href="/income-driven-repayment-calculator" className="bg-white border rounded-xl p-6 hover:shadow-lg transition">
+              <Link href="/income-driven-repayment-calculator/" className="bg-white border rounded-xl p-6 hover:shadow-lg transition">
                 <div className="text-primary-600 mb-4">
                   <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -120,9 +120,9 @@ export default function HomePage() {
                 <Link href="/save-ending-what-should-i-do" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">SAVE Next Steps</Link>
                 <Link href="/rap-vs-save-calculator" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">RAP vs SAVE</Link>
                 <Link href="/ibr-vs-rap" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">IBR vs RAP</Link>
-                <Link href="/income-based-repayment-calculator" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">IBR Calculator</Link>
+                <Link href="/income-based-repayment-calculator/" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">IBR Calculator</Link>
                 <Link href="/idr-payment-estimator" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">IDR Payment Estimator</Link>
-                <Link href="/student-loan-idr-payment-calculator" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">Student Loan IDR Calculator</Link>
+                <Link href="/student-loan-idr-payment-calculator/" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">Student Loan IDR Calculator</Link>
                 <Link href="/pslf-qualifying-payment-calculator" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">PSLF Payment Count</Link>
                 <Link href="/pslf-vs-idr-forgiveness-calculator" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">PSLF vs IDR</Link>
                 <Link href="/pslf-rap-qualifying-payments" className="rounded-lg border bg-white px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50">RAP and PSLF</Link>

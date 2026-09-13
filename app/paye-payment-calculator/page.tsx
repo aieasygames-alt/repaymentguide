@@ -96,12 +96,12 @@ export default function PayePaymentCalculatorPage() {
                 PAYE is worth estimating when you may qualify for Pay As You Earn and want to compare a legacy income-driven plan against IBR or RAP. It can be especially relevant for borrowers checking payment caps, PSLF, or higher-income scenarios where the standard payment matters.
               </p>
               <div className="mt-5 grid gap-4 md:grid-cols-3">
-                <Link href="/income-based-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare PAYE vs IBR</Link>
+                <Link href="/income-based-repayment-calculator/" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare PAYE vs IBR</Link>
                 <Link href="/rap-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare PAYE vs RAP</Link>
                 <Link href="/pslf-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Check PAYE for PSLF</Link>
               </div>
               <div className="mt-4 grid gap-4 md:grid-cols-2">
-                <Link href="/income-driven-repayment-calculator" className="rounded-xl border bg-primary-50 p-4 font-semibold text-primary-950 hover:bg-primary-100">Open the IDR payment estimator</Link>
+                <Link href="/income-driven-repayment-calculator/" className="rounded-xl border bg-primary-50 p-4 font-semibold text-primary-950 hover:bg-primary-100">Open the IDR payment estimator</Link>
                 <Link href="/save-90-day-deadline-calculator" className="rounded-xl border bg-amber-50 p-4 font-semibold text-amber-950 hover:bg-amber-100">Check your deadline first</Link>
               </div>
             </section>
@@ -112,8 +112,8 @@ export default function PayePaymentCalculatorPage() {
                 If your question starts with a specific AGI, such as $108,000, and a specific number of dependents, run PAYE as one scenario rather than the final answer. Household size can lower discretionary income, but PAYE eligibility, the standard repayment cap, spouse income, and PSLF goals can still change which plan is best.
               </p>
               <div className="mt-5 grid gap-4 md:grid-cols-3">
-                <Link href="/income-driven-repayment-calculator" className="rounded-xl border bg-primary-50 p-4 font-semibold text-primary-950 hover:bg-primary-100">Run AGI scenarios</Link>
-                <Link href="/income-based-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare IBR</Link>
+                <Link href="/income-driven-repayment-calculator/" className="rounded-xl border bg-primary-50 p-4 font-semibold text-primary-950 hover:bg-primary-100">Run AGI scenarios</Link>
+                <Link href="/income-based-repayment-calculator/" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare IBR</Link>
                 <Link href="/student-loan-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Check standard cap</Link>
               </div>
               <div className="mt-4 grid gap-4 md:grid-cols-2">
@@ -141,7 +141,7 @@ export default function PayePaymentCalculatorPage() {
                   <tr className="border-b bg-gray-50">
                     <td className="p-3 font-semibold">IBR</td>
                     <td className="p-3">Often the fallback legacy IDR plan when PAYE eligibility is uncertain.</td>
-                    <td className="p-3"><Link href="/income-based-repayment-calculator" className="text-primary-700 underline">IBR calculator</Link></td>
+                    <td className="p-3"><Link href="/income-based-repayment-calculator/" className="text-primary-700 underline">IBR calculator</Link></td>
                   </tr>
                   <tr>
                     <td className="p-3 font-semibold">RAP</td>

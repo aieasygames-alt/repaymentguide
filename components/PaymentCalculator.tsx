@@ -265,7 +265,7 @@ export default function PaymentCalculator() {
         <p className="text-sm text-yellow-800">
           This calculator provides estimates for standard federal repayment plans. For income-driven
           repayment options, use our{' '}
-          <Link href="/income-driven-repayment-calculator" className="underline font-medium">
+          <Link href="/income-driven-repayment-calculator/" className="underline font-medium">
             IDR Calculator
           </Link>
           .

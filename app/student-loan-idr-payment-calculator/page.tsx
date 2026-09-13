@@ -105,7 +105,7 @@ export default function StudentLoanIdrPaymentCalculatorPage() {
                 If this student loan income based repayment calculator looks close, compare it with the plan-specific pages before you apply. IBR, RAP, PAYE, and PSLF all have slightly different rules, and the cheapest estimate is not always the best overall fit.
               </p>
               <div className="mt-5 grid gap-4 md:grid-cols-3">
-                <Link href="/income-based-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Income-Based Repayment calculator</Link>
+                <Link href="/income-based-repayment-calculator/" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Income-Based Repayment calculator</Link>
                 <Link href="/rap-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">RAP payment calculator</Link>
                 <Link href="/pslf-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">PSLF calculator</Link>
               </div>
@@ -129,12 +129,12 @@ export default function StudentLoanIdrPaymentCalculatorPage() {
                 <tbody>
                   <tr className="border-b">
                     <td className="p-3">income driven repayment calculator</td>
-                    <td className="p-3"><Link href="/income-driven-repayment-calculator" className="text-primary-700 underline">IDR calculator</Link></td>
+                    <td className="p-3"><Link href="/income-driven-repayment-calculator/" className="text-primary-700 underline">IDR calculator</Link></td>
                     <td className="p-3">Broad comparison across income-driven repayment plans.</td>
                   </tr>
                   <tr className="border-b bg-gray-50">
                     <td className="p-3">income based repayment calculator</td>
-                    <td className="p-3"><Link href="/income-based-repayment-calculator" className="text-primary-700 underline">IBR calculator</Link></td>
+                    <td className="p-3"><Link href="/income-based-repayment-calculator/" className="text-primary-700 underline">IBR calculator</Link></td>
                     <td className="p-3">Focuses on the Income-Based Repayment plan.</td>
                   </tr>
                   <tr>

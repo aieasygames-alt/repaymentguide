@@ -2816,7 +2816,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <h3 className="text-2xl font-bold mb-3">Ready to optimize your repayment?</h3>
               <p className="text-primary-100 mb-6">Use our free calculators to find your best plan and estimate your savings.</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/income-driven-repayment-calculator" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition text-center">
+                <Link href="/income-driven-repayment-calculator/" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition text-center">
                   Compare IDR Plans
                 </Link>
                 <Link href="/pslf-calculator" className="bg-primary-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-900 transition text-center">

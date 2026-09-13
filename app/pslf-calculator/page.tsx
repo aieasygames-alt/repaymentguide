@@ -179,7 +179,7 @@ export default function PslfCalculatorPage() {
               </p>
               <div className="mt-5 grid gap-4 md:grid-cols-3">
                 <Link href="/ibr-vs-rap" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">IBR vs RAP</Link>
-                <Link href="/income-driven-repayment-calculator" className="rounded-2xl border bg-primary-50 p-5 font-semibold text-primary-950 hover:bg-primary-100">Compare all IDR plans</Link>
+                <Link href="/income-driven-repayment-calculator/" className="rounded-2xl border bg-primary-50 p-5 font-semibold text-primary-950 hover:bg-primary-100">Compare all IDR plans</Link>
                 <Link href="/rap-payment-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">RAP payment calculator</Link>
               </div>
             </section>
@@ -188,7 +188,7 @@ export default function PslfCalculatorPage() {
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">How to Track Your Payments</h2>
               <div className="mb-6 grid gap-4 md:grid-cols-3">
-                <Link href="/income-driven-repayment-calculator" className="rounded-2xl border bg-primary-50 p-5 font-semibold text-primary-950 hover:bg-primary-100">Compare IDR plans</Link>
+                <Link href="/income-driven-repayment-calculator/" className="rounded-2xl border bg-primary-50 p-5 font-semibold text-primary-950 hover:bg-primary-100">Compare IDR plans</Link>
                 <Link href="/rap-payment-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Check RAP for PSLF</Link>
                 <Link href="/ibr-vs-rap" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Compare IBR vs RAP</Link>
               </div>
@@ -362,7 +362,7 @@ export default function PslfCalculatorPage() {
                 <a href="https://studentaid.gov/pslf" target="_blank" rel="noopener noreferrer" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition text-center">
                   PSLF Help Tool
                 </a>
-                <Link href="/income-driven-repayment-calculator" className="bg-primary-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-900 transition text-center">
+                <Link href="/income-driven-repayment-calculator/" className="bg-primary-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-900 transition text-center">
                   Compare IDR Plans
                 </Link>
               </div>

@@ -134,7 +134,7 @@ export default function RapPaymentCalculatorPage() {
               </div>
 
               <aside className="space-y-4">
-                <Link href="/income-driven-repayment-calculator" className="block rounded-3xl border bg-primary-50 p-6 transition hover:shadow-md">
+                <Link href="/income-driven-repayment-calculator/" className="block rounded-3xl border bg-primary-50 p-6 transition hover:shadow-md">
                   <h3 className="text-xl font-bold text-primary-950">Compare all IDR plans</h3>
                   <p className="mt-2 text-primary-800">Run RAP, IBR, PAYE, and ICR side by side.</p>
                 </Link>
@@ -180,7 +180,7 @@ export default function RapPaymentCalculatorPage() {
               </p>
               <div className="mt-6 grid gap-4 md:grid-cols-3">
                 <Link href="/parent-plus-rap-eligibility" className="rounded-2xl border bg-green-50 p-5 font-semibold text-green-950 hover:bg-green-100">Check Parent PLUS RAP eligibility</Link>
-                <Link href="/income-driven-repayment-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Compare IDR plans</Link>
+                <Link href="/income-driven-repayment-calculator/" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Compare IDR plans</Link>
                 <Link href="/pslf-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Review PSLF path</Link>
               </div>
             </section>

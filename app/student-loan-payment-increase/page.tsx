@@ -120,7 +120,7 @@ export default function StudentLoanPaymentIncreasePage() {
                 Ask your servicer which AGI, family size, tax filing status, and income documentation were used. If the higher payment reflects capital gains, a bonus, or another one-time tax-year event, compare that bill with an official current-income review before switching plans.
               </p>
               <div className="mt-5 grid gap-4 md:grid-cols-3">
-                <Link href="/income-based-repayment-calculator" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Review IBR AGI inputs</Link>
+                <Link href="/income-based-repayment-calculator/" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Review IBR AGI inputs</Link>
                 <Link href="/servicer-contact-toolkit" className="rounded-2xl border bg-slate-50 p-5 font-semibold text-slate-900 hover:bg-slate-100">Ask for calculation proof</Link>
                 <Link href="/save-90-day-deadline-calculator" className="rounded-2xl border bg-amber-50 p-5 font-semibold text-amber-950 hover:bg-amber-100">Check IDR deadline</Link>
               </div>

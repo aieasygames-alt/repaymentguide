@@ -79,7 +79,7 @@ export default function RapVsSaveCalculatorPage() {
                 <div className="rounded-2xl bg-slate-50 p-5"><h3 className="font-bold text-slate-950">If PSLF applies</h3><p className="mt-2 text-sm text-slate-700">Prioritize qualifying payments and clean documentation over payment estimate alone.</p></div>
               </div>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <Link href="/income-driven-repayment-calculator" className="rounded-xl bg-primary-700 px-5 py-3 text-center font-semibold text-white hover:bg-primary-800">Compare current IDR plans</Link>
+                <Link href="/income-driven-repayment-calculator/" className="rounded-xl bg-primary-700 px-5 py-3 text-center font-semibold text-white hover:bg-primary-800">Compare current IDR plans</Link>
                 <Link href="/save-90-day-deadline-calculator" className="rounded-xl border px-5 py-3 text-center font-semibold text-primary-800 hover:bg-primary-50">Calculate SAVE deadline</Link>
               </div>
               <div className="mt-4 grid gap-4 md:grid-cols-2">

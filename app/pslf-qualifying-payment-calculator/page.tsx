@@ -108,7 +108,7 @@ export default function PslfQualifyingPaymentCalculatorPage() {
               </p>
               <div className="mt-5 grid gap-4 md:grid-cols-3">
                 <Link href="/pslf-calculator" className="rounded-xl border bg-primary-50 p-4 font-semibold text-primary-950 hover:bg-primary-100">PSLF calculator</Link>
-                <Link href="/income-driven-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare IDR plans</Link>
+                <Link href="/income-driven-repayment-calculator/" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Compare IDR plans</Link>
                 <Link href="/rap-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">RAP payment calculator</Link>
               </div>
             </section>
@@ -132,7 +132,7 @@ export default function PslfQualifyingPaymentCalculatorPage() {
                   <tr className="border-b bg-gray-50">
                     <td className="p-3 font-semibold">25-84</td>
                     <td className="p-3">Midstream stage; repayment plan choice can still change cost.</td>
-                    <td className="p-3"><Link href="/income-driven-repayment-calculator" className="text-primary-700 underline">Compare IDR plans</Link>.</td>
+                    <td className="p-3"><Link href="/income-driven-repayment-calculator/" className="text-primary-700 underline">Compare IDR plans</Link>.</td>
                   </tr>
                   <tr>
                     <td className="p-3 font-semibold">85-120</td>

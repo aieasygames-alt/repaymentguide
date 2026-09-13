@@ -121,7 +121,7 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Student Loan Calculators - IDR, IBR, PSLF, RAP & SAVE',
+  title: 'Student Loan Calculators | IDR, IBR, PSLF, RAP & SAVE',
   description: 'Find the right student loan calculator for IDR, IBR, PAYE, PSLF, RAP, SAVE deadlines, and federal repayment plan comparisons.',
   keywords: ['student loan calculators', 'student loan repayment calculator', 'IDR calculator', 'IBR calculator', 'PAYE calculator', 'PSLF calculator', 'RAP calculator'],
   alternates: { canonical: '/student-loan-calculators/' },
@@ -175,7 +175,7 @@ export default function StudentLoanCalculatorsPage() {
                 If you only need a fixed-payment estimate, start with the standard payment calculator. If your payment depends on income, household size, public service, or a SAVE transition notice, use the IDR estimator, IBR payment calculator, RAP calculator, PSLF calculator, or deadline tools below.
               </p>
               <div className="mt-5 grid gap-4 md:grid-cols-3">
-                <Link href="/income-driven-repayment-calculator" className="rounded-xl bg-primary-700 p-5 text-white transition hover:bg-primary-800">
+                <Link href="/income-driven-repayment-calculator/" className="rounded-xl bg-primary-700 p-5 text-white transition hover:bg-primary-800">
                   <h3 className="font-bold">Need an income-based payment?</h3>
                   <p className="mt-2 text-sm text-primary-50">Use the IDR payment estimator to compare IBR, PAYE, ICR, and RAP.</p>
                 </Link>
@@ -197,8 +197,8 @@ export default function StudentLoanCalculatorsPage() {
             <section className="rounded-2xl border bg-white p-6">
               <h2 className="text-2xl font-bold text-gray-900">Popular calculator searches</h2>
               <div className="mt-5 flex flex-wrap gap-3">
-                <Link href="/income-driven-repayment-calculator" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">income driven repayment calculator</Link>
-                <Link href="/income-based-repayment-calculator" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">income based repayment calculator</Link>
+                <Link href="/income-driven-repayment-calculator/" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">income driven repayment calculator</Link>
+                <Link href="/income-based-repayment-calculator/" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">income based repayment calculator</Link>
                 <Link href="/idr-payment-estimator" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">IDR payment estimator</Link>
                 <Link href="/ibr-vs-rap" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">IBR vs RAP</Link>
                 <Link href="/paye-payment-calculator" className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100">PAYE payment calculator</Link>

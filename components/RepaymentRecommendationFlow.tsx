@@ -207,7 +207,7 @@ export default function RepaymentRecommendationFlow() {
           </div>
 
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <Link href="/income-driven-repayment-calculator" className="rounded-lg bg-primary-700 px-5 py-3 text-center font-semibold text-white hover:bg-primary-800">
+            <Link href="/income-driven-repayment-calculator/" className="rounded-lg bg-primary-700 px-5 py-3 text-center font-semibold text-white hover:bg-primary-800">
               Run detailed IDR calculator
             </Link>
             <Link href="/save-90-day-deadline-calculator" className="rounded-lg border px-5 py-3 text-center font-semibold text-primary-700 hover:bg-primary-50">

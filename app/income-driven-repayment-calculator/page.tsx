@@ -7,8 +7,8 @@ import { FAQSchema } from '@/components/FAQSchema';
 import { CalculatorDisclosure, officialStudentLoanSources } from '@/components/TrustSignals';
 
 export const metadata: Metadata = {
-  title: 'Income-Driven Repayment Calculator - IDR, IBR, PAYE, ICR & RAP',
-  description: 'Use this income-driven repayment calculator to estimate IDR payments under RAP, IBR, PAYE, and ICR, with 2026 examples by income and salary.',
+  title: 'Income Driven Repayment Calculator | Compare IDR Plans',
+  description: 'Use this student loan income driven repayment calculator to estimate IBR, PAYE, ICR, and RAP payments with 2026 income examples.',
   keywords: ['income-driven repayment calculator', 'income driven repayment calculator', 'IDR calculator', 'income based repayment calculator', 'RAP', 'PAYE', 'IBR', 'ICR'],
   alternates: {
     canonical: '/income-driven-repayment-calculator/',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Income-Driven Repayment Calculator',
     description: 'Compare estimated monthly payments under IDR, IBR, PAYE, ICR, and RAP.',
-    url: 'https://repaymentguide.com/income-driven-repayment-calculator',
+    url: 'https://repaymentguide.com/income-driven-repayment-calculator/',
   },
 };
 
@@ -90,6 +90,21 @@ export default function IdrCalculatorPage() {
 
           {/* Detailed Content */}
           <div className="mt-16 max-w-4xl mx-auto space-y-12">
+            <section className="rounded-2xl border bg-slate-50 p-6">
+              <h2 className="text-2xl font-bold text-gray-900">Income driven repayment calculator examples</h2>
+              <p className="mt-3 text-gray-700">Use these planning examples to understand how income and family size can change an estimated federal student loan payment. Enter your own AGI and household details above for a personalized comparison.</p>
+              <div className="mt-5 overflow-x-auto">
+                <table className="w-full min-w-[560px] border-collapse text-sm">
+                  <thead><tr className="bg-slate-900 text-white"><th className="p-3 text-left">AGI</th><th className="p-3 text-left">Household</th><th className="p-3 text-left">What to compare</th></tr></thead>
+                  <tbody>
+                    <tr className="border-b bg-white"><td className="p-3 font-semibold">$40,000</td><td className="p-3">1 borrower</td><td className="p-3">IBR/PAYE discretionary-income estimate versus RAP AGI tier</td></tr>
+                    <tr className="border-b"><td className="p-3 font-semibold">$60,000</td><td className="p-3">Borrower plus 1 dependent</td><td className="p-3">Dependent reduction under RAP and the household-size allowance under legacy IDR</td></tr>
+                    <tr className="bg-white"><td className="p-3 font-semibold">$100,000</td><td className="p-3">Borrower plus 2 dependents</td><td className="p-3">PAYE payment cap, IBR eligibility, PSLF strategy, and total repayment cost</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
             {/* How to Use */}
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">How to Use This Calculator</h2>
@@ -287,7 +302,7 @@ export default function IdrCalculatorPage() {
               </div>
               <div className="mt-5 grid gap-4 md:grid-cols-3">
                 <Link href="/blog/idr-payment-estimator-guide" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">IDR payment estimator guide</Link>
-                <Link href="/income-based-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Income-Based Repayment calculator</Link>
+                <Link href="/income-based-repayment-calculator/" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Income-Based Repayment calculator</Link>
                 <Link href="/rap-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">RAP payment calculator</Link>
               </div>
             </section>
@@ -298,7 +313,7 @@ export default function IdrCalculatorPage() {
                 Broad IDR searches belong here, but a query that names IBR, PAYE, RAP, Parent PLUS, or a servicer deadline usually needs a more focused next step. Use this map when the first estimate is close and you need to verify the plan-specific rules.
               </p>
               <div className="mt-5 grid gap-4 md:grid-cols-2">
-                <Link href="/income-based-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Income based repayment calculator</Link>
+                <Link href="/income-based-repayment-calculator/" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Income based repayment calculator</Link>
                 <Link href="/paye-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">PAYE payment calculator</Link>
                 <Link href="/parent-plus-rap-eligibility" className="rounded-xl border bg-green-50 p-4 font-semibold text-green-950 hover:bg-green-100">Parent PLUS RAP eligibility</Link>
                 <Link href="/save-90-day-deadline-calculator" className="rounded-xl border bg-amber-50 p-4 font-semibold text-amber-950 hover:bg-amber-100">IDR deadline calculator</Link>
@@ -326,8 +341,8 @@ export default function IdrCalculatorPage() {
                 If you searched for a student loan calculator income based payment, start by comparing IBR, PAYE, RAP, and the standard plan side by side. A calculator is most useful when it shows not just the monthly payment, but also whether PSLF, forgiveness timing, or a payment cap changes the answer.
               </p>
               <div className="mt-5 grid gap-4 md:grid-cols-3">
-                <Link href="/student-loan-idr-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Student loan IDR calculator</Link>
-                <Link href="/income-based-repayment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Income-Based Repayment calculator</Link>
+                <Link href="/student-loan-idr-payment-calculator/" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Student loan IDR calculator</Link>
+                <Link href="/income-based-repayment-calculator/" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">Income-Based Repayment calculator</Link>
                 <Link href="/rap-payment-calculator" className="rounded-xl border bg-slate-50 p-4 font-semibold text-slate-900 hover:bg-slate-100">RAP payment calculator</Link>
               </div>
             </section>
@@ -358,7 +373,7 @@ export default function IdrCalculatorPage() {
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
                 <p className="text-blue-800 text-sm">
                   <strong>Looking for detailed IDR guidance?</strong> Check out our comprehensive guide on <Link href="/blog/idr-plan-comparison" className="text-blue-700 hover:text-blue-800 underline">IDR plan comparison</Link> and learn about <Link href="/blog/married-borrowers-repayment-strategy" className="text-blue-700 hover:text-blue-800 underline">repayment strategies for married borrowers</Link>.
-                  {' '}If you searched for a narrower tool, use the <Link href="/income-based-repayment-calculator" className="text-blue-700 hover:text-blue-800 underline">Income-Based Repayment calculator</Link>, <Link href="/idr-payment-estimator" className="text-blue-700 hover:text-blue-800 underline">IDR payment estimator</Link>, or <Link href="/student-loan-idr-payment-calculator" className="text-blue-700 hover:text-blue-800 underline">student loan IDR payment calculator</Link>.
+                  {' '}If you searched for a narrower tool, use the <Link href="/income-based-repayment-calculator/" className="text-blue-700 hover:text-blue-800 underline">Income-Based Repayment calculator</Link>, <Link href="/idr-payment-estimator" className="text-blue-700 hover:text-blue-800 underline">IDR payment estimator</Link>, or <Link href="/student-loan-idr-payment-calculator/" className="text-blue-700 hover:text-blue-800 underline">student loan IDR payment calculator</Link>.
                 </p>
               </div>
 
